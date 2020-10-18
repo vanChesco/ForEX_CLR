@@ -51,16 +51,6 @@ namespace ForEXCLR {
 
 	private: System::Windows::Forms::Label^ label5;
 
-
-
-	protected:
-
-	protected:
-
-	protected:
-
-	protected:
-
 	private:
 		/// <summary>
 		/// Wymagana zmienna projektanta.
@@ -318,7 +308,7 @@ namespace ForEXCLR {
 	{}
 	private: System::Void wartosc_po_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
-		wartosc_po->Text = c_zak->Value;
+//		wartosc_po->Text = c_zak->Value;
 	}
 
 };
