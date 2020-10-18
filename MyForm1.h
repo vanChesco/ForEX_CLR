@@ -54,13 +54,15 @@ namespace ForEXCLR {
 	private: System::Windows::Forms::NumericUpDown^ zysk;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::NumericUpDown^ wartosc;
-	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::LinkLabel^ linkLabel1;
+
+
 
 	private:
 		/// <summary>
 		/// Wymagana zmienna projektanta.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -86,7 +88,7 @@ namespace ForEXCLR {
 			this->wartosc = (gcnew System::Windows::Forms::NumericUpDown());
 			this->zysk = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_sp))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwestycja))->BeginInit();
@@ -109,7 +111,7 @@ namespace ForEXCLR {
 			this->c_zak->TabIndex = 0;
 			this->c_zak->Tag = L"";
 			this->c_zak->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_zak->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38856, 0, 0, 262144 });
+			this->c_zak->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38858, 0, 0, 262144 });
 			this->c_zak->ValueChanged += gcnew System::EventHandler(this, &MyForm::numericUpDown1_ValueChanged);
 			// 
 			// c_k_label
@@ -275,7 +277,7 @@ namespace ForEXCLR {
 			// wartosc
 			// 
 			this->wartosc->BackColor = System::Drawing::SystemColors::Menu;
-			this->wartosc->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->wartosc->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->wartosc->DecimalPlaces = 2;
 			this->wartosc->InterceptArrowKeys = false;
 			this->wartosc->Location = System::Drawing::Point(59, 20);
@@ -283,14 +285,15 @@ namespace ForEXCLR {
 			this->wartosc->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000000, 0, 0, System::Int32::MinValue });
 			this->wartosc->Name = L"wartosc";
 			this->wartosc->ReadOnly = true;
-			this->wartosc->Size = System::Drawing::Size(101, 20);
+			this->wartosc->Size = System::Drawing::Size(101, 16);
 			this->wartosc->TabIndex = 10;
-			this->wartosc->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->wartosc->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->wartosc->ThousandsSeparator = true;
 			// 
 			// zysk
 			// 
 			this->zysk->BackColor = System::Drawing::SystemColors::Menu;
-			this->zysk->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->zysk->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->zysk->DecimalPlaces = 2;
 			this->zysk->InterceptArrowKeys = false;
 			this->zysk->Location = System::Drawing::Point(59, 48);
@@ -298,9 +301,10 @@ namespace ForEXCLR {
 			this->zysk->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000000, 0, 0, System::Int32::MinValue });
 			this->zysk->Name = L"zysk";
 			this->zysk->ReadOnly = true;
-			this->zysk->Size = System::Drawing::Size(101, 20);
+			this->zysk->Size = System::Drawing::Size(101, 16);
 			this->zysk->TabIndex = 9;
-			this->zysk->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->zysk->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->zysk->ThousandsSeparator = true;
 			this->zysk->ValueChanged += gcnew System::EventHandler(this, &MyForm::numericUpDown1_ValueChanged);
 			// 
 			// label5
@@ -313,21 +317,22 @@ namespace ForEXCLR {
 			this->label5->TabIndex = 5;
 			this->label5->Text = L"Zysk";
 			// 
-			// label7
+			// linkLabel1
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(109, 216);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(99, 13);
-			this->label7->TabIndex = 11;
-			this->label7->Text = L"2020 ® vanChesco";
+			this->linkLabel1->AutoSize = true;
+			this->linkLabel1->Location = System::Drawing::Point(110, 216);
+			this->linkLabel1->Name = L"linkLabel1";
+			this->linkLabel1->Size = System::Drawing::Size(99, 13);
+			this->linkLabel1->TabIndex = 12;
+			this->linkLabel1->TabStop = true;
+			this->linkLabel1->Text = L"2020 ® vanChesco";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(224, 238);
-			this->Controls->Add(this->label7);
+			this->Controls->Add(this->linkLabel1);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->groupBox1);
@@ -336,6 +341,7 @@ namespace ForEXCLR {
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
+			this->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->ShowIcon = false;
 			this->Text = L"Forex";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -360,17 +366,17 @@ namespace ForEXCLR {
 	{}
 	private: System::Void numericUpDown1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		zysk->Value = System::Decimal::operator-(inwestycja->Value*(c_sp->Value/c_zak->Value), inwestycja->Value);
+		zysk->Value = System::Decimal::operator-(inwestycja->Value * (c_sp->Value / c_zak->Value), inwestycja->Value);
 		wartosc->Value = inwestycja->Value * (c_sp->Value / c_zak->Value);
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e)
 	{}
-	private: System::Void wartosc_po_Click(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void wartosc_po_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-//		wartosc_po->Text = c_zak->Value;
+		//		wartosc_po->Text = c_zak->Value;
 	}
 
-	private: System::Void c_sp_ValueChanged(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void c_sp_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		double z, w;
 
@@ -380,7 +386,7 @@ namespace ForEXCLR {
 		wartosc->Value = (System::Decimal)w;
 		zysk->Value = (System::Decimal)z;
 	}
-	private: System::Void inwestycja_ValueChanged(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void inwestycja_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		zysk->Value = System::Decimal::operator-(inwestycja->Value * (c_sp->Value / c_zak->Value), inwestycja->Value);
 		wartosc->Value = inwestycja->Value * (c_sp->Value / c_zak->Value);
