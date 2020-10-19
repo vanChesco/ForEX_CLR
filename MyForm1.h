@@ -104,7 +104,7 @@ namespace ForEXCLR {
 			this->c_zak->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->c_zak->DecimalPlaces = 4;
 			this->c_zak->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															 static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->c_zak->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->c_zak->Location = System::Drawing::Point(9, 39);
 			this->c_zak->Name = L"c_zak";
@@ -112,14 +112,13 @@ namespace ForEXCLR {
 			this->c_zak->TabIndex = 0;
 			this->c_zak->Tag = L"";
 			this->c_zak->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_zak->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38858, 0, 0, 262144 });
 			this->c_zak->ValueChanged += gcnew System::EventHandler(this, &MyForm::numericUpDown1_ValueChanged);
 			// 
 			// c_k_label
 			// 
 			this->c_k_label->AutoSize = true;
 			this->c_k_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																 static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->c_k_label->Location = System::Drawing::Point(8, 21);
 			this->c_k_label->Name = L"c_k_label";
 			this->c_k_label->Size = System::Drawing::Size(70, 13);
@@ -130,7 +129,7 @@ namespace ForEXCLR {
 			// 
 			this->c_s_label->AutoSize = true;
 			this->c_s_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																 static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->c_s_label->Location = System::Drawing::Point(101, 20);
 			this->c_s_label->Name = L"c_s_label";
 			this->c_s_label->Size = System::Drawing::Size(82, 13);
@@ -142,14 +141,13 @@ namespace ForEXCLR {
 			this->c_sp->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->c_sp->DecimalPlaces = 4;
 			this->c_sp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->c_sp->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->c_sp->Location = System::Drawing::Point(102, 38);
 			this->c_sp->Name = L"c_sp";
 			this->c_sp->Size = System::Drawing::Size(65, 20);
 			this->c_sp->TabIndex = 3;
 			this->c_sp->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_sp->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 39, 0, 0, 65536 });
 			this->c_sp->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_sp_ValueChanged);
 			// 
 			// inw_label
@@ -166,7 +164,7 @@ namespace ForEXCLR {
 			// 
 			this->Wynik_label->AutoSize = true;
 			this->Wynik_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																   static_cast<System::Byte>(0)));
+				static_cast<System::Byte>(0)));
 			this->Wynik_label->Location = System::Drawing::Point(6, 22);
 			this->Wynik_label->Name = L"Wynik_label";
 			this->Wynik_label->Size = System::Drawing::Size(47, 13);
@@ -182,7 +180,7 @@ namespace ForEXCLR {
 			this->inwestycja->Size = System::Drawing::Size(80, 20);
 			this->inwestycja->TabIndex = 6;
 			this->inwestycja->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->inwestycja->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 150000, 0, 0, 0 });
+			this->inwestycja->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 150, 0, 0, 0 });
 			this->inwestycja->ValueChanged += gcnew System::EventHandler(this, &MyForm::inwestycja_ValueChanged);
 			// 
 			// groupBox1
@@ -194,7 +192,7 @@ namespace ForEXCLR {
 			this->groupBox1->Controls->Add(this->c_s_label);
 			this->groupBox1->Controls->Add(this->c_sp);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-																 static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->groupBox1->Location = System::Drawing::Point(14, 46);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->RightToLeft = System::Windows::Forms::RightToLeft::No;
@@ -207,7 +205,7 @@ namespace ForEXCLR {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->label2->Location = System::Drawing::Point(167, 41);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(28, 13);
@@ -218,7 +216,7 @@ namespace ForEXCLR {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->label1->Location = System::Drawing::Point(74, 41);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(28, 13);
@@ -229,7 +227,7 @@ namespace ForEXCLR {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->label3->Location = System::Drawing::Point(162, 22);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(28, 13);
@@ -240,7 +238,7 @@ namespace ForEXCLR {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->label4->Location = System::Drawing::Point(183, 20);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(28, 13);
@@ -256,7 +254,7 @@ namespace ForEXCLR {
 			this->groupBox2->Controls->Add(this->Wynik_label);
 			this->groupBox2->Controls->Add(this->label3);
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-																 static_cast<System::Byte>(0)));
+				static_cast<System::Byte>(0)));
 			this->groupBox2->Location = System::Drawing::Point(14, 127);
 			this->groupBox2->Name = L"groupBox2";
 			this->groupBox2->Size = System::Drawing::Size(194, 82);
@@ -268,7 +266,7 @@ namespace ForEXCLR {
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->label6->Location = System::Drawing::Point(162, 50);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(28, 13);
@@ -311,7 +309,7 @@ namespace ForEXCLR {
 			// label5
 			// 
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(0)));
+				static_cast<System::Byte>(0)));
 			this->label5->Location = System::Drawing::Point(6, 50);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(30, 13);
