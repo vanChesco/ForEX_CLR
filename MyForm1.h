@@ -380,7 +380,9 @@ namespace ForEXCLR {
 
 
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
-	{}
+	{
+		oblicz();
+	}
 
 	private: System::Void numericUpDown1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
