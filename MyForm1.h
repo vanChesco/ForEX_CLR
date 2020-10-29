@@ -212,7 +212,7 @@ namespace ForEXCLR {
 			this->groupBox1->Location = System::Drawing::Point(14, 73);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->groupBox1->Size = System::Drawing::Size(194, 69);
+			this->groupBox1->Size = System::Drawing::Size(199, 69);
 			this->groupBox1->TabIndex = 7;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Spread";
@@ -273,7 +273,7 @@ namespace ForEXCLR {
 																 static_cast<System::Byte>(0)));
 			this->groupBox2->Location = System::Drawing::Point(14, 148);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(194, 78);
+			this->groupBox2->Size = System::Drawing::Size(199, 78);
 			this->groupBox2->TabIndex = 10;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Po sprzedaży";
@@ -283,7 +283,7 @@ namespace ForEXCLR {
 			this->w_Zysk->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->w_Zysk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 															  static_cast<System::Byte>(238)));
-			this->w_Zysk->Location = System::Drawing::Point(77, 46);
+			this->w_Zysk->Location = System::Drawing::Point(82, 46);
 			this->w_Zysk->Name = L"w_Zysk";
 			this->w_Zysk->Size = System::Drawing::Size(68, 20);
 			this->w_Zysk->TabIndex = 14;
@@ -295,7 +295,7 @@ namespace ForEXCLR {
 			this->w_Wartosc->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->w_Wartosc->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 																 static_cast<System::Byte>(238)));
-			this->w_Wartosc->Location = System::Drawing::Point(88, 22);
+			this->w_Wartosc->Location = System::Drawing::Point(93, 22);
 			this->w_Wartosc->Name = L"w_Wartosc";
 			this->w_Wartosc->Size = System::Drawing::Size(68, 13);
 			this->w_Wartosc->TabIndex = 13;
