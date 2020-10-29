@@ -126,7 +126,7 @@ namespace ForEXCLR {
 			this->c_zak->Tag = L"";
 			this->c_zak->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->c_zak->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38858, 0, 0, 262144 });
-			this->c_zak->ValueChanged += gcnew System::EventHandler(this, &MyForm::numericUpDown1_ValueChanged);
+			this->c_zak->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_zak_ValueChanged);
 			// 
 			// c_k_label
 			// 
@@ -264,6 +264,7 @@ namespace ForEXCLR {
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->BackColor = System::Drawing::SystemColors::Control;
 			this->groupBox2->Controls->Add(this->w_Zysk);
 			this->groupBox2->Controls->Add(this->w_Wartosc);
 			this->groupBox2->Controls->Add(this->lb_PLN);
@@ -434,7 +435,7 @@ namespace ForEXCLR {
 		oblicz();
 	}
 
-	private: System::Void numericUpDown1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void c_zak_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
 	}
