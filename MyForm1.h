@@ -327,7 +327,7 @@ namespace ForEXCLR {
 			// linkLabel1
 			// 
 			this->linkLabel1->AutoSize = true;
-			this->linkLabel1->Location = System::Drawing::Point(109, 229);
+			this->linkLabel1->Location = System::Drawing::Point(115, 229);
 			this->linkLabel1->Name = L"linkLabel1";
 			this->linkLabel1->Size = System::Drawing::Size(99, 13);
 			this->linkLabel1->TabIndex = 12;
