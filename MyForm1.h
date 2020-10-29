@@ -356,7 +356,6 @@ namespace ForEXCLR {
 			this->w_walucie->TabIndex = 14;
 			this->w_walucie->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->w_walucie->ThousandsSeparator = true;
-			this->w_walucie->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 150000, 0, 0, 0 });
 			this->w_walucie->ValueChanged += gcnew System::EventHandler(this, &MyForm::w_walucie_ValueChanged);
 			// 
 			// label7
