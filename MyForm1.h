@@ -407,9 +407,9 @@ namespace ForEXCLR {
 
 		void oblicz()
 		{
-			System::Decimal wartosc = inwestycja->Value * (c_sp->Value / c_zak->Value);
-			System::Decimal zysk = System::Decimal::operator-(inwestycja->Value * (c_sp->Value / c_zak->Value), inwestycja->Value);
 			w_walucie->Value = inwestycja->Value / c_zak->Value;
+			System::Decimal wartosc = inwestycja->Value * (c_sp->Value / c_zak->Value);
+			System::Decimal zysk = System::Decimal::operator-(w_walucie->Value * c_sp->Value, inwestycja->Value);//System::Decimal::operator-(inwestycja->Value * (c_sp->Value / c_zak->Value), inwestycja->Value);
 
 			if (zysk > 0)
 			{
