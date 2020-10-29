@@ -188,6 +188,7 @@ namespace ForEXCLR {
 			// inwestycja
 			// 
 			this->inwestycja->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->inwestycja->DecimalPlaces = 2;
 			this->inwestycja->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->inwestycja->Location = System::Drawing::Point(102, 18);
 			this->inwestycja->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
@@ -196,7 +197,7 @@ namespace ForEXCLR {
 			this->inwestycja->TabIndex = 6;
 			this->inwestycja->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->inwestycja->ThousandsSeparator = true;
-			this->inwestycja->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 150000, 0, 0, 0 });
+			this->inwestycja->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100, 0, 0, 0 });
 			this->inwestycja->ValueChanged += gcnew System::EventHandler(this, &MyForm::inwestycja_ValueChanged);
 			// 
 			// groupBox1
@@ -348,6 +349,7 @@ namespace ForEXCLR {
 			// w_walucie
 			// 
 			this->w_walucie->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->w_walucie->DecimalPlaces = 2;
 			this->w_walucie->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->w_walucie->Location = System::Drawing::Point(102, 47);
 			this->w_walucie->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
