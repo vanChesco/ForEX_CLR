@@ -55,7 +55,7 @@ namespace ForEXCLR {
 
 
 
-	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ lb_PLN;
 
 	private: System::Windows::Forms::LinkLabel^ linkLabel1;
 	private: System::Windows::Forms::Label^ w_Wartosc;
@@ -98,7 +98,7 @@ namespace ForEXCLR {
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->w_Zysk = (gcnew System::Windows::Forms::Label());
 			this->w_Wartosc = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->lb_PLN = (gcnew System::Windows::Forms::Label());
 			this->lb_Zysk = (gcnew System::Windows::Forms::Label());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
 			this->label5 = (gcnew System::Windows::Forms::Label());
@@ -265,7 +265,7 @@ namespace ForEXCLR {
 			// 
 			this->groupBox2->Controls->Add(this->w_Zysk);
 			this->groupBox2->Controls->Add(this->w_Wartosc);
-			this->groupBox2->Controls->Add(this->label6);
+			this->groupBox2->Controls->Add(this->lb_PLN);
 			this->groupBox2->Controls->Add(this->lb_Zysk);
 			this->groupBox2->Controls->Add(this->lb_Wartosc);
 			this->groupBox2->Controls->Add(this->label3);
@@ -297,21 +297,21 @@ namespace ForEXCLR {
 																 static_cast<System::Byte>(238)));
 			this->w_Wartosc->Location = System::Drawing::Point(93, 22);
 			this->w_Wartosc->Name = L"w_Wartosc";
-			this->w_Wartosc->Size = System::Drawing::Size(68, 13);
+			this->w_Wartosc->Size = System::Drawing::Size(66, 13);
 			this->w_Wartosc->TabIndex = 13;
 			this->w_Wartosc->Text = L"0";
 			this->w_Wartosc->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
-			// label6
+			// lb_PLN
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lb_PLN->AutoSize = true;
+			this->lb_PLN->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 															  static_cast<System::Byte>(238)));
-			this->label6->Location = System::Drawing::Point(148, 46);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(42, 20);
-			this->label6->TabIndex = 11;
-			this->label6->Text = L"PLN";
+			this->lb_PLN->Location = System::Drawing::Point(148, 46);
+			this->lb_PLN->Name = L"lb_PLN";
+			this->lb_PLN->Size = System::Drawing::Size(42, 20);
+			this->lb_PLN->TabIndex = 11;
+			this->lb_PLN->Text = L"PLN";
 			// 
 			// lb_Zysk
 			// 
@@ -413,14 +413,14 @@ namespace ForEXCLR {
 				lb_Zysk->Text = "Zysk";
 				lb_Zysk->ForeColor = Color::Green;
 				w_Zysk->ForeColor = Color::Green;
-				label6->ForeColor = Color::Green;
+				lb_PLN->ForeColor = Color::Green;
 			}
 			else
 			{
 				lb_Zysk->Text = "Strata";
 				lb_Zysk->ForeColor = Color::Red;
 				w_Zysk->ForeColor = Color::Red;
-				label6->ForeColor = Color::Red;
+				lb_PLN->ForeColor = Color::Red;
 			}
 			w_Wartosc->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * wartosc) / 100);
 			w_Zysk->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * zysk) / 100);
