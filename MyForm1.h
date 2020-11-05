@@ -305,7 +305,7 @@ namespace ForEXCLR {
 			this->lb_Zysk->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->lb_Zysk->Location = System::Drawing::Point(6, 81);
 			this->lb_Zysk->Name = L"lb_Zysk";
-			this->lb_Zysk->Size = System::Drawing::Size(67, 20);
+			this->lb_Zysk->Size = System::Drawing::Size(70, 20);
 			this->lb_Zysk->TabIndex = 5;
 			this->lb_Zysk->Text = L"Zysk";
 			// 
@@ -316,6 +316,7 @@ namespace ForEXCLR {
 			this->linkLabel1->Name = L"linkLabel1";
 			this->linkLabel1->Size = System::Drawing::Size(103, 13);
 			this->linkLabel1->TabIndex = 12;
+			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"2020 ® vanChesco";
 			// 
 			// label5
@@ -472,6 +473,13 @@ namespace ForEXCLR {
 			w_Zysk->ForeColor = Color::Green;
 			lb_PLN->ForeColor = Color::Green;
 		}
+		else if (zysk == 0)
+		{
+			lb_Zysk->Text = "=====";
+			lb_Zysk->ForeColor = Color::Black;
+			w_Zysk->ForeColor = Color::Black;
+			lb_PLN->ForeColor = Color::Black;
+		}
 		else
 		{
 			lb_Zysk->Text = "Strata";
@@ -479,6 +487,7 @@ namespace ForEXCLR {
 			w_Zysk->ForeColor = Color::Red;
 			lb_PLN->ForeColor = Color::Red;
 		}
+
 		w_Wartosc->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * wartosc) / 100);
 		w_Zysk->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * zysk) / 100);
 
