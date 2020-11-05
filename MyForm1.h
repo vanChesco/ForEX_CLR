@@ -61,6 +61,18 @@ namespace ForEXCLR {
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ w_Wartosc;
 	private: System::Windows::Forms::Label^ w_Zysk;
+	private: System::Windows::Forms::GroupBox^ gr_ZS;
+
+	private: System::Windows::Forms::Label^ lb_SumaUSD;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::Label^ lb_SumaPLN;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Label^ lb_Srednia;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::Label^ label14;
 
 	private:
 		/// <summary>
@@ -87,8 +99,8 @@ namespace ForEXCLR {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->w_Zysk = (gcnew System::Windows::Forms::Label());
 			this->w_Wartosc = (gcnew System::Windows::Forms::Label());
+			this->w_Zysk = (gcnew System::Windows::Forms::Label());
 			this->lb_PLN = (gcnew System::Windows::Forms::Label());
 			this->lb_Zysk = (gcnew System::Windows::Forms::Label());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
@@ -100,6 +112,17 @@ namespace ForEXCLR {
 			this->inwest_2 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->gr_ZS = (gcnew System::Windows::Forms::GroupBox());
+			this->lb_Srednia = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->lb_SumaUSD = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->lb_SumaPLN = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_sp))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_1))->BeginInit();
@@ -108,6 +131,8 @@ namespace ForEXCLR {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->w_walucie_2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_2))->BeginInit();
+			this->gr_ZS->SuspendLayout();
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// c_zak_1
@@ -144,9 +169,9 @@ namespace ForEXCLR {
 				static_cast<System::Byte>(238)));
 			this->c_s_label->Location = System::Drawing::Point(6, 21);
 			this->c_s_label->Name = L"c_s_label";
-			this->c_s_label->Size = System::Drawing::Size(82, 13);
+			this->c_s_label->Size = System::Drawing::Size(85, 13);
 			this->c_s_label->TabIndex = 2;
-			this->c_s_label->Text = L"Cena sprzedaży";
+			this->c_s_label->Text = L"Cena sprzedaży:";
 			// 
 			// c_sp
 			// 
@@ -155,7 +180,7 @@ namespace ForEXCLR {
 			this->c_sp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->c_sp->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
-			this->c_sp->Location = System::Drawing::Point(96, 19);
+			this->c_sp->Location = System::Drawing::Point(103, 19);
 			this->c_sp->Name = L"c_sp";
 			this->c_sp->Size = System::Drawing::Size(65, 20);
 			this->c_sp->TabIndex = 5;
@@ -179,9 +204,9 @@ namespace ForEXCLR {
 				static_cast<System::Byte>(0)));
 			this->lb_Wartosc->Location = System::Drawing::Point(6, 53);
 			this->lb_Wartosc->Name = L"lb_Wartosc";
-			this->lb_Wartosc->Size = System::Drawing::Size(47, 13);
+			this->lb_Wartosc->Size = System::Drawing::Size(50, 13);
 			this->lb_Wartosc->TabIndex = 5;
-			this->lb_Wartosc->Text = L"Wartość";
+			this->lb_Wartosc->Text = L"Wartość:";
 			// 
 			// inwest_1
 			// 
@@ -203,7 +228,7 @@ namespace ForEXCLR {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label2->Location = System::Drawing::Point(161, 22);
+			this->label2->Location = System::Drawing::Point(168, 22);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(28, 13);
 			this->label2->TabIndex = 5;
@@ -225,7 +250,7 @@ namespace ForEXCLR {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label3->Location = System::Drawing::Point(159, 53);
+			this->label3->Location = System::Drawing::Point(166, 53);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(31, 13);
 			this->label3->TabIndex = 6;
@@ -244,55 +269,51 @@ namespace ForEXCLR {
 			// 
 			// groupBox2
 			// 
-			this->groupBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->groupBox2->Controls->Add(this->label2);
-			this->groupBox2->Controls->Add(this->w_Zysk);
 			this->groupBox2->Controls->Add(this->c_sp);
 			this->groupBox2->Controls->Add(this->c_s_label);
 			this->groupBox2->Controls->Add(this->w_Wartosc);
-			this->groupBox2->Controls->Add(this->lb_PLN);
-			this->groupBox2->Controls->Add(this->lb_Zysk);
 			this->groupBox2->Controls->Add(this->lb_Wartosc);
 			this->groupBox2->Controls->Add(this->label3);
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox2->Location = System::Drawing::Point(307, 12);
+			this->groupBox2->Location = System::Drawing::Point(15, 130);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(199, 114);
+			this->groupBox2->Size = System::Drawing::Size(202, 81);
 			this->groupBox2->TabIndex = 10;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Po sprzedaży";
 			// 
-			// w_Zysk
-			// 
-			this->w_Zysk->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->w_Zysk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(238)));
-			this->w_Zysk->Location = System::Drawing::Point(82, 81);
-			this->w_Zysk->Name = L"w_Zysk";
-			this->w_Zysk->Size = System::Drawing::Size(68, 20);
-			this->w_Zysk->TabIndex = 14;
-			this->w_Zysk->Text = L"0";
-			this->w_Zysk->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			// 
 			// w_Wartosc
 			// 
-			this->w_Wartosc->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->w_Wartosc->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->w_Wartosc->Location = System::Drawing::Point(93, 53);
+			this->w_Wartosc->Location = System::Drawing::Point(100, 53);
 			this->w_Wartosc->Name = L"w_Wartosc";
 			this->w_Wartosc->Size = System::Drawing::Size(66, 13);
 			this->w_Wartosc->TabIndex = 13;
 			this->w_Wartosc->Text = L"0";
 			this->w_Wartosc->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			// 
+			// w_Zysk
+			// 
+			this->w_Zysk->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->w_Zysk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->w_Zysk->Location = System::Drawing::Point(52, 33);
+			this->w_Zysk->Name = L"w_Zysk";
+			this->w_Zysk->Size = System::Drawing::Size(68, 20);
+			this->w_Zysk->TabIndex = 14;
+			this->w_Zysk->Text = L"0";
+			this->w_Zysk->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
+			// 
 			// lb_PLN
 			// 
+			this->lb_PLN->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->lb_PLN->AutoSize = true;
 			this->lb_PLN->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->lb_PLN->Location = System::Drawing::Point(148, 81);
+			this->lb_PLN->Location = System::Drawing::Point(118, 33);
 			this->lb_PLN->Name = L"lb_PLN";
 			this->lb_PLN->Size = System::Drawing::Size(42, 20);
 			this->lb_PLN->TabIndex = 11;
@@ -303,16 +324,17 @@ namespace ForEXCLR {
 			this->lb_Zysk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lb_Zysk->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lb_Zysk->Location = System::Drawing::Point(6, 81);
+			this->lb_Zysk->Location = System::Drawing::Point(8, 16);
 			this->lb_Zysk->Name = L"lb_Zysk";
 			this->lb_Zysk->Size = System::Drawing::Size(70, 20);
 			this->lb_Zysk->TabIndex = 5;
 			this->lb_Zysk->Text = L"Zysk";
+			this->lb_Zysk->Visible = false;
 			// 
 			// linkLabel1
 			// 
 			this->linkLabel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->linkLabel1->Location = System::Drawing::Point(403, 132);
+			this->linkLabel1->Location = System::Drawing::Point(339, 218);
 			this->linkLabel1->Name = L"linkLabel1";
 			this->linkLabel1->Size = System::Drawing::Size(103, 13);
 			this->linkLabel1->TabIndex = 12;
@@ -416,11 +438,143 @@ namespace ForEXCLR {
 			this->label8->TabIndex = 20;
 			this->label8->Text = L"2";
 			// 
+			// gr_ZS
+			// 
+			this->gr_ZS->Controls->Add(this->lb_PLN);
+			this->gr_ZS->Controls->Add(this->lb_Zysk);
+			this->gr_ZS->Controls->Add(this->w_Zysk);
+			this->gr_ZS->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->gr_ZS->Location = System::Drawing::Point(223, 130);
+			this->gr_ZS->Name = L"gr_ZS";
+			this->gr_ZS->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->gr_ZS->Size = System::Drawing::Size(219, 81);
+			this->gr_ZS->TabIndex = 21;
+			this->gr_ZS->TabStop = false;
+			this->gr_ZS->Text = L"Zysk lub strata";
+			// 
+			// lb_Srednia
+			// 
+			this->lb_Srednia->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lb_Srednia->Location = System::Drawing::Point(45, 36);
+			this->lb_Srednia->Name = L"lb_Srednia";
+			this->lb_Srednia->Size = System::Drawing::Size(47, 18);
+			this->lb_Srednia->TabIndex = 11;
+			this->lb_Srednia->Text = L"0";
+			this->lb_Srednia->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label13->Location = System::Drawing::Point(3, 69);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(37, 13);
+			this->label13->TabIndex = 10;
+			this->label13->Text = L"Suma:";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label12->Location = System::Drawing::Point(3, 5);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(37, 13);
+			this->label12->TabIndex = 10;
+			this->label12->Text = L"Suma:";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(3, 36);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(32, 13);
+			this->label9->TabIndex = 10;
+			this->label9->Text = L"Próg:";
+			// 
+			// lb_SumaUSD
+			// 
+			this->lb_SumaUSD->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lb_SumaUSD->Location = System::Drawing::Point(30, 69);
+			this->lb_SumaUSD->Name = L"lb_SumaUSD";
+			this->lb_SumaUSD->Size = System::Drawing::Size(62, 15);
+			this->lb_SumaUSD->TabIndex = 0;
+			this->lb_SumaUSD->Text = L"0";
+			this->lb_SumaUSD->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label11->Location = System::Drawing::Point(91, 69);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(30, 13);
+			this->label11->TabIndex = 9;
+			this->label11->Text = L"USD";
+			// 
+			// lb_SumaPLN
+			// 
+			this->lb_SumaPLN->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lb_SumaPLN->Location = System::Drawing::Point(27, 5);
+			this->lb_SumaPLN->Name = L"lb_SumaPLN";
+			this->lb_SumaPLN->Size = System::Drawing::Size(65, 18);
+			this->lb_SumaPLN->TabIndex = 0;
+			this->lb_SumaPLN->Text = L"0";
+			this->lb_SumaPLN->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label14->Location = System::Drawing::Point(93, 36);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(28, 13);
+			this->label14->TabIndex = 9;
+			this->label14->Text = L"PLN";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label10->Location = System::Drawing::Point(93, 5);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(28, 13);
+			this->label10->TabIndex = 9;
+			this->label10->Text = L"PLN";
+			// 
+			// panel1
+			// 
+			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel1->Controls->Add(this->lb_Srednia);
+			this->panel1->Controls->Add(this->label12);
+			this->panel1->Controls->Add(this->label13);
+			this->panel1->Controls->Add(this->label10);
+			this->panel1->Controls->Add(this->label14);
+			this->panel1->Controls->Add(this->label9);
+			this->panel1->Controls->Add(this->lb_SumaPLN);
+			this->panel1->Controls->Add(this->lb_SumaUSD);
+			this->panel1->Controls->Add(this->label11);
+			this->panel1->Location = System::Drawing::Point(311, 27);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(131, 91);
+			this->panel1->TabIndex = 22;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(516, 154);
+			this->ClientSize = System::Drawing::Size(454, 240);
+			this->Controls->Add(this->gr_ZS);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->w_walucie_2);
@@ -437,6 +591,7 @@ namespace ForEXCLR {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->inwest_1);
 			this->Controls->Add(this->lb_Inwestycja);
+			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
@@ -453,6 +608,10 @@ namespace ForEXCLR {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->w_walucie_2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_2))->EndInit();
+			this->gr_ZS->ResumeLayout(false);
+			this->gr_ZS->PerformLayout();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -465,6 +624,9 @@ namespace ForEXCLR {
 		w_walucie_2->Value = inwest_2->Value / c_zak_2->Value;
 		System::Decimal wartosc = c_sp->Value * System::Decimal::operator+(w_walucie_1->Value, w_walucie_2->Value);// System::Decimal::operator+(inwest_1->Value * (c_sp->Value / c_zak_1->Value), inwest_2->Value * (c_sp->Value / c_zak_2->Value));
 		System::Decimal zysk = System::Decimal::operator+(System::Decimal::operator-(inwest_1->Value * (c_sp->Value / c_zak_1->Value), inwest_1->Value), System::Decimal::operator-(inwest_2->Value * (c_sp->Value / c_zak_2->Value), inwest_2->Value));
+		System::Decimal sumaPLN = System::Decimal::operator+(inwest_1->Value, inwest_2->Value);
+		System::Decimal sumaUSD = System::Decimal::operator+(w_walucie_1->Value, w_walucie_2->Value);
+		System::Decimal prog = (c_zak_1->Value * c_zak_2->Value) * System::Decimal::operator+(inwest_1->Value, inwest_2->Value) / System::Decimal::operator+(inwest_1->Value * c_zak_2->Value, inwest_2->Value * c_zak_1->Value); ;
 
 		if (zysk > 0)
 		{
@@ -472,6 +634,7 @@ namespace ForEXCLR {
 			lb_Zysk->ForeColor = Color::Green;
 			w_Zysk->ForeColor = Color::Green;
 			lb_PLN->ForeColor = Color::Green;
+			gr_ZS->Text = "Zysk";
 		}
 		else if (zysk == 0)
 		{
@@ -479,6 +642,7 @@ namespace ForEXCLR {
 			lb_Zysk->ForeColor = Color::Black;
 			w_Zysk->ForeColor = Color::Black;
 			lb_PLN->ForeColor = Color::Black;
+			gr_ZS->Text = "===";
 		}
 		else
 		{
@@ -486,10 +650,14 @@ namespace ForEXCLR {
 			lb_Zysk->ForeColor = Color::Red;
 			w_Zysk->ForeColor = Color::Red;
 			lb_PLN->ForeColor = Color::Red;
+			gr_ZS->Text = "Strata";
 		}
 
 		w_Wartosc->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * wartosc) / 100);
 		w_Zysk->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * zysk) / 100);
+		lb_SumaPLN->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * sumaPLN) / 100);
+		lb_SumaUSD->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * sumaUSD) / 100);
+		lb_Srednia->Text = System::Convert::ToString(System::Decimal::Ceiling(10000 * prog) / 10000);
 
 		std::ofstream stan;
 
