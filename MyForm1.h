@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <fstream>
 
 namespace ForEXCLR {
 
@@ -116,13 +117,13 @@ namespace ForEXCLR {
 			this->c_zak_1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->c_zak_1->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
-			this->c_zak_1->Location = System::Drawing::Point(103, 71);
+			this->c_zak_1->Location = System::Drawing::Point(103, 63);
 			this->c_zak_1->Name = L"c_zak_1";
 			this->c_zak_1->Size = System::Drawing::Size(80, 20);
-			this->c_zak_1->TabIndex = 0;
+			this->c_zak_1->TabIndex = 3;
 			this->c_zak_1->Tag = L"";
 			this->c_zak_1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_zak_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38858, 0, 0, 262144 });
+			this->c_zak_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->c_zak_1->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_zak_1_ValueChanged);
 			// 
 			// c_k_label
@@ -130,7 +131,7 @@ namespace ForEXCLR {
 			this->c_k_label->AutoSize = true;
 			this->c_k_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->c_k_label->Location = System::Drawing::Point(12, 72);
+			this->c_k_label->Location = System::Drawing::Point(12, 64);
 			this->c_k_label->Name = L"c_k_label";
 			this->c_k_label->Size = System::Drawing::Size(73, 13);
 			this->c_k_label->TabIndex = 1;
@@ -157,15 +158,15 @@ namespace ForEXCLR {
 			this->c_sp->Location = System::Drawing::Point(96, 19);
 			this->c_sp->Name = L"c_sp";
 			this->c_sp->Size = System::Drawing::Size(65, 20);
-			this->c_sp->TabIndex = 3;
+			this->c_sp->TabIndex = 5;
 			this->c_sp->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_sp->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 37, 0, 0, 65536 });
+			this->c_sp->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->c_sp->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_sp_1_ValueChanged);
 			// 
 			// lb_Inwestycja
 			// 
 			this->lb_Inwestycja->AutoSize = true;
-			this->lb_Inwestycja->Location = System::Drawing::Point(12, 41);
+			this->lb_Inwestycja->Location = System::Drawing::Point(12, 33);
 			this->lb_Inwestycja->Name = L"lb_Inwestycja";
 			this->lb_Inwestycja->Size = System::Drawing::Size(85, 13);
 			this->lb_Inwestycja->TabIndex = 4;
@@ -187,14 +188,14 @@ namespace ForEXCLR {
 			this->inwest_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->inwest_1->DecimalPlaces = 2;
 			this->inwest_1->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->inwest_1->Location = System::Drawing::Point(103, 40);
+			this->inwest_1->Location = System::Drawing::Point(103, 32);
 			this->inwest_1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->inwest_1->Name = L"inwest_1";
 			this->inwest_1->Size = System::Drawing::Size(80, 20);
-			this->inwest_1->TabIndex = 6;
+			this->inwest_1->TabIndex = 1;
 			this->inwest_1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->inwest_1->ThousandsSeparator = true;
-			this->inwest_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 150000, 0, 0, 0 });
+			this->inwest_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->inwest_1->ValueChanged += gcnew System::EventHandler(this, &MyForm::inwest_1_ValueChanged);
 			// 
 			// label2
@@ -213,7 +214,7 @@ namespace ForEXCLR {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label1->Location = System::Drawing::Point(275, 72);
+			this->label1->Location = System::Drawing::Point(275, 64);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(28, 13);
 			this->label1->TabIndex = 4;
@@ -235,7 +236,7 @@ namespace ForEXCLR {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label4->Location = System::Drawing::Point(275, 41);
+			this->label4->Location = System::Drawing::Point(275, 33);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(28, 13);
 			this->label4->TabIndex = 9;
@@ -255,7 +256,7 @@ namespace ForEXCLR {
 			this->groupBox2->Controls->Add(this->label3);
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox2->Location = System::Drawing::Point(307, 20);
+			this->groupBox2->Location = System::Drawing::Point(307, 12);
 			this->groupBox2->Name = L"groupBox2";
 			this->groupBox2->Size = System::Drawing::Size(199, 114);
 			this->groupBox2->TabIndex = 10;
@@ -311,11 +312,10 @@ namespace ForEXCLR {
 			// linkLabel1
 			// 
 			this->linkLabel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->linkLabel1->Location = System::Drawing::Point(403, 140);
+			this->linkLabel1->Location = System::Drawing::Point(403, 132);
 			this->linkLabel1->Name = L"linkLabel1";
 			this->linkLabel1->Size = System::Drawing::Size(103, 13);
 			this->linkLabel1->TabIndex = 12;
-			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"2020 ® vanChesco";
 			// 
 			// label5
@@ -323,7 +323,7 @@ namespace ForEXCLR {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label5->Location = System::Drawing::Point(275, 105);
+			this->label5->Location = System::Drawing::Point(275, 97);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(30, 13);
 			this->label5->TabIndex = 15;
@@ -334,11 +334,11 @@ namespace ForEXCLR {
 			this->w_walucie_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->w_walucie_1->DecimalPlaces = 2;
 			this->w_walucie_1->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->w_walucie_1->Location = System::Drawing::Point(103, 104);
+			this->w_walucie_1->Location = System::Drawing::Point(103, 96);
 			this->w_walucie_1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->w_walucie_1->Name = L"w_walucie_1";
 			this->w_walucie_1->Size = System::Drawing::Size(80, 20);
-			this->w_walucie_1->TabIndex = 14;
+			this->w_walucie_1->TabIndex = 6;
 			this->w_walucie_1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->w_walucie_1->ThousandsSeparator = true;
 			this->w_walucie_1->ValueChanged += gcnew System::EventHandler(this, &MyForm::w_walucie_1_ValueChanged);
@@ -346,7 +346,7 @@ namespace ForEXCLR {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(12, 105);
+			this->label7->Location = System::Drawing::Point(12, 97);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(60, 13);
 			this->label7->TabIndex = 13;
@@ -357,11 +357,11 @@ namespace ForEXCLR {
 			this->w_walucie_2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->w_walucie_2->DecimalPlaces = 2;
 			this->w_walucie_2->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->w_walucie_2->Location = System::Drawing::Point(189, 103);
+			this->w_walucie_2->Location = System::Drawing::Point(189, 95);
 			this->w_walucie_2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->w_walucie_2->Name = L"w_walucie_2";
 			this->w_walucie_2->Size = System::Drawing::Size(80, 20);
-			this->w_walucie_2->TabIndex = 18;
+			this->w_walucie_2->TabIndex = 7;
 			this->w_walucie_2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->w_walucie_2->ThousandsSeparator = true;
 			this->w_walucie_2->ValueChanged += gcnew System::EventHandler(this, &MyForm::w_walucie_2_ValueChanged);
@@ -373,13 +373,13 @@ namespace ForEXCLR {
 			this->c_zak_2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->c_zak_2->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
-			this->c_zak_2->Location = System::Drawing::Point(189, 70);
+			this->c_zak_2->Location = System::Drawing::Point(189, 62);
 			this->c_zak_2->Name = L"c_zak_2";
 			this->c_zak_2->Size = System::Drawing::Size(80, 20);
-			this->c_zak_2->TabIndex = 16;
+			this->c_zak_2->TabIndex = 4;
 			this->c_zak_2->Tag = L"";
 			this->c_zak_2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_zak_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 384, 0, 0, 131072 });
+			this->c_zak_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->c_zak_2->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_zak_2_ValueChanged);
 			// 
 			// inwest_2
@@ -387,20 +387,20 @@ namespace ForEXCLR {
 			this->inwest_2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->inwest_2->DecimalPlaces = 2;
 			this->inwest_2->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->inwest_2->Location = System::Drawing::Point(189, 39);
+			this->inwest_2->Location = System::Drawing::Point(189, 31);
 			this->inwest_2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->inwest_2->Name = L"inwest_2";
 			this->inwest_2->Size = System::Drawing::Size(80, 20);
-			this->inwest_2->TabIndex = 17;
+			this->inwest_2->TabIndex = 2;
 			this->inwest_2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->inwest_2->ThousandsSeparator = true;
-			this->inwest_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
+			this->inwest_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->inwest_2->ValueChanged += gcnew System::EventHandler(this, &MyForm::inwest_2_ValueChanged);
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(134, 20);
+			this->label6->Location = System::Drawing::Point(134, 12);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(13, 13);
 			this->label6->TabIndex = 19;
@@ -409,7 +409,7 @@ namespace ForEXCLR {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(226, 20);
+			this->label8->Location = System::Drawing::Point(226, 12);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(13, 13);
 			this->label8->TabIndex = 20;
@@ -419,7 +419,7 @@ namespace ForEXCLR {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(516, 162);
+			this->ClientSize = System::Drawing::Size(516, 154);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->w_walucie_2);
@@ -481,11 +481,56 @@ namespace ForEXCLR {
 		}
 		w_Wartosc->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * wartosc) / 100);
 		w_Zysk->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * zysk) / 100);
+
+		std::ofstream stan;
+
+		stan.open("stan", std::ios_base::binary);
+
+		if (!stan.is_open())
+		{
+			System::Windows::Forms::MessageBox::Show("Wystapil problem z otwarciem pliku ostatniego stanu", "Blad", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+		else
+		{
+			stan.write((const char*)&inwest_1->Value, sizeof(inwest_1->Value));
+			stan.write((const char*)&inwest_2->Value, sizeof(inwest_2->Value));
+			stan.write((const char*)&c_zak_1->Value, sizeof(c_zak_1->Value));
+			stan.write((const char*)&c_zak_2->Value, sizeof(c_zak_2->Value));
+			stan.write((const char*)&c_sp->Value, sizeof(c_sp->Value));
+		//	System::Windows::Forms::MessageBox::Show("Stan zaktualizowany", "Zapis", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		stan.close();
 	}
 
 
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
+
+		std::ifstream stan;
+		stan.open("stan", std::ios_base::binary);
+
+		if (!stan.is_open())
+		{
+			System::Windows::Forms::MessageBox::Show("Wystapil problem z otwarciem pliku ostatniego stanu", "Blad", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+		else
+		{
+			System::Decimal temp;
+			stan.read((char*)&temp, sizeof(temp));
+			inwest_1->Value = temp;
+			stan.read((char*)&temp, sizeof(temp)); 
+			inwest_2->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			c_zak_1->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			c_zak_2->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			c_sp->Value = temp;
+	
+			//System::Windows::Forms::MessageBox::Show("Stan zostal wczytany", "Odczyt stanu", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		stan.close();
+		
 		oblicz();
 	}
 
