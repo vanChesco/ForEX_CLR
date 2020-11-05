@@ -34,41 +34,32 @@ namespace ForEXCLR {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::NumericUpDown^ c_zak;
+
+	private: System::Windows::Forms::NumericUpDown^ c_zak_1;
+	private: System::Windows::Forms::NumericUpDown^ c_zak_2;
+	private: System::Windows::Forms::NumericUpDown^ inwest_1;
+	private: System::Windows::Forms::NumericUpDown^ inwest_2;
+	private: System::Windows::Forms::NumericUpDown^ c_sp;
+	private: System::Windows::Forms::NumericUpDown^ w_walucie_1;
+	private: System::Windows::Forms::NumericUpDown^ w_walucie_2;
+	private: System::Windows::Forms::LinkLabel^ linkLabel1;
+	private: System::Windows::Forms::GroupBox^ groupBox2;
 	private: System::Windows::Forms::Label^ c_k_label;
 	private: System::Windows::Forms::Label^ c_s_label;
-	private: System::Windows::Forms::NumericUpDown^ c_sp;
 	private: System::Windows::Forms::Label^ lb_Inwestycja;
-
 	private: System::Windows::Forms::Label^ lb_Wartosc;
-
-	private: System::Windows::Forms::NumericUpDown^ inwestycja;
-
-	private: System::Windows::Forms::GroupBox^ groupBox1;
-
-	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ lb_Zysk;
+	private: System::Windows::Forms::Label^ lb_PLN;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::GroupBox^ groupBox2;
-	private: System::Windows::Forms::Label^ lb_Zysk;
-
-
-
-	private: System::Windows::Forms::Label^ lb_PLN;
-
-	private: System::Windows::Forms::LinkLabel^ linkLabel1;
-	private: System::Windows::Forms::Label^ w_Wartosc;
-
-	private: System::Windows::Forms::Label^ w_Zysk;
 	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::NumericUpDown^ w_walucie;
-
+	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label7;
-
-
-
-
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ w_Wartosc;
+	private: System::Windows::Forms::Label^ w_Zysk;
 
 	private:
 		/// <summary>
@@ -83,14 +74,13 @@ namespace ForEXCLR {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->c_zak = (gcnew System::Windows::Forms::NumericUpDown());
+			this->c_zak_1 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->c_k_label = (gcnew System::Windows::Forms::Label());
 			this->c_s_label = (gcnew System::Windows::Forms::Label());
 			this->c_sp = (gcnew System::Windows::Forms::NumericUpDown());
 			this->lb_Inwestycja = (gcnew System::Windows::Forms::Label());
 			this->lb_Wartosc = (gcnew System::Windows::Forms::Label());
-			this->inwestycja = (gcnew System::Windows::Forms::NumericUpDown());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->inwest_1 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -102,49 +92,56 @@ namespace ForEXCLR {
 			this->lb_Zysk = (gcnew System::Windows::Forms::Label());
 			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->w_walucie = (gcnew System::Windows::Forms::NumericUpDown());
+			this->w_walucie_1 = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak))->BeginInit();
+			this->w_walucie_2 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->c_zak_2 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->inwest_2 = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_sp))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwestycja))->BeginInit();
-			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_1))->BeginInit();
 			this->groupBox2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->w_walucie))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->w_walucie_1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->w_walucie_2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_2))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// c_zak
+			// c_zak_1
 			// 
-			this->c_zak->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->c_zak->DecimalPlaces = 4;
-			this->c_zak->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															 static_cast<System::Byte>(238)));
-			this->c_zak->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
-			this->c_zak->Location = System::Drawing::Point(9, 39);
-			this->c_zak->Name = L"c_zak";
-			this->c_zak->Size = System::Drawing::Size(65, 20);
-			this->c_zak->TabIndex = 0;
-			this->c_zak->Tag = L"";
-			this->c_zak->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_zak->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38858, 0, 0, 262144 });
-			this->c_zak->ValueChanged += gcnew System::EventHandler(this, &MyForm::numericUpDown1_ValueChanged);
+			this->c_zak_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->c_zak_1->DecimalPlaces = 4;
+			this->c_zak_1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->c_zak_1->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
+			this->c_zak_1->Location = System::Drawing::Point(103, 71);
+			this->c_zak_1->Name = L"c_zak_1";
+			this->c_zak_1->Size = System::Drawing::Size(80, 20);
+			this->c_zak_1->TabIndex = 0;
+			this->c_zak_1->Tag = L"";
+			this->c_zak_1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->c_zak_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38858, 0, 0, 262144 });
+			this->c_zak_1->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_zak_1_ValueChanged);
 			// 
 			// c_k_label
 			// 
 			this->c_k_label->AutoSize = true;
 			this->c_k_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																 static_cast<System::Byte>(238)));
-			this->c_k_label->Location = System::Drawing::Point(8, 21);
+				static_cast<System::Byte>(238)));
+			this->c_k_label->Location = System::Drawing::Point(12, 72);
 			this->c_k_label->Name = L"c_k_label";
-			this->c_k_label->Size = System::Drawing::Size(70, 13);
+			this->c_k_label->Size = System::Drawing::Size(73, 13);
 			this->c_k_label->TabIndex = 1;
-			this->c_k_label->Text = L"Cena zakupu";
+			this->c_k_label->Text = L"Cena zakupu:";
 			// 
 			// c_s_label
 			// 
 			this->c_s_label->AutoSize = true;
 			this->c_s_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																 static_cast<System::Byte>(238)));
-			this->c_s_label->Location = System::Drawing::Point(101, 20);
+				static_cast<System::Byte>(238)));
+			this->c_s_label->Location = System::Drawing::Point(6, 21);
 			this->c_s_label->Name = L"c_s_label";
 			this->c_s_label->Size = System::Drawing::Size(82, 13);
 			this->c_s_label->TabIndex = 2;
@@ -155,20 +152,20 @@ namespace ForEXCLR {
 			this->c_sp->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->c_sp->DecimalPlaces = 4;
 			this->c_sp->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															static_cast<System::Byte>(238)));
+				static_cast<System::Byte>(238)));
 			this->c_sp->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
-			this->c_sp->Location = System::Drawing::Point(102, 38);
+			this->c_sp->Location = System::Drawing::Point(96, 19);
 			this->c_sp->Name = L"c_sp";
 			this->c_sp->Size = System::Drawing::Size(65, 20);
 			this->c_sp->TabIndex = 3;
 			this->c_sp->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_sp->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 39, 0, 0, 65536 });
-			this->c_sp->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_sp_ValueChanged);
+			this->c_sp->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 37, 0, 0, 65536 });
+			this->c_sp->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_sp_1_ValueChanged);
 			// 
 			// lb_Inwestycja
 			// 
 			this->lb_Inwestycja->AutoSize = true;
-			this->lb_Inwestycja->Location = System::Drawing::Point(11, 20);
+			this->lb_Inwestycja->Location = System::Drawing::Point(12, 41);
 			this->lb_Inwestycja->Name = L"lb_Inwestycja";
 			this->lb_Inwestycja->Size = System::Drawing::Size(85, 13);
 			this->lb_Inwestycja->TabIndex = 4;
@@ -178,52 +175,34 @@ namespace ForEXCLR {
 			// 
 			this->lb_Wartosc->AutoSize = true;
 			this->lb_Wartosc->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																  static_cast<System::Byte>(0)));
-			this->lb_Wartosc->Location = System::Drawing::Point(6, 22);
+				static_cast<System::Byte>(0)));
+			this->lb_Wartosc->Location = System::Drawing::Point(6, 53);
 			this->lb_Wartosc->Name = L"lb_Wartosc";
 			this->lb_Wartosc->Size = System::Drawing::Size(47, 13);
 			this->lb_Wartosc->TabIndex = 5;
 			this->lb_Wartosc->Text = L"Wartość";
 			// 
-			// inwestycja
+			// inwest_1
 			// 
-			this->inwestycja->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->inwestycja->DecimalPlaces = 2;
-			this->inwestycja->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->inwestycja->Location = System::Drawing::Point(102, 18);
-			this->inwestycja->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
-			this->inwestycja->Name = L"inwestycja";
-			this->inwestycja->Size = System::Drawing::Size(80, 20);
-			this->inwestycja->TabIndex = 6;
-			this->inwestycja->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->inwestycja->ThousandsSeparator = true;
-			this->inwestycja->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100, 0, 0, 0 });
-			this->inwestycja->ValueChanged += gcnew System::EventHandler(this, &MyForm::inwestycja_ValueChanged);
-			// 
-			// groupBox1
-			// 
-			this->groupBox1->Controls->Add(this->label2);
-			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Controls->Add(this->c_k_label);
-			this->groupBox1->Controls->Add(this->c_zak);
-			this->groupBox1->Controls->Add(this->c_s_label);
-			this->groupBox1->Controls->Add(this->c_sp);
-			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-																 static_cast<System::Byte>(238)));
-			this->groupBox1->Location = System::Drawing::Point(14, 73);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->groupBox1->Size = System::Drawing::Size(199, 69);
-			this->groupBox1->TabIndex = 7;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Spread";
+			this->inwest_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->inwest_1->DecimalPlaces = 2;
+			this->inwest_1->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->inwest_1->Location = System::Drawing::Point(103, 40);
+			this->inwest_1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->inwest_1->Name = L"inwest_1";
+			this->inwest_1->Size = System::Drawing::Size(80, 20);
+			this->inwest_1->TabIndex = 6;
+			this->inwest_1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->inwest_1->ThousandsSeparator = true;
+			this->inwest_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 150000, 0, 0, 0 });
+			this->inwest_1->ValueChanged += gcnew System::EventHandler(this, &MyForm::inwest_1_ValueChanged);
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
-			this->label2->Location = System::Drawing::Point(167, 41);
+				static_cast<System::Byte>(238)));
+			this->label2->Location = System::Drawing::Point(161, 22);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(28, 13);
 			this->label2->TabIndex = 5;
@@ -233,8 +212,8 @@ namespace ForEXCLR {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
-			this->label1->Location = System::Drawing::Point(74, 41);
+				static_cast<System::Byte>(238)));
+			this->label1->Location = System::Drawing::Point(275, 72);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(28, 13);
 			this->label1->TabIndex = 4;
@@ -244,8 +223,8 @@ namespace ForEXCLR {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
-			this->label3->Location = System::Drawing::Point(159, 22);
+				static_cast<System::Byte>(238)));
+			this->label3->Location = System::Drawing::Point(159, 53);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(31, 13);
 			this->label3->TabIndex = 6;
@@ -255,8 +234,8 @@ namespace ForEXCLR {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
-			this->label4->Location = System::Drawing::Point(183, 20);
+				static_cast<System::Byte>(238)));
+			this->label4->Location = System::Drawing::Point(275, 41);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(28, 13);
 			this->label4->TabIndex = 9;
@@ -264,17 +243,21 @@ namespace ForEXCLR {
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->groupBox2->Controls->Add(this->label2);
 			this->groupBox2->Controls->Add(this->w_Zysk);
+			this->groupBox2->Controls->Add(this->c_sp);
+			this->groupBox2->Controls->Add(this->c_s_label);
 			this->groupBox2->Controls->Add(this->w_Wartosc);
 			this->groupBox2->Controls->Add(this->lb_PLN);
 			this->groupBox2->Controls->Add(this->lb_Zysk);
 			this->groupBox2->Controls->Add(this->lb_Wartosc);
 			this->groupBox2->Controls->Add(this->label3);
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-																 static_cast<System::Byte>(0)));
-			this->groupBox2->Location = System::Drawing::Point(14, 148);
+				static_cast<System::Byte>(0)));
+			this->groupBox2->Location = System::Drawing::Point(307, 20);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(199, 78);
+			this->groupBox2->Size = System::Drawing::Size(199, 114);
 			this->groupBox2->TabIndex = 10;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Po sprzedaży";
@@ -283,8 +266,8 @@ namespace ForEXCLR {
 			// 
 			this->w_Zysk->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->w_Zysk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
-			this->w_Zysk->Location = System::Drawing::Point(82, 46);
+				static_cast<System::Byte>(238)));
+			this->w_Zysk->Location = System::Drawing::Point(82, 81);
 			this->w_Zysk->Name = L"w_Zysk";
 			this->w_Zysk->Size = System::Drawing::Size(68, 20);
 			this->w_Zysk->TabIndex = 14;
@@ -295,8 +278,8 @@ namespace ForEXCLR {
 			// 
 			this->w_Wartosc->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->w_Wartosc->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-																 static_cast<System::Byte>(238)));
-			this->w_Wartosc->Location = System::Drawing::Point(93, 22);
+				static_cast<System::Byte>(238)));
+			this->w_Wartosc->Location = System::Drawing::Point(93, 53);
 			this->w_Wartosc->Name = L"w_Wartosc";
 			this->w_Wartosc->Size = System::Drawing::Size(66, 13);
 			this->w_Wartosc->TabIndex = 13;
@@ -307,8 +290,8 @@ namespace ForEXCLR {
 			// 
 			this->lb_PLN->AutoSize = true;
 			this->lb_PLN->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
-			this->lb_PLN->Location = System::Drawing::Point(148, 46);
+				static_cast<System::Byte>(238)));
+			this->lb_PLN->Location = System::Drawing::Point(148, 81);
 			this->lb_PLN->Name = L"lb_PLN";
 			this->lb_PLN->Size = System::Drawing::Size(42, 20);
 			this->lb_PLN->TabIndex = 11;
@@ -317,9 +300,9 @@ namespace ForEXCLR {
 			// lb_Zysk
 			// 
 			this->lb_Zysk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-															   static_cast<System::Byte>(0)));
+				static_cast<System::Byte>(0)));
 			this->lb_Zysk->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lb_Zysk->Location = System::Drawing::Point(6, 46);
+			this->lb_Zysk->Location = System::Drawing::Point(6, 81);
 			this->lb_Zysk->Name = L"lb_Zysk";
 			this->lb_Zysk->Size = System::Drawing::Size(67, 20);
 			this->lb_Zysk->TabIndex = 5;
@@ -327,10 +310,10 @@ namespace ForEXCLR {
 			// 
 			// linkLabel1
 			// 
-			this->linkLabel1->AutoSize = true;
-			this->linkLabel1->Location = System::Drawing::Point(115, 229);
+			this->linkLabel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->linkLabel1->Location = System::Drawing::Point(403, 140);
 			this->linkLabel1->Name = L"linkLabel1";
-			this->linkLabel1->Size = System::Drawing::Size(99, 13);
+			this->linkLabel1->Size = System::Drawing::Size(103, 13);
 			this->linkLabel1->TabIndex = 12;
 			this->linkLabel1->TabStop = true;
 			this->linkLabel1->Text = L"2020 ® vanChesco";
@@ -339,94 +322,166 @@ namespace ForEXCLR {
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-															  static_cast<System::Byte>(238)));
-			this->label5->Location = System::Drawing::Point(183, 49);
+				static_cast<System::Byte>(238)));
+			this->label5->Location = System::Drawing::Point(275, 105);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(30, 13);
 			this->label5->TabIndex = 15;
 			this->label5->Text = L"USD";
 			// 
-			// w_walucie
+			// w_walucie_1
 			// 
-			this->w_walucie->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->w_walucie->DecimalPlaces = 2;
-			this->w_walucie->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->w_walucie->Location = System::Drawing::Point(102, 47);
-			this->w_walucie->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
-			this->w_walucie->Name = L"w_walucie";
-			this->w_walucie->Size = System::Drawing::Size(80, 20);
-			this->w_walucie->TabIndex = 14;
-			this->w_walucie->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->w_walucie->ThousandsSeparator = true;
-			this->w_walucie->ValueChanged += gcnew System::EventHandler(this, &MyForm::w_walucie_ValueChanged);
+			this->w_walucie_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->w_walucie_1->DecimalPlaces = 2;
+			this->w_walucie_1->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->w_walucie_1->Location = System::Drawing::Point(103, 104);
+			this->w_walucie_1->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->w_walucie_1->Name = L"w_walucie_1";
+			this->w_walucie_1->Size = System::Drawing::Size(80, 20);
+			this->w_walucie_1->TabIndex = 14;
+			this->w_walucie_1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->w_walucie_1->ThousandsSeparator = true;
+			this->w_walucie_1->ValueChanged += gcnew System::EventHandler(this, &MyForm::w_walucie_1_ValueChanged);
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(11, 49);
+			this->label7->Location = System::Drawing::Point(12, 105);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(60, 13);
 			this->label7->TabIndex = 13;
 			this->label7->Text = L"W walucie:";
 			// 
+			// w_walucie_2
+			// 
+			this->w_walucie_2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->w_walucie_2->DecimalPlaces = 2;
+			this->w_walucie_2->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->w_walucie_2->Location = System::Drawing::Point(189, 103);
+			this->w_walucie_2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->w_walucie_2->Name = L"w_walucie_2";
+			this->w_walucie_2->Size = System::Drawing::Size(80, 20);
+			this->w_walucie_2->TabIndex = 18;
+			this->w_walucie_2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->w_walucie_2->ThousandsSeparator = true;
+			this->w_walucie_2->ValueChanged += gcnew System::EventHandler(this, &MyForm::w_walucie_2_ValueChanged);
+			// 
+			// c_zak_2
+			// 
+			this->c_zak_2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->c_zak_2->DecimalPlaces = 4;
+			this->c_zak_2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->c_zak_2->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
+			this->c_zak_2->Location = System::Drawing::Point(189, 70);
+			this->c_zak_2->Name = L"c_zak_2";
+			this->c_zak_2->Size = System::Drawing::Size(80, 20);
+			this->c_zak_2->TabIndex = 16;
+			this->c_zak_2->Tag = L"";
+			this->c_zak_2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->c_zak_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 384, 0, 0, 131072 });
+			this->c_zak_2->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_zak_2_ValueChanged);
+			// 
+			// inwest_2
+			// 
+			this->inwest_2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->inwest_2->DecimalPlaces = 2;
+			this->inwest_2->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->inwest_2->Location = System::Drawing::Point(189, 39);
+			this->inwest_2->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->inwest_2->Name = L"inwest_2";
+			this->inwest_2->Size = System::Drawing::Size(80, 20);
+			this->inwest_2->TabIndex = 17;
+			this->inwest_2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->inwest_2->ThousandsSeparator = true;
+			this->inwest_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
+			this->inwest_2->ValueChanged += gcnew System::EventHandler(this, &MyForm::inwest_2_ValueChanged);
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(134, 20);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(13, 13);
+			this->label6->TabIndex = 19;
+			this->label6->Text = L"1";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(226, 20);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(13, 13);
+			this->label8->TabIndex = 20;
+			this->label8->Text = L"2";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(224, 249);
+			this->ClientSize = System::Drawing::Size(516, 162);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->w_walucie_2);
 			this->Controls->Add(this->label5);
-			this->Controls->Add(this->w_walucie);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->c_zak_2);
+			this->Controls->Add(this->w_walucie_1);
+			this->Controls->Add(this->inwest_2);
+			this->Controls->Add(this->c_k_label);
 			this->Controls->Add(this->label7);
+			this->Controls->Add(this->c_zak_1);
 			this->Controls->Add(this->linkLabel1);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->label4);
-			this->Controls->Add(this->groupBox1);
-			this->Controls->Add(this->inwestycja);
+			this->Controls->Add(this->inwest_1);
 			this->Controls->Add(this->lb_Inwestycja);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
 			this->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->ShowIcon = false;
-			this->Text = L"Forex";
+			this->Text = L"Waluty";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_sp))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwestycja))->EndInit();
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_1))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->w_walucie))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->w_walucie_1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->w_walucie_2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 
-		void oblicz()
-		{
-			System::Decimal wartosc = inwestycja->Value * (c_sp->Value / c_zak->Value);
-			System::Decimal zysk = System::Decimal::operator-(inwestycja->Value * (c_sp->Value / c_zak->Value), inwestycja->Value);
-			w_walucie->Value = inwestycja->Value / c_zak->Value;
+	private: System::Void oblicz()
+	{
+		w_walucie_1->Value = inwest_1->Value / c_zak_1->Value;
+		w_walucie_2->Value = inwest_2->Value / c_zak_2->Value;
+		System::Decimal wartosc = c_sp->Value * System::Decimal::operator+(w_walucie_1->Value, w_walucie_2->Value);// System::Decimal::operator+(inwest_1->Value * (c_sp->Value / c_zak_1->Value), inwest_2->Value * (c_sp->Value / c_zak_2->Value));
+		System::Decimal zysk = System::Decimal::operator+(System::Decimal::operator-(inwest_1->Value * (c_sp->Value / c_zak_1->Value), inwest_1->Value), System::Decimal::operator-(inwest_2->Value * (c_sp->Value / c_zak_2->Value), inwest_2->Value));
 
-			if (zysk > 0)
-			{
-				lb_Zysk->Text = "Zysk";
-				lb_Zysk->ForeColor = Color::Green;
-				w_Zysk->ForeColor = Color::Green;
-				lb_PLN->ForeColor = Color::Green;
-			}
-			else
-			{
-				lb_Zysk->Text = "Strata";
-				lb_Zysk->ForeColor = Color::Red;
-				w_Zysk->ForeColor = Color::Red;
-				lb_PLN->ForeColor = Color::Red;
-			}
-			w_Wartosc->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * wartosc) / 100);
-			w_Zysk->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * zysk) / 100);
+		if (zysk > 0)
+		{
+			lb_Zysk->Text = "Zysk";
+			lb_Zysk->ForeColor = Color::Green;
+			w_Zysk->ForeColor = Color::Green;
+			lb_PLN->ForeColor = Color::Green;
 		}
+		else
+		{
+			lb_Zysk->Text = "Strata";
+			lb_Zysk->ForeColor = Color::Red;
+			w_Zysk->ForeColor = Color::Red;
+			lb_PLN->ForeColor = Color::Red;
+		}
+		w_Wartosc->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * wartosc) / 100);
+		w_Zysk->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * zysk) / 100);
+	}
 
 
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
@@ -434,23 +489,40 @@ namespace ForEXCLR {
 		oblicz();
 	}
 
-	private: System::Void numericUpDown1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void c_zak_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
 	}
 
-	private: System::Void c_sp_ValueChanged(System::Object^ sender, System::EventArgs^ e)
-	{
-		oblicz();
-	}
-	private: System::Void inwestycja_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	private: System::Void c_zak_2_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
 	}
 
-private: System::Void w_walucie_ValueChanged(System::Object^ sender, System::EventArgs^ e)
-{
-	inwestycja->Value = c_zak->Value * w_walucie->Value;
-}
+	private: System::Void c_sp_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		oblicz();
+	}
+
+	private: System::Void inwest_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		oblicz();
+	}
+
+	private: System::Void inwest_2_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		oblicz();
+	}
+
+	private: System::Void w_walucie_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		inwest_1->Value = c_zak_1->Value * w_walucie_1->Value;
+	}
+
+
+	private: System::Void w_walucie_2_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		inwest_2->Value = c_zak_2->Value * w_walucie_2->Value;
+	}
 };
 }
