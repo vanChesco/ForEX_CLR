@@ -665,7 +665,7 @@ namespace ForEXCLR {
 
 		if (!stan.is_open())
 		{
-			System::Windows::Forms::MessageBox::Show("Wystapil problem z otwarciem pliku ostatniego stanu", "Blad", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			System::Windows::Forms::MessageBox::Show(L"Wystapił problem z otwarciem pliku ostatniego stanu", L"Błąd", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 		else
 		{
@@ -688,7 +688,7 @@ namespace ForEXCLR {
 
 		if (!stan.is_open())
 		{
-			System::Windows::Forms::MessageBox::Show("Wystapil problem z otwarciem pliku ostatniego stanu", "Blad", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			System::Windows::Forms::MessageBox::Show(L"Wystapił problem z otwarciem pliku ostatniego stanu", L"Błąd", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 		else
 		{
@@ -704,7 +704,7 @@ namespace ForEXCLR {
 			stan.read((char*)&temp, sizeof(temp));
 			c_sp->Value = temp;
 	
-			//System::Windows::Forms::MessageBox::Show("Stan zostal wczytany", "Odczyt stanu", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			//System::Windows::Forms::MessageBox::Show(L"Stan został wczytany", L"Odczyt stanu", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 		stan.close();
 		

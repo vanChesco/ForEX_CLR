@@ -1,0 +1,5 @@
+F:\!Coding\ForEX_CLR\x64\Debug\ForEX_CLR.vcxprojAssemblyReference.cache
+F:\!Coding\ForEX_CLR\x64\Debug\ForEXCLR.MyForm1.resources
+F:\!Coding\ForEX_CLR\x64\Debug\ForEX_CLR.vcxproj.GenerateResource.cache
+F:\!Coding\ForEX_CLR\x64\Debug\ForEX_CLR.exe
+F:\!Coding\ForEX_CLR\x64\Debug\ForEX_CLR.pdb
