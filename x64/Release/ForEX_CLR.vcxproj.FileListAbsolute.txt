@@ -5,3 +5,4 @@ F:\!Coding\ForEX_CLR\x64\Release\ForEX_CLR.exe
 C:\Users\user\Documents\Coding\ForEX_CLR\x64\Release\ForEXCLR.MyForm1.resources
 C:\Users\user\Documents\Coding\ForEX_CLR\x64\Release\ForEX_CLR.vcxproj.GenerateResource.cache
 C:\Users\user\Documents\Coding\ForEX_CLR\x64\Release\ForEX_CLR.exe
+C:\Users\user\Documents\Coding\ForEX_CLR\x64\Release\ForEX_CLR.vcxprojAssemblyReference.cache
