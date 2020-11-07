@@ -1,8 +1,8 @@
 ﻿#pragma once
 #include <fstream>
 
-namespace ForEXCLR {
-
+namespace ForEXCLR 
+{
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
@@ -176,6 +176,7 @@ namespace ForEXCLR {
 			this->c_s_label->Size = System::Drawing::Size(85, 13);
 			this->c_s_label->TabIndex = 2;
 			this->c_s_label->Text = L"Cena sprzedaży:";
+			this->c_s_label->Click += gcnew System::EventHandler(this, &MyForm::lb_Srednia_Click);
 			// 
 			// c_sp
 			// 
@@ -477,7 +478,6 @@ namespace ForEXCLR {
 			this->lb_Srednia->TabIndex = 11;
 			this->lb_Srednia->Text = L"0";
 			this->lb_Srednia->TextAlign = System::Drawing::ContentAlignment::TopRight;
-			this->lb_Srednia->Click += gcnew System::EventHandler(this, &MyForm::lb_Srednia_Click);
 			// 
 			// label13
 			// 
@@ -633,11 +633,11 @@ namespace ForEXCLR {
 		}
 #pragma endregion
 
-		System::Decimal prog;
-		System::Decimal wartosc;
-		System::Decimal sumaPLN;
-		System::Decimal sumaUSD;
-		System::Decimal zysk;
+	System::Decimal prog;
+	System::Decimal wartosc;
+	System::Decimal sumaPLN;
+	System::Decimal sumaUSD;
+	System::Decimal zysk;
 
 	private: System::Void oblicz()
 	{
@@ -782,7 +782,6 @@ namespace ForEXCLR {
 		inwest_1->Value = c_zak_1->Value * w_walucie_1->Value;
 	}
 
-
 	private: System::Void w_walucie_2_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		inwest_2->Value = c_zak_2->Value * w_walucie_2->Value;
@@ -791,7 +790,6 @@ namespace ForEXCLR {
 	private: System::Void lb_Srednia_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		c_sp->Value = System::Decimal::operator+(prog, System::Decimal::operator-(prog, c_sp->Value));
-		oblicz();
 	}
 };
 }
