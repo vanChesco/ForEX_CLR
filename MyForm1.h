@@ -153,7 +153,6 @@ namespace ForEXCLR {
 			this->c_zak_1->TabIndex = 3;
 			this->c_zak_1->Tag = L"";
 			this->c_zak_1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_zak_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38, 0, 0, 65536 });
 			this->c_zak_1->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_zak_1_ValueChanged);
 			// 
 			// c_k_label
@@ -406,7 +405,6 @@ namespace ForEXCLR {
 			this->c_zak_2->TabIndex = 4;
 			this->c_zak_2->Tag = L"";
 			this->c_zak_2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_zak_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38, 0, 0, 65536 });
 			this->c_zak_2->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_zak_2_ValueChanged);
 			// 
 			// inwest_2
