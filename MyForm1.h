@@ -153,7 +153,7 @@ namespace ForEXCLR {
 			this->c_zak_1->TabIndex = 3;
 			this->c_zak_1->Tag = L"";
 			this->c_zak_1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_zak_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->c_zak_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38, 0, 0, 65536 });
 			this->c_zak_1->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_zak_1_ValueChanged);
 			// 
 			// c_k_label
@@ -190,7 +190,7 @@ namespace ForEXCLR {
 			this->c_sp->Size = System::Drawing::Size(65, 20);
 			this->c_sp->TabIndex = 5;
 			this->c_sp->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_sp->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->c_sp->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38, 0, 0, 65536 });
 			this->c_sp->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_sp_1_ValueChanged);
 			// 
 			// lb_Inwestycja
@@ -225,7 +225,6 @@ namespace ForEXCLR {
 			this->inwest_1->TabIndex = 1;
 			this->inwest_1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->inwest_1->ThousandsSeparator = true;
-			this->inwest_1->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->inwest_1->ValueChanged += gcnew System::EventHandler(this, &MyForm::inwest_1_ValueChanged);
 			// 
 			// label2
@@ -407,7 +406,7 @@ namespace ForEXCLR {
 			this->c_zak_2->TabIndex = 4;
 			this->c_zak_2->Tag = L"";
 			this->c_zak_2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			this->c_zak_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->c_zak_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 38, 0, 0, 65536 });
 			this->c_zak_2->ValueChanged += gcnew System::EventHandler(this, &MyForm::c_zak_2_ValueChanged);
 			// 
 			// inwest_2
@@ -422,7 +421,6 @@ namespace ForEXCLR {
 			this->inwest_2->TabIndex = 2;
 			this->inwest_2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->inwest_2->ThousandsSeparator = true;
-			this->inwest_2->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->inwest_2->ValueChanged += gcnew System::EventHandler(this, &MyForm::inwest_2_ValueChanged);
 			// 
 			// label6
@@ -638,13 +636,29 @@ namespace ForEXCLR {
 
 	private: System::Void oblicz()
 	{
-		w_walucie_1->Value = inwest_1->Value / c_zak_1->Value;
-		w_walucie_2->Value = inwest_2->Value / c_zak_2->Value;
-		System::Decimal wartosc = c_sp->Value * System::Decimal::operator+(w_walucie_1->Value, w_walucie_2->Value);// System::Decimal::operator+(inwest_1->Value * (c_sp->Value / c_zak_1->Value), inwest_2->Value * (c_sp->Value / c_zak_2->Value));
-		System::Decimal zysk = System::Decimal::operator+(System::Decimal::operator-(inwest_1->Value * (c_sp->Value / c_zak_1->Value), inwest_1->Value), System::Decimal::operator-(inwest_2->Value * (c_sp->Value / c_zak_2->Value), inwest_2->Value));
+		System::Decimal prog = 0;
+
+		if (c_zak_1->Value != 0)
+		{
+			w_walucie_1->Value = inwest_1->Value / c_zak_1->Value;
+		}
+		else w_walucie_1->Value = 0;
+
+		if (c_zak_2->Value != 0)
+		{
+			w_walucie_2->Value = inwest_2->Value / c_zak_2->Value;
+		}
+		else w_walucie_2->Value = 0;
+
+		System::Decimal wartosc = c_sp->Value * System::Decimal::operator+(w_walucie_1->Value, w_walucie_2->Value);
 		System::Decimal sumaPLN = System::Decimal::operator+(inwest_1->Value, inwest_2->Value);
 		System::Decimal sumaUSD = System::Decimal::operator+(w_walucie_1->Value, w_walucie_2->Value);
-		System::Decimal prog = (c_zak_1->Value * c_zak_2->Value) * System::Decimal::operator+(inwest_1->Value, inwest_2->Value) / System::Decimal::operator+(inwest_1->Value * c_zak_2->Value, inwest_2->Value * c_zak_1->Value); ;
+
+		System::Decimal zysk = System::Decimal::operator-(wartosc, sumaPLN);
+
+		if		(c_zak_1->Value == 0)	prog = c_zak_2->Value;
+		else if (c_zak_2->Value == 0)	prog = c_zak_1->Value;
+		else							prog = (c_zak_1->Value * c_zak_2->Value) * System::Decimal::operator+(inwest_1->Value, inwest_2->Value) / System::Decimal::operator+(inwest_1->Value * c_zak_2->Value, inwest_2->Value * c_zak_1->Value);
 
 		if (zysk > 0)
 		{
@@ -671,7 +685,12 @@ namespace ForEXCLR {
 			gr_ZS->Text = "Strata";
 		}
 
-		lb_Procent->Text = System::Convert::ToString(System::Decimal::Ceiling(10000 * zysk / sumaPLN) / 100);
+		if (sumaPLN != 0)
+		{
+			lb_Procent->Text = System::Convert::ToString(System::Decimal::Ceiling(10000 * zysk / sumaPLN) / 100);
+		}
+		else lb_Procent->Text = L"0";
+
 		w_Wartosc->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * wartosc) / 100);
 		w_Zysk->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * zysk) / 100);
 		lb_SumaPLN->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * sumaPLN) / 100);
