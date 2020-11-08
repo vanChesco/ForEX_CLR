@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include <fstream>
+#include "curl/curl.h"
+#include "curl/easy.h"
 
 namespace ForEXCLR 
 {
@@ -95,6 +97,7 @@ namespace ForEXCLR
 	private: System::Windows::Forms::Label^ label23;
 	private: System::Windows::Forms::Label^ label22;
 	private: System::Windows::Forms::GroupBox^ groupBox3;
+	private: System::Windows::Forms::NumericUpDown^ nm_zNetu;
 
 
 	private:
@@ -162,6 +165,7 @@ namespace ForEXCLR
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->c_USDEUR = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->nm_zNetu = (gcnew System::Windows::Forms::NumericUpDown());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_sp))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_1))->BeginInit();
@@ -179,6 +183,7 @@ namespace ForEXCLR
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_EURPLN))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_USDEUR))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->nm_zNetu))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// c_zak_1
@@ -664,6 +669,7 @@ namespace ForEXCLR
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->Controls->Add(this->nm_zNetu);
 			this->tabPage2->Controls->Add(this->groupBox3);
 			this->tabPage2->Controls->Add(this->groupBox1);
 			this->tabPage2->Location = System::Drawing::Point(4, 22);
@@ -804,6 +810,13 @@ namespace ForEXCLR
 			this->label15->TabIndex = 0;
 			this->label15->Text = L"USD->EUR";
 			// 
+			// nm_zNetu
+			// 
+			this->nm_zNetu->Location = System::Drawing::Point(7, 126);
+			this->nm_zNetu->Name = L"nm_zNetu";
+			this->nm_zNetu->Size = System::Drawing::Size(120, 20);
+			this->nm_zNetu->TabIndex = 7;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -840,6 +853,7 @@ namespace ForEXCLR
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_EURPLN))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_USDEUR))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->nm_zNetu))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -940,6 +954,21 @@ namespace ForEXCLR
 
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
+//		CURL* curl = curl_easy_init();
+//		if (!curl)
+//		{
+//			System::Windows::Forms::MessageBox::Show(L"Inicjalizacja CURL nie powiodła się", L"Błąd!", MessageBoxButtons::OK, MessageBoxIcon::Error);
+//			return;
+//		}
+//
+//		CURLcode res = CURLE_OK;
+//		if ((curl_easy_setopt(curl, CURLOPT_URL, "http://api.nbp.pl/api/exchangerates/rates/c/usd/2020-11-03")) != CURLE_OK)
+//		{
+//			System::Windows::Forms::MessageBox::Show(L"Problem z systemem cURL", L"Błąd!", MessageBoxButtons::OK);
+//		};
+
+//		curl_easy_cleanup(curl);
+		
 
 		std::ifstream stan;
 		stan.open("stan", std::ios_base::binary);
