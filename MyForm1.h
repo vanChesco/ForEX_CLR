@@ -872,6 +872,8 @@ namespace ForEXCLR
 			// sl_cena
 			// 
 			this->sl_cena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->sl_cena->DecimalPlaces = 4;
+			this->sl_cena->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->sl_cena->Location = System::Drawing::Point(85, 19);
 			this->sl_cena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
 			this->sl_cena->Name = L"sl_cena";
@@ -1056,32 +1058,37 @@ namespace ForEXCLR
 
 		wart_EUR->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * sumaUSD * c_USDEUR->Value) / 100);
 		wart_PLN->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * sumaUSD * c_USDEUR->Value * c_EURPLN->Value) / 100);
-
-		std::ofstream stan;
-
-		stan.open("stan", std::ios_base::binary);
-
-		if (!stan.is_open())
-		{
-			System::Windows::Forms::MessageBox::Show(L"Wystapił problem z otwarciem pliku ostatniego stanu", L"Błąd", MessageBoxButtons::OK, MessageBoxIcon::Error);
-		}
-		else
-		{
-			stan.write((const char*)&inwest_1->Value, sizeof(inwest_1->Value));
-			stan.write((const char*)&inwest_2->Value, sizeof(inwest_2->Value));
-			stan.write((const char*)&c_zak_1->Value, sizeof(c_zak_1->Value));
-			stan.write((const char*)&c_zak_2->Value, sizeof(c_zak_2->Value));
-			stan.write((const char*)&c_sp->Value, sizeof(c_sp->Value));
-			stan.write((const char*)&c_USDEUR->Value, sizeof(c_USDEUR->Value));
-			stan.write((const char*)&c_EURPLN->Value, sizeof(c_EURPLN->Value));
-		//	System::Windows::Forms::MessageBox::Show("Stan zaktualizowany", "Zapis", MessageBoxButtons::OK, MessageBoxIcon::Information);
-		}
-		stan.close();
 	}
 
 		private: System::Void stopLoss()
 		{
 			sl_stopLoss->Text = System::Convert::ToString(sl_cena->Value * (1 - sl_prog->Value / 100)) + " jednostek";
+		}
+
+		private: System::Void zapiszStan()
+		{
+			std::ofstream stan;
+
+			stan.open("stan", std::ios_base::binary);
+
+			if (!stan.is_open())
+			{
+				System::Windows::Forms::MessageBox::Show(L"Wystapił problem z otwarciem pliku ostatniego stanu", L"Błąd", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+			else
+			{
+				stan.write((const char*)&inwest_1->Value, sizeof(inwest_1->Value));
+				stan.write((const char*)&inwest_2->Value, sizeof(inwest_2->Value));
+				stan.write((const char*)&c_zak_1->Value, sizeof(c_zak_1->Value));
+				stan.write((const char*)&c_zak_2->Value, sizeof(c_zak_2->Value));
+				stan.write((const char*)&c_sp->Value, sizeof(c_sp->Value));
+				stan.write((const char*)&c_USDEUR->Value, sizeof(c_USDEUR->Value));
+				stan.write((const char*)&c_EURPLN->Value, sizeof(c_EURPLN->Value));
+				stan.write((const char*)&sl_cena->Value, sizeof(sl_cena->Value));
+				stan.write((const char*)&sl_prog->Value, sizeof(sl_prog->Value));
+				//	System::Windows::Forms::MessageBox::Show("Stan zaktualizowany", "Zapis", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			}
+			stan.close();
 		}
 
 
@@ -1127,6 +1134,10 @@ namespace ForEXCLR
 			c_USDEUR->Value = temp;
 			stan.read((char*)&temp, sizeof(temp));
 			c_EURPLN->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			sl_cena->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			sl_prog->Value = temp;
 	
 			//System::Windows::Forms::MessageBox::Show(L"Stan został wczytany", L"Odczyt stanu", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
@@ -1138,26 +1149,31 @@ namespace ForEXCLR
 	private: System::Void c_zak_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
+		zapiszStan();
 	}
 
 	private: System::Void c_zak_2_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
+		zapiszStan();
 	}
 
 	private: System::Void c_sp_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
+		zapiszStan();
 	}
 
 	private: System::Void inwest_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
+		zapiszStan();
 	}
 
 	private: System::Void inwest_2_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
+		zapiszStan();
 	}
 
 	private: System::Void w_walucie_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
@@ -1178,24 +1194,28 @@ namespace ForEXCLR
 	private: System::Void c_USDEUR_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
+		zapiszStan();
 	}
 
 
 	private: System::Void c_EURPLN_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
+		zapiszStan();
 	}
 
 
 	private: System::Void sl_cena_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		stopLoss();
+		zapiszStan();
 	}
 
 
 	private: System::Void sl_prog_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		stopLoss();
+		zapiszStan();
 	}
 };
 }
