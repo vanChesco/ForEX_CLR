@@ -144,6 +144,33 @@ private: System::Windows::Forms::Label^ lb_swingWynik;
 private: System::Windows::Forms::Label^ lb_swingLabel;
 private: System::Windows::Forms::Label^ lb_swingPLN;
 private: System::Windows::Forms::Panel^ panel2;
+private: System::Windows::Forms::ComboBox^ Box1;
+private: System::Windows::Forms::ComboBox^ Box4;
+private: System::Windows::Forms::ComboBox^ Box3;
+private: System::Windows::Forms::ComboBox^ Box2;
+
+
+private: System::Windows::Forms::Label^ label43;
+private: System::Windows::Forms::Label^ label39;
+private: System::Windows::Forms::Label^ label40;
+private: System::Windows::Forms::Label^ label41;
+private: System::Windows::Forms::NumericUpDown^ num_ZRXcena;
+private: System::Windows::Forms::NumericUpDown^ num_LSKcena;
+private: System::Windows::Forms::NumericUpDown^ num_XRPcena;
+private: System::Windows::Forms::NumericUpDown^ num_ETHcena;
+private: System::Windows::Forms::NumericUpDown^ num_ZRXkwota;
+private: System::Windows::Forms::NumericUpDown^ num_LSKkwota;
+private: System::Windows::Forms::NumericUpDown^ num_XRPkwota;
+private: System::Windows::Forms::NumericUpDown^ num_ETHkwota;
+
+private: System::Windows::Forms::Label^ lb_Krypto;
+private: System::Windows::Forms::Label^ lb_ZRX;
+private: System::Windows::Forms::Label^ lb_LSK;
+private: System::Windows::Forms::Label^ lb_XRP;
+private: System::Windows::Forms::Label^ lb_ETH;
+private: System::Windows::Forms::Label^ lb_nazwaKrypto;
+
+
 
 
 
@@ -200,6 +227,24 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->tb_Karty = (gcnew System::Windows::Forms::TabControl());
 			this->tabSwing = (gcnew System::Windows::Forms::TabPage());
+			this->lb_nazwaKrypto = (gcnew System::Windows::Forms::Label());
+			this->lb_ZRX = (gcnew System::Windows::Forms::Label());
+			this->lb_LSK = (gcnew System::Windows::Forms::Label());
+			this->lb_XRP = (gcnew System::Windows::Forms::Label());
+			this->lb_ETH = (gcnew System::Windows::Forms::Label());
+			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->num_ZRXcena = (gcnew System::Windows::Forms::NumericUpDown());
+			this->num_LSKcena = (gcnew System::Windows::Forms::NumericUpDown());
+			this->num_XRPcena = (gcnew System::Windows::Forms::NumericUpDown());
+			this->num_ETHcena = (gcnew System::Windows::Forms::NumericUpDown());
+			this->num_ZRXkwota = (gcnew System::Windows::Forms::NumericUpDown());
+			this->num_LSKkwota = (gcnew System::Windows::Forms::NumericUpDown());
+			this->num_XRPkwota = (gcnew System::Windows::Forms::NumericUpDown());
+			this->num_ETHkwota = (gcnew System::Windows::Forms::NumericUpDown());
+			this->lb_Krypto = (gcnew System::Windows::Forms::Label());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->lb_swingWynik = (gcnew System::Windows::Forms::Label());
 			this->lb_swingPLN = (gcnew System::Windows::Forms::Label());
@@ -223,9 +268,13 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->label33 = (gcnew System::Windows::Forms::Label());
 			this->label31 = (gcnew System::Windows::Forms::Label());
 			this->label27 = (gcnew System::Windows::Forms::Label());
-			this->label26 = (gcnew System::Windows::Forms::Label());
 			this->num_cenaWejscia = (gcnew System::Windows::Forms::NumericUpDown());
 			this->num_kwotaWejscia = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->Box1 = (gcnew System::Windows::Forms::ComboBox());
+			this->Box4 = (gcnew System::Windows::Forms::ComboBox());
+			this->Box3 = (gcnew System::Windows::Forms::ComboBox());
+			this->Box2 = (gcnew System::Windows::Forms::ComboBox());
 			this->tabSpread = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
@@ -262,6 +311,14 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->panel1->SuspendLayout();
 			this->tb_Karty->SuspendLayout();
 			this->tabSwing->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_ZRXcena))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_LSKcena))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_XRPcena))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_ETHcena))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_ZRXkwota))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_LSKkwota))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_XRPkwota))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_ETHkwota))->BeginInit();
 			this->panel2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_prowizja))->BeginInit();
 			this->groupBox6->SuspendLayout();
@@ -479,7 +536,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// linkLabel1
 			// 
 			this->linkLabel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->linkLabel1->Location = System::Drawing::Point(359, 260);
+			this->linkLabel1->Location = System::Drawing::Point(359, 373);
 			this->linkLabel1->Name = L"linkLabel1";
 			this->linkLabel1->Size = System::Drawing::Size(103, 13);
 			this->linkLabel1->TabIndex = 12;
@@ -734,11 +791,29 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->tb_Karty->Location = System::Drawing::Point(12, 12);
 			this->tb_Karty->Name = L"tb_Karty";
 			this->tb_Karty->SelectedIndex = 0;
-			this->tb_Karty->Size = System::Drawing::Size(453, 244);
+			this->tb_Karty->Size = System::Drawing::Size(453, 358);
 			this->tb_Karty->TabIndex = 23;
 			// 
 			// tabSwing
 			// 
+			this->tabSwing->Controls->Add(this->lb_nazwaKrypto);
+			this->tabSwing->Controls->Add(this->lb_ZRX);
+			this->tabSwing->Controls->Add(this->lb_LSK);
+			this->tabSwing->Controls->Add(this->lb_XRP);
+			this->tabSwing->Controls->Add(this->lb_ETH);
+			this->tabSwing->Controls->Add(this->label43);
+			this->tabSwing->Controls->Add(this->label39);
+			this->tabSwing->Controls->Add(this->label40);
+			this->tabSwing->Controls->Add(this->label41);
+			this->tabSwing->Controls->Add(this->num_ZRXcena);
+			this->tabSwing->Controls->Add(this->num_LSKcena);
+			this->tabSwing->Controls->Add(this->num_XRPcena);
+			this->tabSwing->Controls->Add(this->num_ETHcena);
+			this->tabSwing->Controls->Add(this->num_ZRXkwota);
+			this->tabSwing->Controls->Add(this->num_LSKkwota);
+			this->tabSwing->Controls->Add(this->num_XRPkwota);
+			this->tabSwing->Controls->Add(this->num_ETHkwota);
+			this->tabSwing->Controls->Add(this->lb_Krypto);
 			this->tabSwing->Controls->Add(this->panel2);
 			this->tabSwing->Controls->Add(this->label38);
 			this->tabSwing->Controls->Add(this->lb_progWyjscia);
@@ -749,12 +824,220 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->tabSwing->Controls->Add(this->label30);
 			this->tabSwing->Controls->Add(this->groupBox6);
 			this->tabSwing->Controls->Add(this->groupBox5);
+			this->tabSwing->Controls->Add(this->Box1);
+			this->tabSwing->Controls->Add(this->Box4);
+			this->tabSwing->Controls->Add(this->Box3);
+			this->tabSwing->Controls->Add(this->Box2);
 			this->tabSwing->Location = System::Drawing::Point(4, 22);
 			this->tabSwing->Name = L"tabSwing";
-			this->tabSwing->Size = System::Drawing::Size(445, 218);
+			this->tabSwing->Size = System::Drawing::Size(445, 332);
 			this->tabSwing->TabIndex = 3;
 			this->tabSwing->Text = L"Short Swing";
 			this->tabSwing->UseVisualStyleBackColor = true;
+			// 
+			// lb_nazwaKrypto
+			// 
+			this->lb_nazwaKrypto->AutoSize = true;
+			this->lb_nazwaKrypto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+																	  static_cast<System::Byte>(0)));
+			this->lb_nazwaKrypto->Location = System::Drawing::Point(200, 131);
+			this->lb_nazwaKrypto->Name = L"lb_nazwaKrypto";
+			this->lb_nazwaKrypto->Size = System::Drawing::Size(15, 20);
+			this->lb_nazwaKrypto->TabIndex = 29;
+			this->lb_nazwaKrypto->Text = L"-";
+			// 
+			// lb_ZRX
+			// 
+			this->lb_ZRX->AutoSize = true;
+			this->lb_ZRX->Location = System::Drawing::Point(357, 16);
+			this->lb_ZRX->Name = L"lb_ZRX";
+			this->lb_ZRX->Size = System::Drawing::Size(29, 13);
+			this->lb_ZRX->TabIndex = 28;
+			this->lb_ZRX->Text = L"ZRX";
+			this->lb_ZRX->DoubleClick += gcnew System::EventHandler(this, &MyForm::lb_ZRX_doubleClick);
+			this->lb_ZRX->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::lb_ZRX_MouseClick);
+			// 
+			// lb_LSK
+			// 
+			this->lb_LSK->AutoSize = true;
+			this->lb_LSK->Location = System::Drawing::Point(269, 16);
+			this->lb_LSK->Name = L"lb_LSK";
+			this->lb_LSK->Size = System::Drawing::Size(27, 13);
+			this->lb_LSK->TabIndex = 27;
+			this->lb_LSK->Text = L"LSK";
+			this->lb_LSK->DoubleClick += gcnew System::EventHandler(this, &MyForm::lb_LSK_doubleClick);
+			this->lb_LSK->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::lb_LSK_MouseClick);
+			// 
+			// lb_XRP
+			// 
+			this->lb_XRP->AutoSize = true;
+			this->lb_XRP->Location = System::Drawing::Point(181, 16);
+			this->lb_XRP->Name = L"lb_XRP";
+			this->lb_XRP->Size = System::Drawing::Size(29, 13);
+			this->lb_XRP->TabIndex = 26;
+			this->lb_XRP->Text = L"XRP";
+			this->lb_XRP->DoubleClick += gcnew System::EventHandler(this, &MyForm::lb_XRP_doubleClick);
+			this->lb_XRP->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::lb_XRP_MouseClick);
+			// 
+			// lb_ETH
+			// 
+			this->lb_ETH->AutoSize = true;
+			this->lb_ETH->Location = System::Drawing::Point(86, 16);
+			this->lb_ETH->Name = L"lb_ETH";
+			this->lb_ETH->Size = System::Drawing::Size(29, 13);
+			this->lb_ETH->TabIndex = 25;
+			this->lb_ETH->Text = L"ETH";
+			this->lb_ETH->DoubleClick += gcnew System::EventHandler(this, &MyForm::lb_ETH_doubleClick);
+			this->lb_ETH->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::lb_ETH_MouseClick);
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->Location = System::Drawing::Point(9, 16);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(54, 13);
+			this->label43->TabIndex = 24;
+			this->label43->Text = L"KRYPTO:";
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Location = System::Drawing::Point(401, 44);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(28, 13);
+			this->label39->TabIndex = 23;
+			this->label39->Text = L"PLN";
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Location = System::Drawing::Point(401, 69);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(28, 13);
+			this->label40->TabIndex = 22;
+			this->label40->Text = L"PLN";
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->Location = System::Drawing::Point(9, 69);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(32, 13);
+			this->label41->TabIndex = 21;
+			this->label41->Text = L"Cena";
+			// 
+			// num_ZRXcena
+			// 
+			this->num_ZRXcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_ZRXcena->DecimalPlaces = 2;
+			this->num_ZRXcena->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_ZRXcena->Location = System::Drawing::Point(306, 67);
+			this->num_ZRXcena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_ZRXcena->Name = L"num_ZRXcena";
+			this->num_ZRXcena->Size = System::Drawing::Size(80, 20);
+			this->num_ZRXcena->TabIndex = 19;
+			this->num_ZRXcena->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_ZRXcena->ThousandsSeparator = true;
+			// 
+			// num_LSKcena
+			// 
+			this->num_LSKcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_LSKcena->DecimalPlaces = 2;
+			this->num_LSKcena->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_LSKcena->Location = System::Drawing::Point(218, 67);
+			this->num_LSKcena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_LSKcena->Name = L"num_LSKcena";
+			this->num_LSKcena->Size = System::Drawing::Size(80, 20);
+			this->num_LSKcena->TabIndex = 19;
+			this->num_LSKcena->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_LSKcena->ThousandsSeparator = true;
+			// 
+			// num_XRPcena
+			// 
+			this->num_XRPcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_XRPcena->DecimalPlaces = 2;
+			this->num_XRPcena->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_XRPcena->Location = System::Drawing::Point(134, 67);
+			this->num_XRPcena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_XRPcena->Name = L"num_XRPcena";
+			this->num_XRPcena->Size = System::Drawing::Size(80, 20);
+			this->num_XRPcena->TabIndex = 19;
+			this->num_XRPcena->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_XRPcena->ThousandsSeparator = true;
+			// 
+			// num_ETHcena
+			// 
+			this->num_ETHcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_ETHcena->DecimalPlaces = 2;
+			this->num_ETHcena->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_ETHcena->Location = System::Drawing::Point(47, 67);
+			this->num_ETHcena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_ETHcena->Name = L"num_ETHcena";
+			this->num_ETHcena->Size = System::Drawing::Size(80, 20);
+			this->num_ETHcena->TabIndex = 19;
+			this->num_ETHcena->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_ETHcena->ThousandsSeparator = true;
+			// 
+			// num_ZRXkwota
+			// 
+			this->num_ZRXkwota->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_ZRXkwota->DecimalPlaces = 2;
+			this->num_ZRXkwota->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_ZRXkwota->Location = System::Drawing::Point(306, 42);
+			this->num_ZRXkwota->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_ZRXkwota->Name = L"num_ZRXkwota";
+			this->num_ZRXkwota->Size = System::Drawing::Size(80, 20);
+			this->num_ZRXkwota->TabIndex = 18;
+			this->num_ZRXkwota->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_ZRXkwota->ThousandsSeparator = true;
+			// 
+			// num_LSKkwota
+			// 
+			this->num_LSKkwota->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_LSKkwota->DecimalPlaces = 2;
+			this->num_LSKkwota->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_LSKkwota->Location = System::Drawing::Point(218, 42);
+			this->num_LSKkwota->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_LSKkwota->Name = L"num_LSKkwota";
+			this->num_LSKkwota->Size = System::Drawing::Size(80, 20);
+			this->num_LSKkwota->TabIndex = 18;
+			this->num_LSKkwota->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_LSKkwota->ThousandsSeparator = true;
+			// 
+			// num_XRPkwota
+			// 
+			this->num_XRPkwota->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_XRPkwota->DecimalPlaces = 2;
+			this->num_XRPkwota->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_XRPkwota->Location = System::Drawing::Point(134, 42);
+			this->num_XRPkwota->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_XRPkwota->Name = L"num_XRPkwota";
+			this->num_XRPkwota->Size = System::Drawing::Size(80, 20);
+			this->num_XRPkwota->TabIndex = 18;
+			this->num_XRPkwota->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_XRPkwota->ThousandsSeparator = true;
+			// 
+			// num_ETHkwota
+			// 
+			this->num_ETHkwota->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_ETHkwota->DecimalPlaces = 2;
+			this->num_ETHkwota->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_ETHkwota->Location = System::Drawing::Point(47, 42);
+			this->num_ETHkwota->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_ETHkwota->Name = L"num_ETHkwota";
+			this->num_ETHkwota->Size = System::Drawing::Size(80, 20);
+			this->num_ETHkwota->TabIndex = 18;
+			this->num_ETHkwota->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_ETHkwota->ThousandsSeparator = true;
+			// 
+			// lb_Krypto
+			// 
+			this->lb_Krypto->AutoSize = true;
+			this->lb_Krypto->Location = System::Drawing::Point(9, 44);
+			this->lb_Krypto->Name = L"lb_Krypto";
+			this->lb_Krypto->Size = System::Drawing::Size(37, 13);
+			this->lb_Krypto->TabIndex = 20;
+			this->lb_Krypto->Text = L"Kwota";
 			// 
 			// panel2
 			// 
@@ -762,7 +1045,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->panel2->Controls->Add(this->lb_swingWynik);
 			this->panel2->Controls->Add(this->lb_swingPLN);
 			this->panel2->Controls->Add(this->lb_swingLabel);
-			this->panel2->Location = System::Drawing::Point(229, 164);
+			this->panel2->Location = System::Drawing::Point(229, 276);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(200, 39);
 			this->panel2->TabIndex = 16;
@@ -807,7 +1090,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->label38->AutoSize = true;
 			this->label38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 															   static_cast<System::Byte>(0)));
-			this->label38->Location = System::Drawing::Point(209, 134);
+			this->label38->Location = System::Drawing::Point(209, 246);
 			this->label38->Name = L"label38";
 			this->label38->Size = System::Drawing::Size(35, 17);
 			this->label38->TabIndex = 12;
@@ -817,7 +1100,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// 
 			this->lb_progWyjscia->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 																	  static_cast<System::Byte>(0)));
-			this->lb_progWyjscia->Location = System::Drawing::Point(149, 134);
+			this->lb_progWyjscia->Location = System::Drawing::Point(149, 246);
 			this->lb_progWyjscia->Name = L"lb_progWyjscia";
 			this->lb_progWyjscia->Size = System::Drawing::Size(61, 20);
 			this->lb_progWyjscia->TabIndex = 11;
@@ -828,7 +1111,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->label37->AutoSize = true;
 			this->label37->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 															   static_cast<System::Byte>(0)));
-			this->label37->Location = System::Drawing::Point(8, 134);
+			this->label37->Location = System::Drawing::Point(8, 246);
 			this->label37->Name = L"label37";
 			this->label37->Size = System::Drawing::Size(94, 17);
 			this->label37->TabIndex = 10;
@@ -839,7 +1122,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->label36->AutoSize = true;
 			this->label36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 															   static_cast<System::Byte>(0)));
-			this->label36->Location = System::Drawing::Point(8, 108);
+			this->label36->Location = System::Drawing::Point(8, 220);
 			this->label36->Name = L"label36";
 			this->label36->Size = System::Drawing::Size(142, 17);
 			this->label36->TabIndex = 9;
@@ -849,7 +1132,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// 
 			this->lb_jednKupione->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 																	  static_cast<System::Byte>(0)));
-			this->lb_jednKupione->Location = System::Drawing::Point(149, 108);
+			this->lb_jednKupione->Location = System::Drawing::Point(149, 220);
 			this->lb_jednKupione->Name = L"lb_jednKupione";
 			this->lb_jednKupione->Size = System::Drawing::Size(122, 20);
 			this->lb_jednKupione->TabIndex = 9;
@@ -860,7 +1143,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->num_prowizja->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_prowizja->DecimalPlaces = 2;
 			this->num_prowizja->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_prowizja->Location = System::Drawing::Point(190, 50);
+			this->num_prowizja->Location = System::Drawing::Point(190, 162);
 			this->num_prowizja->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_prowizja->Name = L"num_prowizja";
 			this->num_prowizja->Size = System::Drawing::Size(63, 20);
@@ -872,7 +1155,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// label30
 			// 
 			this->label30->AutoSize = true;
-			this->label30->Location = System::Drawing::Point(198, 73);
+			this->label30->Location = System::Drawing::Point(198, 185);
 			this->label30->Name = L"label30";
 			this->label30->Size = System::Drawing::Size(46, 13);
 			this->label30->TabIndex = 8;
@@ -887,7 +1170,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->groupBox6->Controls->Add(this->label28);
 			this->groupBox6->Controls->Add(this->num_cenaWyjscia);
 			this->groupBox6->Controls->Add(this->label29);
-			this->groupBox6->Location = System::Drawing::Point(282, 19);
+			this->groupBox6->Location = System::Drawing::Point(282, 131);
 			this->groupBox6->Name = L"groupBox6";
 			this->groupBox6->Size = System::Drawing::Size(160, 78);
 			this->groupBox6->TabIndex = 0;
@@ -896,7 +1179,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// 
 			// lb_kwotaWyjscia
 			// 
-			this->lb_kwotaWyjscia->Location = System::Drawing::Point(49, 47);
+			this->lb_kwotaWyjscia->Location = System::Drawing::Point(49, 24);
 			this->lb_kwotaWyjscia->Name = L"lb_kwotaWyjscia";
 			this->lb_kwotaWyjscia->Size = System::Drawing::Size(75, 18);
 			this->lb_kwotaWyjscia->TabIndex = 10;
@@ -915,7 +1198,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// label34
 			// 
 			this->label34->AutoSize = true;
-			this->label34->Location = System::Drawing::Point(130, 47);
+			this->label34->Location = System::Drawing::Point(130, 24);
 			this->label34->Name = L"label34";
 			this->label34->Size = System::Drawing::Size(28, 13);
 			this->label34->TabIndex = 9;
@@ -924,7 +1207,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// label32
 			// 
 			this->label32->AutoSize = true;
-			this->label32->Location = System::Drawing::Point(130, 21);
+			this->label32->Location = System::Drawing::Point(130, 51);
 			this->label32->Name = L"label32";
 			this->label32->Size = System::Drawing::Size(28, 13);
 			this->label32->TabIndex = 7;
@@ -933,7 +1216,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// label28
 			// 
 			this->label28->AutoSize = true;
-			this->label28->Location = System::Drawing::Point(6, 21);
+			this->label28->Location = System::Drawing::Point(6, 51);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(32, 13);
 			this->label28->TabIndex = 7;
@@ -944,7 +1227,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->num_cenaWyjscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_cenaWyjscia->DecimalPlaces = 2;
 			this->num_cenaWyjscia->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_cenaWyjscia->Location = System::Drawing::Point(44, 19);
+			this->num_cenaWyjscia->Location = System::Drawing::Point(44, 49);
 			this->num_cenaWyjscia->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_cenaWyjscia->Name = L"num_cenaWyjscia";
 			this->num_cenaWyjscia->Size = System::Drawing::Size(80, 20);
@@ -956,7 +1239,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// label29
 			// 
 			this->label29->AutoSize = true;
-			this->label29->Location = System::Drawing::Point(6, 47);
+			this->label29->Location = System::Drawing::Point(6, 24);
 			this->label29->Name = L"label29";
 			this->label29->Size = System::Drawing::Size(37, 13);
 			this->label29->TabIndex = 6;
@@ -967,10 +1250,10 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->groupBox5->Controls->Add(this->label33);
 			this->groupBox5->Controls->Add(this->label31);
 			this->groupBox5->Controls->Add(this->label27);
-			this->groupBox5->Controls->Add(this->label26);
 			this->groupBox5->Controls->Add(this->num_cenaWejscia);
 			this->groupBox5->Controls->Add(this->num_kwotaWejscia);
-			this->groupBox5->Location = System::Drawing::Point(3, 19);
+			this->groupBox5->Controls->Add(this->label26);
+			this->groupBox5->Location = System::Drawing::Point(3, 131);
 			this->groupBox5->Name = L"groupBox5";
 			this->groupBox5->Size = System::Drawing::Size(164, 78);
 			this->groupBox5->TabIndex = 0;
@@ -980,7 +1263,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// label33
 			// 
 			this->label33->AutoSize = true;
-			this->label33->Location = System::Drawing::Point(130, 47);
+			this->label33->Location = System::Drawing::Point(130, 24);
 			this->label33->Name = L"label33";
 			this->label33->Size = System::Drawing::Size(28, 13);
 			this->label33->TabIndex = 8;
@@ -989,7 +1272,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// label31
 			// 
 			this->label31->AutoSize = true;
-			this->label31->Location = System::Drawing::Point(130, 21);
+			this->label31->Location = System::Drawing::Point(130, 49);
 			this->label31->Name = L"label31";
 			this->label31->Size = System::Drawing::Size(28, 13);
 			this->label31->TabIndex = 6;
@@ -998,27 +1281,18 @@ private: System::Windows::Forms::Panel^ panel2;
 			// label27
 			// 
 			this->label27->AutoSize = true;
-			this->label27->Location = System::Drawing::Point(6, 21);
+			this->label27->Location = System::Drawing::Point(6, 49);
 			this->label27->Name = L"label27";
 			this->label27->Size = System::Drawing::Size(32, 13);
 			this->label27->TabIndex = 5;
 			this->label27->Text = L"Cena";
-			// 
-			// label26
-			// 
-			this->label26->AutoSize = true;
-			this->label26->Location = System::Drawing::Point(6, 47);
-			this->label26->Name = L"label26";
-			this->label26->Size = System::Drawing::Size(37, 13);
-			this->label26->TabIndex = 4;
-			this->label26->Text = L"Kwota";
 			// 
 			// num_cenaWejscia
 			// 
 			this->num_cenaWejscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_cenaWejscia->DecimalPlaces = 2;
 			this->num_cenaWejscia->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_cenaWejscia->Location = System::Drawing::Point(44, 19);
+			this->num_cenaWejscia->Location = System::Drawing::Point(44, 47);
 			this->num_cenaWejscia->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_cenaWejscia->Name = L"num_cenaWejscia";
 			this->num_cenaWejscia->Size = System::Drawing::Size(80, 20);
@@ -1032,7 +1306,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->num_kwotaWejscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_kwotaWejscia->DecimalPlaces = 2;
 			this->num_kwotaWejscia->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_kwotaWejscia->Location = System::Drawing::Point(44, 45);
+			this->num_kwotaWejscia->Location = System::Drawing::Point(44, 22);
 			this->num_kwotaWejscia->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_kwotaWejscia->Name = L"num_kwotaWejscia";
 			this->num_kwotaWejscia->Size = System::Drawing::Size(80, 20);
@@ -1040,6 +1314,89 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->num_kwotaWejscia->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->num_kwotaWejscia->ThousandsSeparator = true;
 			this->num_kwotaWejscia->ValueChanged += gcnew System::EventHandler(this, &MyForm::num_kwotaWejscia_ValueChanged);
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(6, 24);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(37, 13);
+			this->label26->TabIndex = 4;
+			this->label26->Text = L"Kwota";
+			// 
+			// Box1
+			// 
+			this->Box1->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(7)
+			{
+				L"BTC", L"ETH", L"XRP", L"XLM", L"LTC",
+					L"LSK", L"BSV"
+			});
+			this->Box1->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->Box1->FormattingEnabled = true;
+			this->Box1->Items->AddRange(gcnew cli::array< System::Object^  >(7) { L"BTC", L"ETH", L"XRP", L"XLM", L"LTC", L"LSK", L"BSV" });
+			this->Box1->Location = System::Drawing::Point(65, 13);
+			this->Box1->Name = L"Box1";
+			this->Box1->Size = System::Drawing::Size(62, 21);
+			this->Box1->TabIndex = 17;
+			this->Box1->Visible = false;
+			this->Box1->TextChanged += gcnew System::EventHandler(this, &MyForm::Box1_TextChanged);
+			this->Box1->Leave += gcnew System::EventHandler(this, &MyForm::Box1_Leave);
+			// 
+			// Box4
+			// 
+			this->Box4->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(7)
+			{
+				L"BTC", L"ETH", L"XRP", L"XLM", L"LTC",
+					L"LSK", L"BSV"
+			});
+			this->Box4->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->Box4->FormattingEnabled = true;
+			this->Box4->Items->AddRange(gcnew cli::array< System::Object^  >(7) { L"BTC", L"ETH", L"XRP", L"XLM", L"LTC", L"LSK", L"BSV" });
+			this->Box4->Location = System::Drawing::Point(325, 13);
+			this->Box4->Name = L"Box4";
+			this->Box4->Size = System::Drawing::Size(62, 21);
+			this->Box4->TabIndex = 17;
+			this->Box4->Visible = false;
+			this->Box4->TextChanged += gcnew System::EventHandler(this, &MyForm::Box4_TextChanged);
+			this->Box4->Leave += gcnew System::EventHandler(this, &MyForm::Box4_Leave);
+			this->Box4->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::lb_ZRX_MouseClick);
+			// 
+			// Box3
+			// 
+			this->Box3->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(7)
+			{
+				L"BTC", L"ETH", L"XRP", L"XLM", L"LTC",
+					L"LSK", L"BSV"
+			});
+			this->Box3->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->Box3->FormattingEnabled = true;
+			this->Box3->Items->AddRange(gcnew cli::array< System::Object^  >(7) { L"BTC", L"ETH", L"XRP", L"XLM", L"LTC", L"LSK", L"BSV" });
+			this->Box3->Location = System::Drawing::Point(237, 13);
+			this->Box3->Name = L"Box3";
+			this->Box3->Size = System::Drawing::Size(62, 21);
+			this->Box3->TabIndex = 17;
+			this->Box3->Visible = false;
+			this->Box3->TextChanged += gcnew System::EventHandler(this, &MyForm::Box3_TextChanged);
+			this->Box3->Leave += gcnew System::EventHandler(this, &MyForm::Box3_Leave);
+			this->Box3->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::lb_LSK_MouseClick);
+			// 
+			// Box2
+			// 
+			this->Box2->AutoCompleteCustomSource->AddRange(gcnew cli::array< System::String^  >(7)
+			{
+				L"BTC", L"ETH", L"XRP", L"XLM", L"LTC",
+					L"LSK", L"BSV"
+			});
+			this->Box2->FlatStyle = System::Windows::Forms::FlatStyle::System;
+			this->Box2->FormattingEnabled = true;
+			this->Box2->Items->AddRange(gcnew cli::array< System::Object^  >(7) { L"BTC", L"ETH", L"XRP", L"XLM", L"LTC", L"LSK", L"BSV" });
+			this->Box2->Location = System::Drawing::Point(153, 13);
+			this->Box2->Name = L"Box2";
+			this->Box2->Size = System::Drawing::Size(62, 21);
+			this->Box2->TabIndex = 17;
+			this->Box2->Visible = false;
+			this->Box2->TextChanged += gcnew System::EventHandler(this, &MyForm::Box2_TextChanged);
+			this->Box2->Leave += gcnew System::EventHandler(this, &MyForm::Box2_Leave);
 			// 
 			// tabSpread
 			// 
@@ -1063,7 +1420,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->tabSpread->Location = System::Drawing::Point(4, 22);
 			this->tabSpread->Name = L"tabSpread";
 			this->tabSpread->Padding = System::Windows::Forms::Padding(3);
-			this->tabSpread->Size = System::Drawing::Size(445, 218);
+			this->tabSpread->Size = System::Drawing::Size(445, 332);
 			this->tabSpread->TabIndex = 0;
 			this->tabSpread->Text = L"Bezpośrednio";
 			this->tabSpread->UseVisualStyleBackColor = true;
@@ -1075,7 +1432,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->tabPage2->Location = System::Drawing::Point(4, 22);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(445, 218);
+			this->tabPage2->Size = System::Drawing::Size(445, 332);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Pośrednio";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -1218,7 +1575,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->tabStopLoss->Location = System::Drawing::Point(4, 22);
 			this->tabStopLoss->Name = L"tabStopLoss";
 			this->tabStopLoss->Padding = System::Windows::Forms::Padding(3);
-			this->tabStopLoss->Size = System::Drawing::Size(445, 218);
+			this->tabStopLoss->Size = System::Drawing::Size(445, 332);
 			this->tabStopLoss->TabIndex = 2;
 			this->tabStopLoss->Text = L"Stop Loss";
 			this->tabStopLoss->UseVisualStyleBackColor = true;
@@ -1324,7 +1681,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(474, 282);
+			this->ClientSize = System::Drawing::Size(474, 395);
 			this->Controls->Add(this->tb_Karty);
 			this->Controls->Add(this->linkLabel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
@@ -1333,6 +1690,7 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->ShowIcon = false;
 			this->Text = L"Waluty";
+			this->FormClosed += gcnew System::Windows::Forms::FormClosedEventHandler(this, &MyForm::MyForm_FormClosed);
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_sp))->EndInit();
@@ -1350,6 +1708,14 @@ private: System::Windows::Forms::Panel^ panel2;
 			this->tb_Karty->ResumeLayout(false);
 			this->tabSwing->ResumeLayout(false);
 			this->tabSwing->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_ZRXcena))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_LSKcena))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_XRPcena))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_ETHcena))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_ZRXkwota))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_LSKkwota))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_XRPkwota))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_ETHkwota))->EndInit();
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_prowizja))->EndInit();
@@ -1519,7 +1885,16 @@ private: System::Windows::Forms::Panel^ panel2;
 			stan.write((const char*)&num_cenaWyjscia->Value, sizeof(num_cenaWyjscia->Value));
 			stan.write((const char*)&num_kwotaWejscia->Value, sizeof(num_kwotaWejscia->Value));
 			stan.write((const char*)&num_prowizja->Value, sizeof(num_prowizja->Value));
-		//		System::Windows::Forms::MessageBox::Show("Stan zaktualizowany", "Zapis", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			stan.write((const char*)&num_ETHkwota->Value, sizeof(num_ETHkwota->Value));
+			stan.write((const char*)&num_XRPkwota->Value, sizeof(num_XRPkwota->Value));
+			stan.write((const char*)&num_LSKkwota->Value, sizeof(num_LSKkwota->Value));
+			stan.write((const char*)&num_ZRXkwota->Value, sizeof(num_ZRXkwota->Value));
+			stan.write((const char*)&num_ETHcena->Value, sizeof(num_ETHcena->Value));
+			stan.write((const char*)&num_XRPcena->Value, sizeof(num_XRPcena->Value));
+			stan.write((const char*)&num_LSKcena->Value, sizeof(num_LSKcena->Value));
+			stan.write((const char*)&num_ZRXcena->Value, sizeof(num_ZRXcena->Value));
+		
+			//		System::Windows::Forms::MessageBox::Show("Stan zaktualizowany", "Zapis", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 		stan.close();
 	}
@@ -1579,8 +1954,24 @@ private: System::Windows::Forms::Panel^ panel2;
 			num_kwotaWejscia->Value = temp;
 			stan.read((char*)&temp, sizeof(temp));
 			num_prowizja->Value = temp;
-	
-			//System::Windows::Forms::MessageBox::Show(L"Stan został wczytany", L"Odczyt stanu", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			stan.read((char*)&temp, sizeof(temp));
+			num_ETHkwota->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_XRPkwota->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_LSKkwota->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_ZRXkwota->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_ETHcena->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_XRPcena->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_LSKcena->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_ZRXcena->Value = temp;
+
+		//	System::Windows::Forms::MessageBox::Show(L"Stan został wczytany", L"Odczyt stanu", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 		stan.close();
 		
@@ -1590,31 +1981,26 @@ private: System::Windows::Forms::Panel^ panel2;
 	private: System::Void c_zak_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
-		zapiszStan();
 	}
 
 	private: System::Void c_zak_2_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
-		zapiszStan();
 	}
 
 	private: System::Void c_sp_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
-		zapiszStan();
 	}
 
 	private: System::Void inwest_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
-		zapiszStan();
 	}
 
 	private: System::Void inwest_2_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
-		zapiszStan();
 	}
 
 	private: System::Void w_walucie_1_ValueChanged(System::Object^ sender, System::EventArgs^ e)
@@ -1635,54 +2021,145 @@ private: System::Windows::Forms::Panel^ panel2;
 	private: System::Void c_USDEUR_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
-		zapiszStan();
 	}
 
 
 	private: System::Void c_EURPLN_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		oblicz();
-		zapiszStan();
 	}
 
 
 	private: System::Void sl_cena_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		stopLoss();
-		zapiszStan();
 	}
 
 
 	private: System::Void sl_prog_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		stopLoss();
-		zapiszStan();
 	}
 
 
 	private: System::Void num_cenaWejscia_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		swing();
-		zapiszStan();
 	}
 
 
 	private: System::Void num_kwotaWejscia_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		swing();
-		zapiszStan();
 	}
 
 
 	private: System::Void num_prowizja_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		swing();
-		zapiszStan();
 	}
 	private: System::Void num_cenaWyjscia_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		swing();
-		zapiszStan();
 	}
+
+
+private: System::Void MyForm_FormClosed(System::Object^ sender, System::Windows::Forms::FormClosedEventArgs^ e)
+{
+	zapiszStan();
+}
+private: System::Void lb_ETH_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	num_kwotaWejscia->Value = num_ETHkwota->Value;
+	num_cenaWejscia->Value = num_ETHcena->Value;
+	lb_nazwaKrypto->Text = lb_ETH->Text;
+	num_cenaWyjscia->Focus();
+}
+private: System::Void lb_XRP_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	num_kwotaWejscia->Value = num_XRPkwota->Value;
+	num_cenaWejscia->Value = num_XRPcena->Value;
+	lb_nazwaKrypto->Text = lb_XRP->Text;
+	num_cenaWyjscia->Focus();
+}
+private: System::Void lb_LSK_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	num_kwotaWejscia->Value = num_LSKkwota->Value;
+	num_cenaWejscia->Value = num_LSKcena->Value;
+	lb_nazwaKrypto->Text = lb_LSK->Text;
+	num_cenaWyjscia->Focus();
+}
+private: System::Void lb_ZRX_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
+{
+	num_kwotaWejscia->Value = num_ZRXkwota->Value;
+	num_cenaWejscia->Value = num_ZRXcena->Value;
+	lb_nazwaKrypto->Text = lb_ZRX->Text;
+	num_cenaWyjscia->Focus();
+}
+
+private: System::Void lb_ETH_doubleClick(System::Object^ sender, System::EventArgs^ e)
+{
+	lb_ETH->Visible = false;
+	Box1->Visible = true;
+}
+private: System::Void Box1_Leave(System::Object^ sender, System::EventArgs^ e)
+{
+	Box1->Visible = false;
+	lb_ETH->Visible = true;
+}
+private: System::Void Box1_TextChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	lb_ETH->Text = Box1->Text;
+}
+
+private: System::Void lb_XRP_doubleClick(System::Object^ sender, System::EventArgs^ e)
+{
+	lb_XRP->Visible = false;
+	Box2->Visible = true;
+}
+private: System::Void Box2_Leave(System::Object^ sender, System::EventArgs^ e)
+{
+	Box2->Visible = false;
+	lb_XRP->Visible = true;
+}
+private: System::Void Box2_TextChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	lb_XRP->Text = Box2->Text;
+}
+
+
+private: System::Void lb_LSK_doubleClick(System::Object^ sender, System::EventArgs^ e)
+{
+	lb_LSK->Visible = false;
+	Box3->Visible = true;
+}
+private: System::Void Box3_Leave(System::Object^ sender, System::EventArgs^ e)
+{
+	Box3->Visible = false;
+	lb_LSK->Visible = true;
+}
+private: System::Void Box3_TextChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	lb_LSK->Text = Box3->Text;
+}
+
+
+private: System::Void lb_ZRX_doubleClick(System::Object^ sender, System::EventArgs^ e)
+{
+	lb_ZRX->Visible = false;
+	Box4->Visible = true;
+}
+private: System::Void Box4_Leave(System::Object^ sender, System::EventArgs^ e)
+{
+	Box4->Visible = false;
+	lb_ZRX->Visible = true;
+}
+private: System::Void Box4_TextChanged(System::Object^ sender, System::EventArgs^ e)
+{
+	lb_ZRX->Text = Box4->Text;
+}
+
+
 };
+
 }
