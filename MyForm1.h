@@ -1,8 +1,8 @@
 ﻿#pragma once
 #include <fstream>
+#include <math.h>
 #include "curl/curl.h"
 #include "curl/easy.h"
-
 namespace ForEXCLR 
 {
 	using namespace System;
@@ -79,7 +79,8 @@ namespace ForEXCLR
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Label^ lb_prc;
 	private: System::Windows::Forms::TabControl^ tb_Karty;
-	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: System::Windows::Forms::TabPage^ tabSpread;
+
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::Label^ label16;
@@ -97,8 +98,9 @@ namespace ForEXCLR
 	private: System::Windows::Forms::Label^ label23;
 	private: System::Windows::Forms::Label^ label22;
 	private: System::Windows::Forms::GroupBox^ groupBox3;
+	private: System::Windows::Forms::TabPage^ tabStopLoss;
 
-	private: System::Windows::Forms::TabPage^ tabPage3;
+
 	private: System::Windows::Forms::Label^ sl_stopLoss;
 	private: System::Windows::Forms::Label^ label25;
 	private: System::Windows::Forms::Label^ label24;
@@ -108,6 +110,42 @@ namespace ForEXCLR
 	private: System::Windows::Forms::Label^ label19;
 	private: System::Windows::Forms::NumericUpDown^ sl_cena;
 	private: System::Windows::Forms::GroupBox^ groupBox4;
+	private: System::Windows::Forms::TabPage^ tabSwing;
+
+	private: System::Windows::Forms::Label^ label30;
+	private: System::Windows::Forms::GroupBox^ groupBox6;
+	private: System::Windows::Forms::NumericUpDown^ num_prowizja;
+
+
+	private: System::Windows::Forms::Label^ label28;
+	private: System::Windows::Forms::NumericUpDown^ num_cenaWyjscia;
+
+	private: System::Windows::Forms::Label^ label29;
+
+
+	private: System::Windows::Forms::GroupBox^ groupBox5;
+	private: System::Windows::Forms::Label^ label27;
+	private: System::Windows::Forms::Label^ label26;
+private: System::Windows::Forms::NumericUpDown^ num_cenaWejscia;
+private: System::Windows::Forms::NumericUpDown^ num_kwotaWejscia;
+private: System::Windows::Forms::Label^ label34;
+private: System::Windows::Forms::Label^ label32;
+private: System::Windows::Forms::Label^ label33;
+private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::Label^ lb_jednKupione;
+
+private: System::Windows::Forms::Label^ label35;
+private: System::Windows::Forms::Label^ lb_progWyjscia;
+private: System::Windows::Forms::Label^ label37;
+private: System::Windows::Forms::Label^ label36;
+private: System::Windows::Forms::Label^ lb_kwotaWyjscia;
+private: System::Windows::Forms::Label^ label38;
+private: System::Windows::Forms::Label^ lb_swingWynik;
+private: System::Windows::Forms::Label^ lb_swingLabel;
+private: System::Windows::Forms::Label^ lb_swingPLN;
+private: System::Windows::Forms::Panel^ panel2;
+
+
 
 
 	private:
@@ -161,7 +199,34 @@ namespace ForEXCLR
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->tb_Karty = (gcnew System::Windows::Forms::TabControl());
-			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->tabSwing = (gcnew System::Windows::Forms::TabPage());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->lb_swingWynik = (gcnew System::Windows::Forms::Label());
+			this->lb_swingPLN = (gcnew System::Windows::Forms::Label());
+			this->lb_swingLabel = (gcnew System::Windows::Forms::Label());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->lb_progWyjscia = (gcnew System::Windows::Forms::Label());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->lb_jednKupione = (gcnew System::Windows::Forms::Label());
+			this->num_prowizja = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
+			this->lb_kwotaWyjscia = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->num_cenaWyjscia = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->num_cenaWejscia = (gcnew System::Windows::Forms::NumericUpDown());
+			this->num_kwotaWejscia = (gcnew System::Windows::Forms::NumericUpDown());
+			this->tabSpread = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->wart_EUR = (gcnew System::Windows::Forms::Label());
@@ -175,7 +240,7 @@ namespace ForEXCLR
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->c_USDEUR = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->tabStopLoss = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->sl_cena = (gcnew System::Windows::Forms::NumericUpDown());
@@ -196,13 +261,21 @@ namespace ForEXCLR
 			this->gr_ZS->SuspendLayout();
 			this->panel1->SuspendLayout();
 			this->tb_Karty->SuspendLayout();
-			this->tabPage1->SuspendLayout();
+			this->tabSwing->SuspendLayout();
+			this->panel2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_prowizja))->BeginInit();
+			this->groupBox6->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_cenaWyjscia))->BeginInit();
+			this->groupBox5->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_cenaWejscia))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_kwotaWejscia))->BeginInit();
+			this->tabSpread->SuspendLayout();
 			this->tabPage2->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_EURPLN))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_USDEUR))->BeginInit();
-			this->tabPage3->SuspendLayout();
+			this->tabStopLoss->SuspendLayout();
 			this->groupBox4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sl_cena))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sl_prog))->BeginInit();
@@ -654,41 +727,346 @@ namespace ForEXCLR
 			// 
 			// tb_Karty
 			// 
-			this->tb_Karty->Controls->Add(this->tabPage1);
+			this->tb_Karty->Controls->Add(this->tabSwing);
+			this->tb_Karty->Controls->Add(this->tabSpread);
 			this->tb_Karty->Controls->Add(this->tabPage2);
-			this->tb_Karty->Controls->Add(this->tabPage3);
+			this->tb_Karty->Controls->Add(this->tabStopLoss);
 			this->tb_Karty->Location = System::Drawing::Point(12, 12);
 			this->tb_Karty->Name = L"tb_Karty";
 			this->tb_Karty->SelectedIndex = 0;
 			this->tb_Karty->Size = System::Drawing::Size(453, 244);
 			this->tb_Karty->TabIndex = 23;
 			// 
-			// tabPage1
+			// tabSwing
 			// 
-			this->tabPage1->Controls->Add(this->lb_Inwestycja);
-			this->tabPage1->Controls->Add(this->gr_ZS);
-			this->tabPage1->Controls->Add(this->panel1);
-			this->tabPage1->Controls->Add(this->label8);
-			this->tabPage1->Controls->Add(this->inwest_1);
-			this->tabPage1->Controls->Add(this->label6);
-			this->tabPage1->Controls->Add(this->label4);
-			this->tabPage1->Controls->Add(this->w_walucie_2);
-			this->tabPage1->Controls->Add(this->groupBox2);
-			this->tabPage1->Controls->Add(this->label5);
-			this->tabPage1->Controls->Add(this->c_zak_1);
-			this->tabPage1->Controls->Add(this->label1);
-			this->tabPage1->Controls->Add(this->label7);
-			this->tabPage1->Controls->Add(this->c_zak_2);
-			this->tabPage1->Controls->Add(this->c_k_label);
-			this->tabPage1->Controls->Add(this->w_walucie_1);
-			this->tabPage1->Controls->Add(this->inwest_2);
-			this->tabPage1->Location = System::Drawing::Point(4, 22);
-			this->tabPage1->Name = L"tabPage1";
-			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(445, 218);
-			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"Bezpośrednio";
-			this->tabPage1->UseVisualStyleBackColor = true;
+			this->tabSwing->Controls->Add(this->panel2);
+			this->tabSwing->Controls->Add(this->label38);
+			this->tabSwing->Controls->Add(this->lb_progWyjscia);
+			this->tabSwing->Controls->Add(this->label37);
+			this->tabSwing->Controls->Add(this->label36);
+			this->tabSwing->Controls->Add(this->lb_jednKupione);
+			this->tabSwing->Controls->Add(this->num_prowizja);
+			this->tabSwing->Controls->Add(this->label30);
+			this->tabSwing->Controls->Add(this->groupBox6);
+			this->tabSwing->Controls->Add(this->groupBox5);
+			this->tabSwing->Location = System::Drawing::Point(4, 22);
+			this->tabSwing->Name = L"tabSwing";
+			this->tabSwing->Size = System::Drawing::Size(445, 218);
+			this->tabSwing->TabIndex = 3;
+			this->tabSwing->Text = L"Short Swing";
+			this->tabSwing->UseVisualStyleBackColor = true;
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::Gainsboro;
+			this->panel2->Controls->Add(this->lb_swingWynik);
+			this->panel2->Controls->Add(this->lb_swingPLN);
+			this->panel2->Controls->Add(this->lb_swingLabel);
+			this->panel2->Location = System::Drawing::Point(229, 164);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(200, 39);
+			this->panel2->TabIndex = 16;
+			// 
+			// lb_swingWynik
+			// 
+			this->lb_swingWynik->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->lb_swingWynik->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+																	 static_cast<System::Byte>(0)));
+			this->lb_swingWynik->Location = System::Drawing::Point(79, 9);
+			this->lb_swingWynik->Name = L"lb_swingWynik";
+			this->lb_swingWynik->Size = System::Drawing::Size(78, 20);
+			this->lb_swingWynik->TabIndex = 14;
+			this->lb_swingWynik->Text = L"0";
+			this->lb_swingWynik->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			// 
+			// lb_swingPLN
+			// 
+			this->lb_swingPLN->AutoSize = true;
+			this->lb_swingPLN->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+																   static_cast<System::Byte>(0)));
+			this->lb_swingPLN->Location = System::Drawing::Point(154, 9);
+			this->lb_swingPLN->Name = L"lb_swingPLN";
+			this->lb_swingPLN->Size = System::Drawing::Size(39, 20);
+			this->lb_swingPLN->TabIndex = 15;
+			this->lb_swingPLN->Text = L"PLN";
+			// 
+			// lb_swingLabel
+			// 
+			this->lb_swingLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->lb_swingLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+																	 static_cast<System::Byte>(0)));
+			this->lb_swingLabel->Location = System::Drawing::Point(3, 9);
+			this->lb_swingLabel->Name = L"lb_swingLabel";
+			this->lb_swingLabel->Size = System::Drawing::Size(82, 20);
+			this->lb_swingLabel->TabIndex = 13;
+			this->lb_swingLabel->Text = L"-";
+			this->lb_swingLabel->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+															   static_cast<System::Byte>(0)));
+			this->label38->Location = System::Drawing::Point(209, 134);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(35, 17);
+			this->label38->TabIndex = 12;
+			this->label38->Text = L"PLN";
+			// 
+			// lb_progWyjscia
+			// 
+			this->lb_progWyjscia->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+																	  static_cast<System::Byte>(0)));
+			this->lb_progWyjscia->Location = System::Drawing::Point(149, 134);
+			this->lb_progWyjscia->Name = L"lb_progWyjscia";
+			this->lb_progWyjscia->Size = System::Drawing::Size(61, 20);
+			this->lb_progWyjscia->TabIndex = 11;
+			this->lb_progWyjscia->Text = L"0";
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+															   static_cast<System::Byte>(0)));
+			this->label37->Location = System::Drawing::Point(8, 134);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(94, 17);
+			this->label37->TabIndex = 10;
+			this->label37->Text = L"Próg wyjścia: ";
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+															   static_cast<System::Byte>(0)));
+			this->label36->Location = System::Drawing::Point(8, 108);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(142, 17);
+			this->label36->TabIndex = 9;
+			this->label36->Text = L"Jednostek nabytych: ";
+			// 
+			// lb_jednKupione
+			// 
+			this->lb_jednKupione->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+																	  static_cast<System::Byte>(0)));
+			this->lb_jednKupione->Location = System::Drawing::Point(149, 108);
+			this->lb_jednKupione->Name = L"lb_jednKupione";
+			this->lb_jednKupione->Size = System::Drawing::Size(122, 20);
+			this->lb_jednKupione->TabIndex = 9;
+			this->lb_jednKupione->Text = L"0";
+			// 
+			// num_prowizja
+			// 
+			this->num_prowizja->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_prowizja->DecimalPlaces = 2;
+			this->num_prowizja->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_prowizja->Location = System::Drawing::Point(190, 50);
+			this->num_prowizja->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_prowizja->Name = L"num_prowizja";
+			this->num_prowizja->Size = System::Drawing::Size(63, 20);
+			this->num_prowizja->TabIndex = 8;
+			this->num_prowizja->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_prowizja->ThousandsSeparator = true;
+			this->num_prowizja->ValueChanged += gcnew System::EventHandler(this, &MyForm::num_prowizja_ValueChanged);
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Location = System::Drawing::Point(198, 73);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(46, 13);
+			this->label30->TabIndex = 8;
+			this->label30->Text = L"Prowizja";
+			// 
+			// groupBox6
+			// 
+			this->groupBox6->Controls->Add(this->lb_kwotaWyjscia);
+			this->groupBox6->Controls->Add(this->label35);
+			this->groupBox6->Controls->Add(this->label34);
+			this->groupBox6->Controls->Add(this->label32);
+			this->groupBox6->Controls->Add(this->label28);
+			this->groupBox6->Controls->Add(this->num_cenaWyjscia);
+			this->groupBox6->Controls->Add(this->label29);
+			this->groupBox6->Location = System::Drawing::Point(282, 19);
+			this->groupBox6->Name = L"groupBox6";
+			this->groupBox6->Size = System::Drawing::Size(160, 78);
+			this->groupBox6->TabIndex = 0;
+			this->groupBox6->TabStop = false;
+			this->groupBox6->Text = L"Wyjście";
+			// 
+			// lb_kwotaWyjscia
+			// 
+			this->lb_kwotaWyjscia->Location = System::Drawing::Point(49, 47);
+			this->lb_kwotaWyjscia->Name = L"lb_kwotaWyjscia";
+			this->lb_kwotaWyjscia->Size = System::Drawing::Size(75, 18);
+			this->lb_kwotaWyjscia->TabIndex = 10;
+			this->lb_kwotaWyjscia->Text = L"0";
+			this->lb_kwotaWyjscia->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->Location = System::Drawing::Point(32, 118);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(15, 13);
+			this->label35->TabIndex = 9;
+			this->label35->Text = L"%";
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->Location = System::Drawing::Point(130, 47);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(28, 13);
+			this->label34->TabIndex = 9;
+			this->label34->Text = L"PLN";
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Location = System::Drawing::Point(130, 21);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(28, 13);
+			this->label32->TabIndex = 7;
+			this->label32->Text = L"PLN";
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Location = System::Drawing::Point(6, 21);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(32, 13);
+			this->label28->TabIndex = 7;
+			this->label28->Text = L"Cena";
+			// 
+			// num_cenaWyjscia
+			// 
+			this->num_cenaWyjscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_cenaWyjscia->DecimalPlaces = 2;
+			this->num_cenaWyjscia->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_cenaWyjscia->Location = System::Drawing::Point(44, 19);
+			this->num_cenaWyjscia->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_cenaWyjscia->Name = L"num_cenaWyjscia";
+			this->num_cenaWyjscia->Size = System::Drawing::Size(80, 20);
+			this->num_cenaWyjscia->TabIndex = 5;
+			this->num_cenaWyjscia->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_cenaWyjscia->ThousandsSeparator = true;
+			this->num_cenaWyjscia->ValueChanged += gcnew System::EventHandler(this, &MyForm::num_cenaWyjscia_ValueChanged);
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Location = System::Drawing::Point(6, 47);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(37, 13);
+			this->label29->TabIndex = 6;
+			this->label29->Text = L"Kwota";
+			// 
+			// groupBox5
+			// 
+			this->groupBox5->Controls->Add(this->label33);
+			this->groupBox5->Controls->Add(this->label31);
+			this->groupBox5->Controls->Add(this->label27);
+			this->groupBox5->Controls->Add(this->label26);
+			this->groupBox5->Controls->Add(this->num_cenaWejscia);
+			this->groupBox5->Controls->Add(this->num_kwotaWejscia);
+			this->groupBox5->Location = System::Drawing::Point(3, 19);
+			this->groupBox5->Name = L"groupBox5";
+			this->groupBox5->Size = System::Drawing::Size(164, 78);
+			this->groupBox5->TabIndex = 0;
+			this->groupBox5->TabStop = false;
+			this->groupBox5->Text = L"Wejście";
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->Location = System::Drawing::Point(130, 47);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(28, 13);
+			this->label33->TabIndex = 8;
+			this->label33->Text = L"PLN";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Location = System::Drawing::Point(130, 21);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(28, 13);
+			this->label31->TabIndex = 6;
+			this->label31->Text = L"PLN";
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Location = System::Drawing::Point(6, 21);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(32, 13);
+			this->label27->TabIndex = 5;
+			this->label27->Text = L"Cena";
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(6, 47);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(37, 13);
+			this->label26->TabIndex = 4;
+			this->label26->Text = L"Kwota";
+			// 
+			// num_cenaWejscia
+			// 
+			this->num_cenaWejscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_cenaWejscia->DecimalPlaces = 2;
+			this->num_cenaWejscia->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_cenaWejscia->Location = System::Drawing::Point(44, 19);
+			this->num_cenaWejscia->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_cenaWejscia->Name = L"num_cenaWejscia";
+			this->num_cenaWejscia->Size = System::Drawing::Size(80, 20);
+			this->num_cenaWejscia->TabIndex = 3;
+			this->num_cenaWejscia->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_cenaWejscia->ThousandsSeparator = true;
+			this->num_cenaWejscia->ValueChanged += gcnew System::EventHandler(this, &MyForm::num_cenaWejscia_ValueChanged);
+			// 
+			// num_kwotaWejscia
+			// 
+			this->num_kwotaWejscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->num_kwotaWejscia->DecimalPlaces = 2;
+			this->num_kwotaWejscia->ForeColor = System::Drawing::SystemColors::WindowText;
+			this->num_kwotaWejscia->Location = System::Drawing::Point(44, 45);
+			this->num_kwotaWejscia->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
+			this->num_kwotaWejscia->Name = L"num_kwotaWejscia";
+			this->num_kwotaWejscia->Size = System::Drawing::Size(80, 20);
+			this->num_kwotaWejscia->TabIndex = 2;
+			this->num_kwotaWejscia->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->num_kwotaWejscia->ThousandsSeparator = true;
+			this->num_kwotaWejscia->ValueChanged += gcnew System::EventHandler(this, &MyForm::num_kwotaWejscia_ValueChanged);
+			// 
+			// tabSpread
+			// 
+			this->tabSpread->Controls->Add(this->lb_Inwestycja);
+			this->tabSpread->Controls->Add(this->gr_ZS);
+			this->tabSpread->Controls->Add(this->panel1);
+			this->tabSpread->Controls->Add(this->label8);
+			this->tabSpread->Controls->Add(this->inwest_1);
+			this->tabSpread->Controls->Add(this->label6);
+			this->tabSpread->Controls->Add(this->label4);
+			this->tabSpread->Controls->Add(this->w_walucie_2);
+			this->tabSpread->Controls->Add(this->groupBox2);
+			this->tabSpread->Controls->Add(this->label5);
+			this->tabSpread->Controls->Add(this->c_zak_1);
+			this->tabSpread->Controls->Add(this->label1);
+			this->tabSpread->Controls->Add(this->label7);
+			this->tabSpread->Controls->Add(this->c_zak_2);
+			this->tabSpread->Controls->Add(this->c_k_label);
+			this->tabSpread->Controls->Add(this->w_walucie_1);
+			this->tabSpread->Controls->Add(this->inwest_2);
+			this->tabSpread->Location = System::Drawing::Point(4, 22);
+			this->tabSpread->Name = L"tabSpread";
+			this->tabSpread->Padding = System::Windows::Forms::Padding(3);
+			this->tabSpread->Size = System::Drawing::Size(445, 218);
+			this->tabSpread->TabIndex = 0;
+			this->tabSpread->Text = L"Bezpośrednio";
+			this->tabSpread->UseVisualStyleBackColor = true;
 			// 
 			// tabPage2
 			// 
@@ -832,18 +1210,18 @@ namespace ForEXCLR
 			this->label15->TabIndex = 0;
 			this->label15->Text = L"USD->EUR";
 			// 
-			// tabPage3
+			// tabStopLoss
 			// 
-			this->tabPage3->Controls->Add(this->groupBox4);
-			this->tabPage3->Controls->Add(this->sl_stopLoss);
-			this->tabPage3->Controls->Add(this->label25);
-			this->tabPage3->Location = System::Drawing::Point(4, 22);
-			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage3->Size = System::Drawing::Size(445, 218);
-			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"Stop Loss";
-			this->tabPage3->UseVisualStyleBackColor = true;
+			this->tabStopLoss->Controls->Add(this->groupBox4);
+			this->tabStopLoss->Controls->Add(this->sl_stopLoss);
+			this->tabStopLoss->Controls->Add(this->label25);
+			this->tabStopLoss->Location = System::Drawing::Point(4, 22);
+			this->tabStopLoss->Name = L"tabStopLoss";
+			this->tabStopLoss->Padding = System::Windows::Forms::Padding(3);
+			this->tabStopLoss->Size = System::Drawing::Size(445, 218);
+			this->tabStopLoss->TabIndex = 2;
+			this->tabStopLoss->Text = L"Stop Loss";
+			this->tabStopLoss->UseVisualStyleBackColor = true;
 			// 
 			// groupBox4
 			// 
@@ -970,16 +1348,28 @@ namespace ForEXCLR
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->tb_Karty->ResumeLayout(false);
-			this->tabPage1->ResumeLayout(false);
-			this->tabPage1->PerformLayout();
+			this->tabSwing->ResumeLayout(false);
+			this->tabSwing->PerformLayout();
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_prowizja))->EndInit();
+			this->groupBox6->ResumeLayout(false);
+			this->groupBox6->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_cenaWyjscia))->EndInit();
+			this->groupBox5->ResumeLayout(false);
+			this->groupBox5->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_cenaWejscia))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->num_kwotaWejscia))->EndInit();
+			this->tabSpread->ResumeLayout(false);
+			this->tabSpread->PerformLayout();
 			this->tabPage2->ResumeLayout(false);
 			this->groupBox3->ResumeLayout(false);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_EURPLN))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_USDEUR))->EndInit();
-			this->tabPage3->ResumeLayout(false);
-			this->tabPage3->PerformLayout();
+			this->tabStopLoss->ResumeLayout(false);
+			this->tabStopLoss->PerformLayout();
 			this->groupBox4->ResumeLayout(false);
 			this->groupBox4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sl_cena))->EndInit();
@@ -994,6 +1384,8 @@ namespace ForEXCLR
 	System::Decimal sumaPLN;
 	System::Decimal sumaUSD;
 	System::Decimal zysk;
+	System::Decimal jednostkiKupione;
+	double swingWynik;
 
 	private: System::Void oblicz()
 	{
@@ -1060,36 +1452,77 @@ namespace ForEXCLR
 		wart_PLN->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * sumaUSD * c_USDEUR->Value * c_EURPLN->Value) / 100);
 	}
 
-		private: System::Void stopLoss()
+	private: System::Void swing()
+	{
+		jednostkiKupione = (num_kwotaWejscia->Value / num_cenaWejscia->Value) * (1 - num_prowizja->Value / 100);
+		lb_jednKupione->Text = System::Convert::ToString(System::Decimal::Ceiling(100000000 * jednostkiKupione) / 100000000);
+		System::Decimal kwotaWyjscia = jednostkiKupione * num_cenaWyjscia->Value;
+		lb_kwotaWyjscia->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * kwotaWyjscia) / 100);
+		lb_progWyjscia->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * num_cenaWejscia->Value / ((1 - num_prowizja->Value / 100) * (1 - num_prowizja->Value / 100))) / 100);
+		swingWynik = double(kwotaWyjscia) - double(num_kwotaWejscia->Value);
+
+		if (kwotaWyjscia > num_kwotaWejscia->Value)
 		{
-			sl_stopLoss->Text = System::Convert::ToString(sl_cena->Value * (1 - sl_prog->Value / 100)) + " jednostek";
+			lb_kwotaWyjscia->ForeColor = Color::Green;
+			label34->ForeColor = Color::Green;
+			lb_swingLabel->Text = L"Zysk:";
+			lb_swingLabel->ForeColor = Color::Green;
+			lb_swingWynik->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * System::Decimal(swingWynik)) / 100);
+			lb_swingWynik->ForeColor = Color::Green;
+			lb_swingPLN->ForeColor = Color::Green;
 		}
-
-		private: System::Void zapiszStan()
+		
+		else if (kwotaWyjscia < num_kwotaWejscia->Value)
 		{
-			std::ofstream stan;
-
-			stan.open("stan", std::ios_base::binary);
-
-			if (!stan.is_open())
-			{
-				System::Windows::Forms::MessageBox::Show(L"Wystapił problem z otwarciem pliku ostatniego stanu", L"Błąd", MessageBoxButtons::OK, MessageBoxIcon::Error);
-			}
-			else
-			{
-				stan.write((const char*)&inwest_1->Value, sizeof(inwest_1->Value));
-				stan.write((const char*)&inwest_2->Value, sizeof(inwest_2->Value));
-				stan.write((const char*)&c_zak_1->Value, sizeof(c_zak_1->Value));
-				stan.write((const char*)&c_zak_2->Value, sizeof(c_zak_2->Value));
-				stan.write((const char*)&c_sp->Value, sizeof(c_sp->Value));
-				stan.write((const char*)&c_USDEUR->Value, sizeof(c_USDEUR->Value));
-				stan.write((const char*)&c_EURPLN->Value, sizeof(c_EURPLN->Value));
-				stan.write((const char*)&sl_cena->Value, sizeof(sl_cena->Value));
-				stan.write((const char*)&sl_prog->Value, sizeof(sl_prog->Value));
-				//	System::Windows::Forms::MessageBox::Show("Stan zaktualizowany", "Zapis", MessageBoxButtons::OK, MessageBoxIcon::Information);
-			}
-			stan.close();
+			lb_kwotaWyjscia->ForeColor = Color::Red;
+			label34->ForeColor = Color::Red;
+			lb_swingLabel->Text = L"Strata:";
+			lb_swingLabel->ForeColor = Color::Red;
+			lb_swingWynik->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * System::Decimal(swingWynik)) / 100);
+			lb_swingWynik->ForeColor = Color::Red;
+			lb_swingPLN->ForeColor = Color::Red;
 		}
+		else
+		{
+			lb_kwotaWyjscia->ForeColor = Color::Black;
+			label34->ForeColor = Color::Black;
+		}
+	}
+
+	private: System::Void stopLoss()
+	{
+		sl_stopLoss->Text = System::Convert::ToString(sl_cena->Value * (1 - sl_prog->Value / 100)) + " jednostek";
+	}
+
+	private: System::Void zapiszStan()
+	{
+		std::ofstream stan;
+
+		stan.open("stan", std::ios_base::binary);
+
+		if (!stan.is_open())
+		{
+			System::Windows::Forms::MessageBox::Show(L"Wystapił problem z otwarciem pliku ostatniego stanu", L"Błąd", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+		else
+		{
+			stan.write((const char*)&inwest_1->Value, sizeof(inwest_1->Value));
+			stan.write((const char*)&inwest_2->Value, sizeof(inwest_2->Value));
+			stan.write((const char*)&c_zak_1->Value, sizeof(c_zak_1->Value));
+			stan.write((const char*)&c_zak_2->Value, sizeof(c_zak_2->Value));
+			stan.write((const char*)&c_sp->Value, sizeof(c_sp->Value));
+			stan.write((const char*)&c_USDEUR->Value, sizeof(c_USDEUR->Value));
+			stan.write((const char*)&c_EURPLN->Value, sizeof(c_EURPLN->Value));
+			stan.write((const char*)&sl_cena->Value, sizeof(sl_cena->Value));
+			stan.write((const char*)&sl_prog->Value, sizeof(sl_prog->Value));
+			stan.write((const char*)&num_cenaWejscia->Value, sizeof(num_cenaWejscia->Value));
+			stan.write((const char*)&num_cenaWyjscia->Value, sizeof(num_cenaWyjscia->Value));
+			stan.write((const char*)&num_kwotaWejscia->Value, sizeof(num_kwotaWejscia->Value));
+			stan.write((const char*)&num_prowizja->Value, sizeof(num_prowizja->Value));
+		//		System::Windows::Forms::MessageBox::Show("Stan zaktualizowany", "Zapis", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		stan.close();
+	}
 
 
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
@@ -1138,6 +1571,14 @@ namespace ForEXCLR
 			sl_cena->Value = temp;
 			stan.read((char*)&temp, sizeof(temp));
 			sl_prog->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_cenaWejscia->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_cenaWyjscia->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_kwotaWejscia->Value = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			num_prowizja->Value = temp;
 	
 			//System::Windows::Forms::MessageBox::Show(L"Stan został wczytany", L"Odczyt stanu", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
@@ -1215,6 +1656,32 @@ namespace ForEXCLR
 	private: System::Void sl_prog_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
 		stopLoss();
+		zapiszStan();
+	}
+
+
+	private: System::Void num_cenaWejscia_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		swing();
+		zapiszStan();
+	}
+
+
+	private: System::Void num_kwotaWejscia_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		swing();
+		zapiszStan();
+	}
+
+
+	private: System::Void num_prowizja_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		swing();
+		zapiszStan();
+	}
+	private: System::Void num_cenaWyjscia_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
+		swing();
 		zapiszStan();
 	}
 };
