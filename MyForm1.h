@@ -202,6 +202,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ZRXUSDT;
 private: System::Windows::Forms::NumericUpDown^ num_LSKUSDT;
 
 private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
+private: System::Windows::Forms::Panel^ panel4;
 
 
 
@@ -271,21 +272,21 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->label49 = (gcnew System::Windows::Forms::Label());
 			this->num_XRPUSDT = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label48 = (gcnew System::Windows::Forms::Label());
-			this->label42 = (gcnew System::Windows::Forms::Label());
 			this->num_BSVUSDT = (gcnew System::Windows::Forms::NumericUpDown());
-			this->lb_USDT1 = (gcnew System::Windows::Forms::Label());
 			this->label46 = (gcnew System::Windows::Forms::Label());
-			this->lb_USDT2 = (gcnew System::Windows::Forms::Label());
+			this->label42 = (gcnew System::Windows::Forms::Label());
 			this->label47 = (gcnew System::Windows::Forms::Label());
-			this->lb_USDT3 = (gcnew System::Windows::Forms::Label());
 			this->num_ZRXUSDT = (gcnew System::Windows::Forms::NumericUpDown());
-			this->lb_USDT4 = (gcnew System::Windows::Forms::Label());
 			this->num_LSKUSDT = (gcnew System::Windows::Forms::NumericUpDown());
-			this->lb_USDT5 = (gcnew System::Windows::Forms::Label());
+			this->lb_USDT1 = (gcnew System::Windows::Forms::Label());
 			this->label44 = (gcnew System::Windows::Forms::Label());
 			this->num_ETHUSDT = (gcnew System::Windows::Forms::NumericUpDown());
 			this->num_cenaUSDT = (gcnew System::Windows::Forms::NumericUpDown());
+			this->lb_USDT2 = (gcnew System::Windows::Forms::Label());
 			this->label45 = (gcnew System::Windows::Forms::Label());
+			this->lb_USDT3 = (gcnew System::Windows::Forms::Label());
+			this->lb_USDT5 = (gcnew System::Windows::Forms::Label());
+			this->lb_USDT4 = (gcnew System::Windows::Forms::Label());
 			this->lb_BSV = (gcnew System::Windows::Forms::Label());
 			this->num_BSVcena = (gcnew System::Windows::Forms::NumericUpDown());
 			this->num_BSVkwota = (gcnew System::Windows::Forms::NumericUpDown());
@@ -362,6 +363,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->sl_stopLoss = (gcnew System::Windows::Forms::Label());
 			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_sp))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_1))->BeginInit();
@@ -408,6 +410,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->groupBox4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sl_cena))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sl_prog))->BeginInit();
+			this->panel4->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// c_zak_1
@@ -868,10 +871,9 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// 
 			// tabSwing
 			// 
+			this->tabSwing->Controls->Add(this->panel4);
 			this->tabSwing->Controls->Add(this->panel3);
 			this->tabSwing->Controls->Add(this->lb_BSV);
-			this->tabSwing->Controls->Add(this->num_BSVcena);
-			this->tabSwing->Controls->Add(this->num_BSVkwota);
 			this->tabSwing->Controls->Add(this->Box5);
 			this->tabSwing->Controls->Add(this->lb_nazwaKrypto);
 			this->tabSwing->Controls->Add(this->lb_ZRX);
@@ -879,18 +881,6 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->tabSwing->Controls->Add(this->lb_XRP);
 			this->tabSwing->Controls->Add(this->lb_ETH);
 			this->tabSwing->Controls->Add(this->label43);
-			this->tabSwing->Controls->Add(this->label39);
-			this->tabSwing->Controls->Add(this->label40);
-			this->tabSwing->Controls->Add(this->label41);
-			this->tabSwing->Controls->Add(this->num_ZRXcena);
-			this->tabSwing->Controls->Add(this->num_LSKcena);
-			this->tabSwing->Controls->Add(this->num_XRPcena);
-			this->tabSwing->Controls->Add(this->num_ETHcena);
-			this->tabSwing->Controls->Add(this->num_ZRXkwota);
-			this->tabSwing->Controls->Add(this->num_LSKkwota);
-			this->tabSwing->Controls->Add(this->num_XRPkwota);
-			this->tabSwing->Controls->Add(this->num_ETHkwota);
-			this->tabSwing->Controls->Add(this->lb_Krypto);
 			this->tabSwing->Controls->Add(this->panel2);
 			this->tabSwing->Controls->Add(this->label38);
 			this->tabSwing->Controls->Add(this->lb_progWyjscia);
@@ -914,7 +904,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// 
 			// panel3
 			// 
-			this->panel3->BackColor = System::Drawing::Color::Gainsboro;
+			this->panel3->BackColor = System::Drawing::Color::Tan;
 			this->panel3->Controls->Add(this->label55);
 			this->panel3->Controls->Add(this->label50);
 			this->panel3->Controls->Add(this->label51);
@@ -927,18 +917,18 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->panel3->Controls->Add(this->label42);
 			this->panel3->Controls->Add(this->num_BSVUSDT);
 			this->panel3->Controls->Add(this->lb_USDT1);
+			this->panel3->Controls->Add(this->label44);
 			this->panel3->Controls->Add(this->label46);
+			this->panel3->Controls->Add(this->num_cenaUSDT);
 			this->panel3->Controls->Add(this->lb_USDT2);
+			this->panel3->Controls->Add(this->label45);
 			this->panel3->Controls->Add(this->label47);
 			this->panel3->Controls->Add(this->lb_USDT3);
+			this->panel3->Controls->Add(this->lb_USDT5);
 			this->panel3->Controls->Add(this->num_ZRXUSDT);
 			this->panel3->Controls->Add(this->lb_USDT4);
-			this->panel3->Controls->Add(this->num_LSKUSDT);
-			this->panel3->Controls->Add(this->lb_USDT5);
-			this->panel3->Controls->Add(this->label44);
 			this->panel3->Controls->Add(this->num_ETHUSDT);
-			this->panel3->Controls->Add(this->num_cenaUSDT);
-			this->panel3->Controls->Add(this->label45);
+			this->panel3->Controls->Add(this->num_LSKUSDT);
 			this->panel3->Location = System::Drawing::Point(3, 108);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(517, 115);
@@ -947,7 +937,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label55
 			// 
 			this->label55->AutoSize = true;
-			this->label55->Location = System::Drawing::Point(481, 84);
+			this->label55->Location = System::Drawing::Point(477, 92);
 			this->label55->Name = L"label55";
 			this->label55->Size = System::Drawing::Size(28, 13);
 			this->label55->TabIndex = 34;
@@ -958,65 +948,65 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->label50->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->label50->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 															   static_cast<System::Byte>(0)));
-			this->label50->Location = System::Drawing::Point(52, 84);
+			this->label50->Location = System::Drawing::Point(52, 92);
 			this->label50->Name = L"label50";
 			this->label50->Size = System::Drawing::Size(78, 13);
 			this->label50->TabIndex = 50;
 			this->label50->Text = L"0";
-			this->label50->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			this->label50->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label51
 			// 
 			this->label51->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->label51->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 															   static_cast<System::Byte>(0)));
-			this->label51->Location = System::Drawing::Point(139, 84);
+			this->label51->Location = System::Drawing::Point(139, 92);
 			this->label51->Name = L"label51";
 			this->label51->Size = System::Drawing::Size(78, 13);
 			this->label51->TabIndex = 51;
 			this->label51->Text = L"0";
-			this->label51->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			this->label51->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label52
 			// 
 			this->label52->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->label52->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 															   static_cast<System::Byte>(0)));
-			this->label52->Location = System::Drawing::Point(225, 84);
+			this->label52->Location = System::Drawing::Point(225, 92);
 			this->label52->Name = L"label52";
 			this->label52->Size = System::Drawing::Size(78, 13);
 			this->label52->TabIndex = 52;
 			this->label52->Text = L"0";
-			this->label52->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			this->label52->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label53
 			// 
 			this->label53->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->label53->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 															   static_cast<System::Byte>(0)));
-			this->label53->Location = System::Drawing::Point(311, 84);
+			this->label53->Location = System::Drawing::Point(311, 92);
 			this->label53->Name = L"label53";
 			this->label53->Size = System::Drawing::Size(78, 13);
 			this->label53->TabIndex = 53;
 			this->label53->Text = L"0";
-			this->label53->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			this->label53->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label54
 			// 
 			this->label54->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
 			this->label54->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 															   static_cast<System::Byte>(0)));
-			this->label54->Location = System::Drawing::Point(397, 84);
+			this->label54->Location = System::Drawing::Point(397, 92);
 			this->label54->Name = L"label54";
 			this->label54->Size = System::Drawing::Size(78, 13);
 			this->label54->TabIndex = 54;
 			this->label54->Text = L"0";
-			this->label54->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			this->label54->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label49
 			// 
 			this->label49->AutoSize = true;
-			this->label49->Location = System::Drawing::Point(6, 84);
+			this->label49->Location = System::Drawing::Point(6, 92);
 			this->label49->Name = L"label49";
 			this->label49->Size = System::Drawing::Size(39, 13);
 			this->label49->TabIndex = 49;
@@ -1027,7 +1017,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_XRPUSDT->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_XRPUSDT->DecimalPlaces = 5;
 			this->num_XRPUSDT->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_XRPUSDT->Location = System::Drawing::Point(131, 37);
+			this->num_XRPUSDT->Location = System::Drawing::Point(131, 41);
 			this->num_XRPUSDT->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_XRPUSDT->Name = L"num_XRPUSDT";
 			this->num_XRPUSDT->Size = System::Drawing::Size(80, 20);
@@ -1039,27 +1029,18 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label48
 			// 
 			this->label48->AutoSize = true;
-			this->label48->Location = System::Drawing::Point(477, 62);
+			this->label48->Location = System::Drawing::Point(473, 70);
 			this->label48->Name = L"label48";
 			this->label48->Size = System::Drawing::Size(37, 13);
 			this->label48->TabIndex = 48;
 			this->label48->Text = L"USDT";
-			// 
-			// label42
-			// 
-			this->label42->AutoSize = true;
-			this->label42->Location = System::Drawing::Point(6, 62);
-			this->label42->Name = L"label42";
-			this->label42->Size = System::Drawing::Size(37, 13);
-			this->label42->TabIndex = 34;
-			this->label42->Text = L"USDT";
 			// 
 			// num_BSVUSDT
 			// 
 			this->num_BSVUSDT->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_BSVUSDT->DecimalPlaces = 5;
 			this->num_BSVUSDT->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_BSVUSDT->Location = System::Drawing::Point(389, 37);
+			this->num_BSVUSDT->Location = System::Drawing::Point(389, 41);
 			this->num_BSVUSDT->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_BSVUSDT->Name = L"num_BSVUSDT";
 			this->num_BSVUSDT->Size = System::Drawing::Size(80, 20);
@@ -1068,66 +1049,39 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_BSVUSDT->ThousandsSeparator = true;
 			this->num_BSVUSDT->ValueChanged += gcnew System::EventHandler(this, &MyForm::num_BSVUSDT_ValueChanged);
 			// 
-			// lb_USDT1
-			// 
-			this->lb_USDT1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->lb_USDT1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																static_cast<System::Byte>(0)));
-			this->lb_USDT1->Location = System::Drawing::Point(52, 62);
-			this->lb_USDT1->Name = L"lb_USDT1";
-			this->lb_USDT1->Size = System::Drawing::Size(78, 13);
-			this->lb_USDT1->TabIndex = 16;
-			this->lb_USDT1->Text = L"0";
-			this->lb_USDT1->TextAlign = System::Drawing::ContentAlignment::TopRight;
-			// 
 			// label46
 			// 
 			this->label46->AutoSize = true;
-			this->label46->Location = System::Drawing::Point(477, 39);
+			this->label46->Location = System::Drawing::Point(473, 43);
 			this->label46->Name = L"label46";
 			this->label46->Size = System::Drawing::Size(37, 13);
 			this->label46->TabIndex = 46;
 			this->label46->Text = L"USDT";
 			// 
-			// lb_USDT2
+			// label42
 			// 
-			this->lb_USDT2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->lb_USDT2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																static_cast<System::Byte>(0)));
-			this->lb_USDT2->Location = System::Drawing::Point(139, 62);
-			this->lb_USDT2->Name = L"lb_USDT2";
-			this->lb_USDT2->Size = System::Drawing::Size(78, 13);
-			this->lb_USDT2->TabIndex = 35;
-			this->lb_USDT2->Text = L"0";
-			this->lb_USDT2->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			this->label42->AutoSize = true;
+			this->label42->Location = System::Drawing::Point(6, 70);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(37, 13);
+			this->label42->TabIndex = 34;
+			this->label42->Text = L"USDT";
 			// 
 			// label47
 			// 
 			this->label47->AutoSize = true;
-			this->label47->Location = System::Drawing::Point(6, 39);
+			this->label47->Location = System::Drawing::Point(6, 43);
 			this->label47->Name = L"label47";
 			this->label47->Size = System::Drawing::Size(28, 13);
 			this->label47->TabIndex = 45;
 			this->label47->Text = L"Kurs";
-			// 
-			// lb_USDT3
-			// 
-			this->lb_USDT3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->lb_USDT3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																static_cast<System::Byte>(0)));
-			this->lb_USDT3->Location = System::Drawing::Point(225, 62);
-			this->lb_USDT3->Name = L"lb_USDT3";
-			this->lb_USDT3->Size = System::Drawing::Size(78, 13);
-			this->lb_USDT3->TabIndex = 36;
-			this->lb_USDT3->Text = L"0";
-			this->lb_USDT3->TextAlign = System::Drawing::ContentAlignment::TopRight;
 			// 
 			// num_ZRXUSDT
 			// 
 			this->num_ZRXUSDT->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_ZRXUSDT->DecimalPlaces = 5;
 			this->num_ZRXUSDT->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_ZRXUSDT->Location = System::Drawing::Point(303, 37);
+			this->num_ZRXUSDT->Location = System::Drawing::Point(303, 41);
 			this->num_ZRXUSDT->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_ZRXUSDT->Name = L"num_ZRXUSDT";
 			this->num_ZRXUSDT->Size = System::Drawing::Size(80, 20);
@@ -1136,24 +1090,12 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_ZRXUSDT->ThousandsSeparator = true;
 			this->num_ZRXUSDT->ValueChanged += gcnew System::EventHandler(this, &MyForm::num_ZRXUSDT_ValueChanged);
 			// 
-			// lb_USDT4
-			// 
-			this->lb_USDT4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->lb_USDT4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-																static_cast<System::Byte>(0)));
-			this->lb_USDT4->Location = System::Drawing::Point(311, 62);
-			this->lb_USDT4->Name = L"lb_USDT4";
-			this->lb_USDT4->Size = System::Drawing::Size(78, 13);
-			this->lb_USDT4->TabIndex = 37;
-			this->lb_USDT4->Text = L"0";
-			this->lb_USDT4->TextAlign = System::Drawing::ContentAlignment::TopRight;
-			// 
 			// num_LSKUSDT
 			// 
 			this->num_LSKUSDT->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_LSKUSDT->DecimalPlaces = 5;
 			this->num_LSKUSDT->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_LSKUSDT->Location = System::Drawing::Point(217, 37);
+			this->num_LSKUSDT->Location = System::Drawing::Point(217, 41);
 			this->num_LSKUSDT->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_LSKUSDT->Name = L"num_LSKUSDT";
 			this->num_LSKUSDT->Size = System::Drawing::Size(80, 20);
@@ -1162,17 +1104,17 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_LSKUSDT->ThousandsSeparator = true;
 			this->num_LSKUSDT->ValueChanged += gcnew System::EventHandler(this, &MyForm::num_LSKUSDT_ValueChanged);
 			// 
-			// lb_USDT5
+			// lb_USDT1
 			// 
-			this->lb_USDT5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->lb_USDT5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lb_USDT1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->lb_USDT1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 																static_cast<System::Byte>(0)));
-			this->lb_USDT5->Location = System::Drawing::Point(397, 62);
-			this->lb_USDT5->Name = L"lb_USDT5";
-			this->lb_USDT5->Size = System::Drawing::Size(78, 13);
-			this->lb_USDT5->TabIndex = 38;
-			this->lb_USDT5->Text = L"0";
-			this->lb_USDT5->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			this->lb_USDT1->Location = System::Drawing::Point(52, 70);
+			this->lb_USDT1->Name = L"lb_USDT1";
+			this->lb_USDT1->Size = System::Drawing::Size(78, 13);
+			this->lb_USDT1->TabIndex = 16;
+			this->lb_USDT1->Text = L"0";
+			this->lb_USDT1->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// label44
 			// 
@@ -1188,7 +1130,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_ETHUSDT->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_ETHUSDT->DecimalPlaces = 5;
 			this->num_ETHUSDT->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_ETHUSDT->Location = System::Drawing::Point(44, 37);
+			this->num_ETHUSDT->Location = System::Drawing::Point(44, 41);
 			this->num_ETHUSDT->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_ETHUSDT->Name = L"num_ETHUSDT";
 			this->num_ETHUSDT->Size = System::Drawing::Size(80, 20);
@@ -1211,6 +1153,18 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_cenaUSDT->ThousandsSeparator = true;
 			this->num_cenaUSDT->ValueChanged += gcnew System::EventHandler(this, &MyForm::num_cenaUSDT_ValueChanged_1);
 			// 
+			// lb_USDT2
+			// 
+			this->lb_USDT2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->lb_USDT2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+																static_cast<System::Byte>(0)));
+			this->lb_USDT2->Location = System::Drawing::Point(139, 70);
+			this->lb_USDT2->Name = L"lb_USDT2";
+			this->lb_USDT2->Size = System::Drawing::Size(78, 13);
+			this->lb_USDT2->TabIndex = 35;
+			this->lb_USDT2->Text = L"0";
+			this->lb_USDT2->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
 			// label45
 			// 
 			this->label45->AutoSize = true;
@@ -1220,12 +1174,50 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->label45->TabIndex = 11;
 			this->label45->Text = L"PLN";
 			// 
+			// lb_USDT3
+			// 
+			this->lb_USDT3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->lb_USDT3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+																static_cast<System::Byte>(0)));
+			this->lb_USDT3->Location = System::Drawing::Point(225, 70);
+			this->lb_USDT3->Name = L"lb_USDT3";
+			this->lb_USDT3->Size = System::Drawing::Size(78, 13);
+			this->lb_USDT3->TabIndex = 36;
+			this->lb_USDT3->Text = L"0";
+			this->lb_USDT3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
+			// lb_USDT5
+			// 
+			this->lb_USDT5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->lb_USDT5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+																static_cast<System::Byte>(0)));
+			this->lb_USDT5->Location = System::Drawing::Point(397, 70);
+			this->lb_USDT5->Name = L"lb_USDT5";
+			this->lb_USDT5->Size = System::Drawing::Size(78, 13);
+			this->lb_USDT5->TabIndex = 38;
+			this->lb_USDT5->Text = L"0";
+			this->lb_USDT5->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
+			// lb_USDT4
+			// 
+			this->lb_USDT4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->lb_USDT4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+																static_cast<System::Byte>(0)));
+			this->lb_USDT4->Location = System::Drawing::Point(311, 70);
+			this->lb_USDT4->Name = L"lb_USDT4";
+			this->lb_USDT4->Size = System::Drawing::Size(78, 13);
+			this->lb_USDT4->TabIndex = 37;
+			this->lb_USDT4->Text = L"0";
+			this->lb_USDT4->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			// 
 			// lb_BSV
 			// 
 			this->lb_BSV->AutoSize = true;
-			this->lb_BSV->Location = System::Drawing::Point(443, 16);
+			this->lb_BSV->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															  static_cast<System::Byte>(0)));
+			this->lb_BSV->Location = System::Drawing::Point(422, 16);
 			this->lb_BSV->Name = L"lb_BSV";
-			this->lb_BSV->Size = System::Drawing::Size(28, 13);
+			this->lb_BSV->Size = System::Drawing::Size(38, 17);
 			this->lb_BSV->TabIndex = 33;
 			this->lb_BSV->Text = L"BSV";
 			this->lb_BSV->DoubleClick += gcnew System::EventHandler(this, &MyForm::lb_BSV_doubleClick);
@@ -1236,7 +1228,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_BSVcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_BSVcena->DecimalPlaces = 2;
 			this->num_BSVcena->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_BSVcena->Location = System::Drawing::Point(392, 67);
+			this->num_BSVcena->Location = System::Drawing::Point(389, 30);
 			this->num_BSVcena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_BSVcena->Name = L"num_BSVcena";
 			this->num_BSVcena->Size = System::Drawing::Size(80, 20);
@@ -1249,7 +1241,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_BSVkwota->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_BSVkwota->DecimalPlaces = 2;
 			this->num_BSVkwota->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_BSVkwota->Location = System::Drawing::Point(392, 42);
+			this->num_BSVkwota->Location = System::Drawing::Point(389, 5);
 			this->num_BSVkwota->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_BSVkwota->Name = L"num_BSVkwota";
 			this->num_BSVkwota->Size = System::Drawing::Size(80, 20);
@@ -1278,20 +1270,23 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// lb_nazwaKrypto
 			// 
 			this->lb_nazwaKrypto->AutoSize = true;
-			this->lb_nazwaKrypto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lb_nazwaKrypto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 																	  static_cast<System::Byte>(0)));
-			this->lb_nazwaKrypto->Location = System::Drawing::Point(242, 246);
+			this->lb_nazwaKrypto->ForeColor = System::Drawing::Color::Blue;
+			this->lb_nazwaKrypto->Location = System::Drawing::Point(230, 236);
 			this->lb_nazwaKrypto->Name = L"lb_nazwaKrypto";
-			this->lb_nazwaKrypto->Size = System::Drawing::Size(15, 20);
+			this->lb_nazwaKrypto->Size = System::Drawing::Size(72, 31);
 			this->lb_nazwaKrypto->TabIndex = 29;
-			this->lb_nazwaKrypto->Text = L"-";
+			this->lb_nazwaKrypto->Text = L"ETH";
 			// 
 			// lb_ZRX
 			// 
 			this->lb_ZRX->AutoSize = true;
-			this->lb_ZRX->Location = System::Drawing::Point(357, 16);
+			this->lb_ZRX->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															  static_cast<System::Byte>(0)));
+			this->lb_ZRX->Location = System::Drawing::Point(336, 16);
 			this->lb_ZRX->Name = L"lb_ZRX";
-			this->lb_ZRX->Size = System::Drawing::Size(29, 13);
+			this->lb_ZRX->Size = System::Drawing::Size(39, 17);
 			this->lb_ZRX->TabIndex = 28;
 			this->lb_ZRX->Text = L"ZRX";
 			this->lb_ZRX->DoubleClick += gcnew System::EventHandler(this, &MyForm::lb_ZRX_doubleClick);
@@ -1300,9 +1295,11 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// lb_LSK
 			// 
 			this->lb_LSK->AutoSize = true;
-			this->lb_LSK->Location = System::Drawing::Point(271, 16);
+			this->lb_LSK->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															  static_cast<System::Byte>(0)));
+			this->lb_LSK->Location = System::Drawing::Point(253, 16);
 			this->lb_LSK->Name = L"lb_LSK";
-			this->lb_LSK->Size = System::Drawing::Size(27, 13);
+			this->lb_LSK->Size = System::Drawing::Size(37, 17);
 			this->lb_LSK->TabIndex = 27;
 			this->lb_LSK->Text = L"LSK";
 			this->lb_LSK->DoubleClick += gcnew System::EventHandler(this, &MyForm::lb_LSK_doubleClick);
@@ -1311,9 +1308,11 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// lb_XRP
 			// 
 			this->lb_XRP->AutoSize = true;
-			this->lb_XRP->Location = System::Drawing::Point(181, 16);
+			this->lb_XRP->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															  static_cast<System::Byte>(0)));
+			this->lb_XRP->Location = System::Drawing::Point(163, 16);
 			this->lb_XRP->Name = L"lb_XRP";
-			this->lb_XRP->Size = System::Drawing::Size(29, 13);
+			this->lb_XRP->Size = System::Drawing::Size(39, 17);
 			this->lb_XRP->TabIndex = 26;
 			this->lb_XRP->Text = L"XRP";
 			this->lb_XRP->DoubleClick += gcnew System::EventHandler(this, &MyForm::lb_XRP_doubleClick);
@@ -1322,9 +1321,11 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// lb_ETH
 			// 
 			this->lb_ETH->AutoSize = true;
-			this->lb_ETH->Location = System::Drawing::Point(86, 16);
+			this->lb_ETH->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															  static_cast<System::Byte>(0)));
+			this->lb_ETH->Location = System::Drawing::Point(74, 16);
 			this->lb_ETH->Name = L"lb_ETH";
-			this->lb_ETH->Size = System::Drawing::Size(29, 13);
+			this->lb_ETH->Size = System::Drawing::Size(39, 17);
 			this->lb_ETH->TabIndex = 25;
 			this->lb_ETH->Text = L"ETH";
 			this->lb_ETH->DoubleClick += gcnew System::EventHandler(this, &MyForm::lb_ETH_doubleClick);
@@ -1333,7 +1334,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label43
 			// 
 			this->label43->AutoSize = true;
-			this->label43->Location = System::Drawing::Point(9, 16);
+			this->label43->Location = System::Drawing::Point(3, 18);
 			this->label43->Name = L"label43";
 			this->label43->Size = System::Drawing::Size(54, 13);
 			this->label43->TabIndex = 24;
@@ -1342,7 +1343,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label39
 			// 
 			this->label39->AutoSize = true;
-			this->label39->Location = System::Drawing::Point(475, 44);
+			this->label39->Location = System::Drawing::Point(478, 7);
 			this->label39->Name = L"label39";
 			this->label39->Size = System::Drawing::Size(28, 13);
 			this->label39->TabIndex = 23;
@@ -1351,7 +1352,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label40
 			// 
 			this->label40->AutoSize = true;
-			this->label40->Location = System::Drawing::Point(475, 69);
+			this->label40->Location = System::Drawing::Point(478, 32);
 			this->label40->Name = L"label40";
 			this->label40->Size = System::Drawing::Size(28, 13);
 			this->label40->TabIndex = 22;
@@ -1360,7 +1361,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label41
 			// 
 			this->label41->AutoSize = true;
-			this->label41->Location = System::Drawing::Point(9, 69);
+			this->label41->Location = System::Drawing::Point(6, 32);
 			this->label41->Name = L"label41";
 			this->label41->Size = System::Drawing::Size(32, 13);
 			this->label41->TabIndex = 21;
@@ -1371,7 +1372,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_ZRXcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_ZRXcena->DecimalPlaces = 2;
 			this->num_ZRXcena->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_ZRXcena->Location = System::Drawing::Point(306, 67);
+			this->num_ZRXcena->Location = System::Drawing::Point(303, 30);
 			this->num_ZRXcena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_ZRXcena->Name = L"num_ZRXcena";
 			this->num_ZRXcena->Size = System::Drawing::Size(80, 20);
@@ -1384,7 +1385,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_LSKcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_LSKcena->DecimalPlaces = 2;
 			this->num_LSKcena->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_LSKcena->Location = System::Drawing::Point(220, 67);
+			this->num_LSKcena->Location = System::Drawing::Point(217, 30);
 			this->num_LSKcena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_LSKcena->Name = L"num_LSKcena";
 			this->num_LSKcena->Size = System::Drawing::Size(80, 20);
@@ -1397,7 +1398,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_XRPcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_XRPcena->DecimalPlaces = 2;
 			this->num_XRPcena->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_XRPcena->Location = System::Drawing::Point(134, 67);
+			this->num_XRPcena->Location = System::Drawing::Point(131, 30);
 			this->num_XRPcena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_XRPcena->Name = L"num_XRPcena";
 			this->num_XRPcena->Size = System::Drawing::Size(80, 20);
@@ -1410,7 +1411,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_ETHcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_ETHcena->DecimalPlaces = 2;
 			this->num_ETHcena->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_ETHcena->Location = System::Drawing::Point(47, 67);
+			this->num_ETHcena->Location = System::Drawing::Point(44, 30);
 			this->num_ETHcena->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_ETHcena->Name = L"num_ETHcena";
 			this->num_ETHcena->Size = System::Drawing::Size(80, 20);
@@ -1423,7 +1424,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_ZRXkwota->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_ZRXkwota->DecimalPlaces = 2;
 			this->num_ZRXkwota->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_ZRXkwota->Location = System::Drawing::Point(306, 42);
+			this->num_ZRXkwota->Location = System::Drawing::Point(303, 5);
 			this->num_ZRXkwota->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_ZRXkwota->Name = L"num_ZRXkwota";
 			this->num_ZRXkwota->Size = System::Drawing::Size(80, 20);
@@ -1436,7 +1437,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_LSKkwota->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_LSKkwota->DecimalPlaces = 2;
 			this->num_LSKkwota->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_LSKkwota->Location = System::Drawing::Point(220, 42);
+			this->num_LSKkwota->Location = System::Drawing::Point(217, 5);
 			this->num_LSKkwota->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_LSKkwota->Name = L"num_LSKkwota";
 			this->num_LSKkwota->Size = System::Drawing::Size(80, 20);
@@ -1449,7 +1450,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_XRPkwota->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_XRPkwota->DecimalPlaces = 2;
 			this->num_XRPkwota->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_XRPkwota->Location = System::Drawing::Point(134, 42);
+			this->num_XRPkwota->Location = System::Drawing::Point(131, 5);
 			this->num_XRPkwota->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_XRPkwota->Name = L"num_XRPkwota";
 			this->num_XRPkwota->Size = System::Drawing::Size(80, 20);
@@ -1462,7 +1463,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_ETHkwota->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_ETHkwota->DecimalPlaces = 2;
 			this->num_ETHkwota->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_ETHkwota->Location = System::Drawing::Point(47, 42);
+			this->num_ETHkwota->Location = System::Drawing::Point(44, 5);
 			this->num_ETHkwota->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_ETHkwota->Name = L"num_ETHkwota";
 			this->num_ETHkwota->Size = System::Drawing::Size(80, 20);
@@ -1474,7 +1475,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// lb_Krypto
 			// 
 			this->lb_Krypto->AutoSize = true;
-			this->lb_Krypto->Location = System::Drawing::Point(9, 44);
+			this->lb_Krypto->Location = System::Drawing::Point(6, 7);
 			this->lb_Krypto->Name = L"lb_Krypto";
 			this->lb_Krypto->Size = System::Drawing::Size(37, 13);
 			this->lb_Krypto->TabIndex = 20;
@@ -1486,7 +1487,9 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->panel2->Controls->Add(this->lb_swingWynik);
 			this->panel2->Controls->Add(this->lb_swingPLN);
 			this->panel2->Controls->Add(this->lb_swingLabel);
-			this->panel2->Location = System::Drawing::Point(301, 350);
+			this->panel2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															  static_cast<System::Byte>(0)));
+			this->panel2->Location = System::Drawing::Point(313, 353);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(200, 39);
 			this->panel2->TabIndex = 16;
@@ -1494,7 +1497,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// lb_swingWynik
 			// 
 			this->lb_swingWynik->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->lb_swingWynik->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lb_swingWynik->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 																	 static_cast<System::Byte>(0)));
 			this->lb_swingWynik->Location = System::Drawing::Point(79, 9);
 			this->lb_swingWynik->Name = L"lb_swingWynik";
@@ -1506,22 +1509,22 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// lb_swingPLN
 			// 
 			this->lb_swingPLN->AutoSize = true;
-			this->lb_swingPLN->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lb_swingPLN->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 																   static_cast<System::Byte>(0)));
 			this->lb_swingPLN->Location = System::Drawing::Point(154, 9);
 			this->lb_swingPLN->Name = L"lb_swingPLN";
-			this->lb_swingPLN->Size = System::Drawing::Size(39, 20);
+			this->lb_swingPLN->Size = System::Drawing::Size(42, 20);
 			this->lb_swingPLN->TabIndex = 15;
 			this->lb_swingPLN->Text = L"PLN";
 			// 
 			// lb_swingLabel
 			// 
 			this->lb_swingLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->lb_swingLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lb_swingLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 																	 static_cast<System::Byte>(0)));
-			this->lb_swingLabel->Location = System::Drawing::Point(3, 9);
+			this->lb_swingLabel->Location = System::Drawing::Point(10, 9);
 			this->lb_swingLabel->Name = L"lb_swingLabel";
-			this->lb_swingLabel->Size = System::Drawing::Size(82, 20);
+			this->lb_swingLabel->Size = System::Drawing::Size(70, 20);
 			this->lb_swingLabel->TabIndex = 13;
 			this->lb_swingLabel->Text = L"-";
 			this->lb_swingLabel->TextAlign = System::Drawing::ContentAlignment::TopRight;
@@ -1604,6 +1607,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// 
 			// groupBox6
 			// 
+			this->groupBox6->BackColor = System::Drawing::Color::Transparent;
 			this->groupBox6->Controls->Add(this->lb_kwotaWyjscia);
 			this->groupBox6->Controls->Add(this->label35);
 			this->groupBox6->Controls->Add(this->label34);
@@ -1611,16 +1615,16 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->groupBox6->Controls->Add(this->label28);
 			this->groupBox6->Controls->Add(this->num_cenaWyjscia);
 			this->groupBox6->Controls->Add(this->label29);
-			this->groupBox6->Location = System::Drawing::Point(343, 244);
+			this->groupBox6->Location = System::Drawing::Point(325, 244);
 			this->groupBox6->Name = L"groupBox6";
-			this->groupBox6->Size = System::Drawing::Size(160, 78);
+			this->groupBox6->Size = System::Drawing::Size(195, 78);
 			this->groupBox6->TabIndex = 0;
 			this->groupBox6->TabStop = false;
 			this->groupBox6->Text = L"Wyjście";
 			// 
 			// lb_kwotaWyjscia
 			// 
-			this->lb_kwotaWyjscia->Location = System::Drawing::Point(49, 24);
+			this->lb_kwotaWyjscia->Location = System::Drawing::Point(81, 24);
 			this->lb_kwotaWyjscia->Name = L"lb_kwotaWyjscia";
 			this->lb_kwotaWyjscia->Size = System::Drawing::Size(75, 18);
 			this->lb_kwotaWyjscia->TabIndex = 10;
@@ -1639,7 +1643,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label34
 			// 
 			this->label34->AutoSize = true;
-			this->label34->Location = System::Drawing::Point(130, 24);
+			this->label34->Location = System::Drawing::Point(162, 24);
 			this->label34->Name = L"label34";
 			this->label34->Size = System::Drawing::Size(28, 13);
 			this->label34->TabIndex = 9;
@@ -1648,7 +1652,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label32
 			// 
 			this->label32->AutoSize = true;
-			this->label32->Location = System::Drawing::Point(130, 51);
+			this->label32->Location = System::Drawing::Point(162, 51);
 			this->label32->Name = L"label32";
 			this->label32->Size = System::Drawing::Size(28, 13);
 			this->label32->TabIndex = 7;
@@ -1657,7 +1661,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label28
 			// 
 			this->label28->AutoSize = true;
-			this->label28->Location = System::Drawing::Point(6, 51);
+			this->label28->Location = System::Drawing::Point(15, 51);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(32, 13);
 			this->label28->TabIndex = 7;
@@ -1668,7 +1672,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_cenaWyjscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_cenaWyjscia->DecimalPlaces = 2;
 			this->num_cenaWyjscia->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_cenaWyjscia->Location = System::Drawing::Point(44, 49);
+			this->num_cenaWyjscia->Location = System::Drawing::Point(76, 49);
 			this->num_cenaWyjscia->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_cenaWyjscia->Name = L"num_cenaWyjscia";
 			this->num_cenaWyjscia->Size = System::Drawing::Size(80, 20);
@@ -1680,7 +1684,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label29
 			// 
 			this->label29->AutoSize = true;
-			this->label29->Location = System::Drawing::Point(6, 24);
+			this->label29->Location = System::Drawing::Point(15, 24);
 			this->label29->Name = L"label29";
 			this->label29->Size = System::Drawing::Size(37, 13);
 			this->label29->TabIndex = 6;
@@ -1688,15 +1692,16 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// 
 			// groupBox5
 			// 
+			this->groupBox5->BackColor = System::Drawing::Color::Transparent;
 			this->groupBox5->Controls->Add(this->label33);
 			this->groupBox5->Controls->Add(this->label31);
 			this->groupBox5->Controls->Add(this->label27);
 			this->groupBox5->Controls->Add(this->num_cenaWejscia);
 			this->groupBox5->Controls->Add(this->num_kwotaWejscia);
 			this->groupBox5->Controls->Add(this->label26);
-			this->groupBox5->Location = System::Drawing::Point(12, 244);
+			this->groupBox5->Location = System::Drawing::Point(3, 244);
 			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Size = System::Drawing::Size(164, 78);
+			this->groupBox5->Size = System::Drawing::Size(199, 78);
 			this->groupBox5->TabIndex = 0;
 			this->groupBox5->TabStop = false;
 			this->groupBox5->Text = L"Wejście";
@@ -1704,7 +1709,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label33
 			// 
 			this->label33->AutoSize = true;
-			this->label33->Location = System::Drawing::Point(130, 24);
+			this->label33->Location = System::Drawing::Point(161, 24);
 			this->label33->Name = L"label33";
 			this->label33->Size = System::Drawing::Size(28, 13);
 			this->label33->TabIndex = 8;
@@ -1713,7 +1718,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label31
 			// 
 			this->label31->AutoSize = true;
-			this->label31->Location = System::Drawing::Point(130, 49);
+			this->label31->Location = System::Drawing::Point(161, 49);
 			this->label31->Name = L"label31";
 			this->label31->Size = System::Drawing::Size(28, 13);
 			this->label31->TabIndex = 6;
@@ -1722,7 +1727,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label27
 			// 
 			this->label27->AutoSize = true;
-			this->label27->Location = System::Drawing::Point(6, 49);
+			this->label27->Location = System::Drawing::Point(14, 49);
 			this->label27->Name = L"label27";
 			this->label27->Size = System::Drawing::Size(32, 13);
 			this->label27->TabIndex = 5;
@@ -1733,7 +1738,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_cenaWejscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_cenaWejscia->DecimalPlaces = 2;
 			this->num_cenaWejscia->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_cenaWejscia->Location = System::Drawing::Point(44, 47);
+			this->num_cenaWejscia->Location = System::Drawing::Point(75, 47);
 			this->num_cenaWejscia->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_cenaWejscia->Name = L"num_cenaWejscia";
 			this->num_cenaWejscia->Size = System::Drawing::Size(80, 20);
@@ -1747,7 +1752,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->num_kwotaWejscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->num_kwotaWejscia->DecimalPlaces = 2;
 			this->num_kwotaWejscia->ForeColor = System::Drawing::SystemColors::WindowText;
-			this->num_kwotaWejscia->Location = System::Drawing::Point(44, 22);
+			this->num_kwotaWejscia->Location = System::Drawing::Point(75, 22);
 			this->num_kwotaWejscia->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_kwotaWejscia->Name = L"num_kwotaWejscia";
 			this->num_kwotaWejscia->Size = System::Drawing::Size(80, 20);
@@ -1759,7 +1764,7 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			// label26
 			// 
 			this->label26->AutoSize = true;
-			this->label26->Location = System::Drawing::Point(6, 24);
+			this->label26->Location = System::Drawing::Point(14, 24);
 			this->label26->Name = L"label26";
 			this->label26->Size = System::Drawing::Size(37, 13);
 			this->label26->TabIndex = 4;
@@ -2116,6 +2121,28 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->label25->TabIndex = 4;
 			this->label25->Text = L"Stop Loss:";
 			// 
+			// panel4
+			// 
+			this->panel4->BackColor = System::Drawing::Color::DarkSeaGreen;
+			this->panel4->Controls->Add(this->num_XRPcena);
+			this->panel4->Controls->Add(this->lb_Krypto);
+			this->panel4->Controls->Add(this->num_ETHkwota);
+			this->panel4->Controls->Add(this->num_BSVcena);
+			this->panel4->Controls->Add(this->num_XRPkwota);
+			this->panel4->Controls->Add(this->num_BSVkwota);
+			this->panel4->Controls->Add(this->num_LSKkwota);
+			this->panel4->Controls->Add(this->num_ZRXkwota);
+			this->panel4->Controls->Add(this->num_ETHcena);
+			this->panel4->Controls->Add(this->num_LSKcena);
+			this->panel4->Controls->Add(this->num_ZRXcena);
+			this->panel4->Controls->Add(this->label41);
+			this->panel4->Controls->Add(this->label40);
+			this->panel4->Controls->Add(this->label39);
+			this->panel4->Location = System::Drawing::Point(3, 40);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(517, 55);
+			this->panel4->TabIndex = 34;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -2189,6 +2216,8 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			this->groupBox4->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sl_cena))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->sl_prog))->EndInit();
+			this->panel4->ResumeLayout(false);
+			this->panel4->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -2398,6 +2427,20 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			stan.write((const char*)&num_ZRXUSDT->Value, sizeof(num_ZRXUSDT->Value));
 			stan.write((const char*)&num_BSVUSDT->Value, sizeof(num_BSVUSDT->Value));
 
+			stan.setf(std::ios_base::out);
+
+			/*stan.write((const char*)&lb_ETH->Text, sizeof(lb_ETH->Text));
+			stan.write((const char*)&lb_XRP->Text, sizeof(lb_XRP->Text));
+			stan.write((const char*)&lb_LSK->Text, sizeof(lb_LSK->Text));
+			stan.write((const char*)&lb_ZRX->Text, sizeof(lb_ZRX->Text));
+			stan.write((const char*)&lb_BSV->Text, sizeof(lb_BSV->Text));*/
+
+		/*	lb_ETH->Text
+			lb_XRP->Text
+			lb_LSK->Text
+			lb_ZRX->Text
+			lb_BSV->Text*/
+
 			//		System::Windows::Forms::MessageBox::Show("Stan zaktualizowany", "Zapis", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 		stan.close();
@@ -2491,6 +2534,26 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 			stan.read((char*)&temp, sizeof(temp));
 			num_BSVUSDT->Value = temp;
 
+		/*	System::String temp;
+
+			stan.read((char*)&temp, sizeof(temp));
+			lb_ETH->Text = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			lb_XRP->Text = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			lb_LSK->Text = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			lb_ZRX->Text = temp;
+			stan.read((char*)&temp, sizeof(temp));
+			lb_BSV->Text = temp;
+
+
+			lb_ETH->Text
+			lb_XRP->Text
+			lb_LSK->Text
+			lb_ZRX->Text
+			lb_BSV->Text*/
+
 		//	System::Windows::Forms::MessageBox::Show(L"Stan został wczytany", L"Odczyt stanu", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 		stan.close();
@@ -2580,68 +2643,68 @@ private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 
 	private: System::Void num_ETHUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		System::Decimal kwota = num_ETHUSDT->Value * (num_ETHkwota->Value / num_ETHcena->Value) * (1 - num_prowizja->Value / 100);
+		System::Decimal kwota = ((num_ETHkwota->Value / num_ETHcena->Value) * (1 - num_prowizja->Value / 100)) * num_ETHUSDT->Value;
 
 		if (num_ETHcena->Value != 0)
 		{
-			lb_USDT1->Text = System::Convert::ToString(kwota);
+			lb_USDT1->Text = System::Convert::ToString(System::Decimal::Ceiling(100000 * kwota) / 100000);
 		}
 		else lb_USDT1->Text = "-";
 		
-		label50->Text = System::Convert::ToString(kwota * num_cenaUSDT->Value);
+		label50->Text = System::Convert::ToString(System::Decimal::Ceiling(kwota * num_cenaUSDT->Value * 100) / 100);
 	}
 
 	private: System::Void num_XRPUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		System::Decimal kwota = num_XRPUSDT->Value * (num_XRPkwota->Value / num_XRPcena->Value) * (1 - num_prowizja->Value / 100);
+		System::Decimal kwota = ((num_XRPkwota->Value / num_XRPcena->Value) * (1 - num_prowizja->Value / 100)) * num_XRPUSDT->Value;
 
 		if (num_XRPcena->Value != 0)
 		{
-			lb_USDT2->Text = System::Convert::ToString(kwota);
+			lb_USDT2->Text = System::Convert::ToString(System::Decimal::Ceiling(100000 * kwota) / 100000);
 		}
 		else lb_USDT2->Text = "-";
 	
-		label51->Text = System::Convert::ToString(kwota * num_cenaUSDT->Value);
+		label51->Text = System::Convert::ToString(System::Decimal::Ceiling(kwota * num_cenaUSDT->Value * 100) / 100);
 	}
 
 
 	private: System::Void num_LSKUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		System::Decimal kwota = num_LSKUSDT->Value * (num_LSKkwota->Value / num_LSKcena->Value) * (1 - num_prowizja->Value / 100);
+		System::Decimal kwota = ((num_LSKkwota->Value / num_LSKcena->Value) * (1 - num_prowizja->Value / 100)) * num_LSKUSDT->Value;
 
 		if (num_LSKcena->Value != 0)
 		{
-			lb_USDT3->Text = System::Convert::ToString(kwota);
+			lb_USDT3->Text = System::Convert::ToString(System::Decimal::Ceiling(100000 * kwota) / 100000);
 		}
 		else lb_USDT3->Text = "-";
 
-		label52->Text = System::Convert::ToString(kwota * num_cenaUSDT->Value);
+		label52->Text = System::Convert::ToString(System::Decimal::Ceiling(kwota * num_cenaUSDT->Value * 100) / 100);
 	}
 
 	private: System::Void num_ZRXUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		System::Decimal kwota = num_ZRXUSDT->Value * (num_ZRXkwota->Value / num_ZRXcena->Value) * (1 - num_prowizja->Value / 100);
+		System::Decimal kwota = ((num_ZRXkwota->Value / num_ZRXcena->Value) * (1 - num_prowizja->Value / 100)) * num_ZRXUSDT->Value;
 
 		if (num_ZRXcena->Value != 0)
 		{
-			lb_USDT4->Text = System::Convert::ToString(kwota);
+			lb_USDT4->Text = System::Convert::ToString(System::Decimal::Ceiling(100000 * kwota) / 100000);
 		}
 		else lb_USDT4->Text = "-";
 
-		label53->Text = System::Convert::ToString(kwota * num_cenaUSDT->Value);
+		label53->Text = System::Convert::ToString(System::Decimal::Ceiling(kwota * num_cenaUSDT->Value * 100) / 100);
 	}
 
 	private: System::Void num_BSVUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		System::Decimal kwota = num_BSVUSDT->Value * (num_BSVkwota->Value / num_BSVcena->Value) * (1 - num_prowizja->Value / 100);
+		System::Decimal kwota = ((num_BSVkwota->Value / num_BSVcena->Value) * (1 - num_prowizja->Value / 100)) * num_BSVUSDT->Value;
 
 		if (num_BSVcena->Value != 0)
 		{
-			lb_USDT5->Text = System::Convert::ToString(kwota);
+			lb_USDT5->Text = System::Convert::ToString(System::Decimal::Ceiling(100000 * kwota) / 100000);
 		}
 		else lb_USDT5->Text = "-";
 
-		label54->Text = System::Convert::ToString(kwota * num_cenaUSDT->Value);
+		label54->Text = System::Convert::ToString(System::Decimal::Ceiling(kwota * num_cenaUSDT->Value * 100) / 100);
 	}
 
 	private: System::Void num_cenaUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
