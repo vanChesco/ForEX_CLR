@@ -179,6 +179,8 @@ namespace ForEXCLR
 	private: System::Windows::Forms::NumericUpDown^ num_LSKUSDT;
 	private: System::Windows::Forms::NumericUpDown^ num_ETHUSDT;
 	private: System::Windows::Forms::Panel^ panel4;
+private: System::Windows::Forms::Label^ label56;
+private: System::Windows::Forms::Label^ label57;
 
 	private:
 		/// <summary>
@@ -334,6 +336,8 @@ namespace ForEXCLR
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->sl_stopLoss = (gcnew System::Windows::Forms::Label());
 			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label56 = (gcnew System::Windows::Forms::Label());
+			this->label57 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_sp))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_1))->BeginInit();
@@ -841,6 +845,7 @@ namespace ForEXCLR
 			// 
 			// tabSwing
 			// 
+			this->tabSwing->Controls->Add(this->label57);
 			this->tabSwing->Controls->Add(this->panel4);
 			this->tabSwing->Controls->Add(this->panel3);
 			this->tabSwing->Controls->Add(this->lb_BSV);
@@ -865,6 +870,7 @@ namespace ForEXCLR
 			this->tabSwing->Controls->Add(this->Box4);
 			this->tabSwing->Controls->Add(this->Box3);
 			this->tabSwing->Controls->Add(this->Box2);
+			this->tabSwing->Controls->Add(this->label56);
 			this->tabSwing->Location = System::Drawing::Point(4, 22);
 			this->tabSwing->Name = L"tabSwing";
 			this->tabSwing->Size = System::Drawing::Size(523, 403);
@@ -1417,7 +1423,7 @@ namespace ForEXCLR
 			this->lb_nazwaKrypto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 																	  static_cast<System::Byte>(0)));
 			this->lb_nazwaKrypto->ForeColor = System::Drawing::Color::Blue;
-			this->lb_nazwaKrypto->Location = System::Drawing::Point(230, 236);
+			this->lb_nazwaKrypto->Location = System::Drawing::Point(228, 245);
 			this->lb_nazwaKrypto->Name = L"lb_nazwaKrypto";
 			this->lb_nazwaKrypto->Size = System::Drawing::Size(72, 31);
 			this->lb_nazwaKrypto->TabIndex = 29;
@@ -1591,7 +1597,7 @@ namespace ForEXCLR
 			this->num_prowizja->DecimalPlaces = 2;
 			this->num_prowizja->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->num_prowizja->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
-			this->num_prowizja->Location = System::Drawing::Point(232, 277);
+			this->num_prowizja->Location = System::Drawing::Point(228, 286);
 			this->num_prowizja->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_prowizja->Name = L"num_prowizja";
 			this->num_prowizja->Size = System::Drawing::Size(63, 20);
@@ -1603,7 +1609,7 @@ namespace ForEXCLR
 			// label30
 			// 
 			this->label30->AutoSize = true;
-			this->label30->Location = System::Drawing::Point(240, 300);
+			this->label30->Location = System::Drawing::Point(236, 309);
 			this->label30->Name = L"label30";
 			this->label30->Size = System::Drawing::Size(46, 13);
 			this->label30->TabIndex = 8;
@@ -2127,6 +2133,30 @@ namespace ForEXCLR
 			this->label25->Size = System::Drawing::Size(85, 20);
 			this->label25->TabIndex = 4;
 			this->label25->Text = L"Stop Loss:";
+			// 
+			// label56
+			// 
+			this->label56->AutoSize = true;
+			this->label56->Font = (gcnew System::Drawing::Font(L"Symbol", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															   static_cast<System::Byte>(2)));
+			this->label56->ForeColor = System::Drawing::Color::Blue;
+			this->label56->Location = System::Drawing::Point(199, 245);
+			this->label56->Name = L"label56";
+			this->label56->Size = System::Drawing::Size(35, 27);
+			this->label56->TabIndex = 35;
+			this->label56->Text = L"Þ";
+			// 
+			// label57
+			// 
+			this->label57->AutoSize = true;
+			this->label57->Font = (gcnew System::Drawing::Font(L"Symbol", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															   static_cast<System::Byte>(2)));
+			this->label57->ForeColor = System::Drawing::Color::Blue;
+			this->label57->Location = System::Drawing::Point(293, 245);
+			this->label57->Name = L"label57";
+			this->label57->Size = System::Drawing::Size(35, 27);
+			this->label57->TabIndex = 36;
+			this->label57->Text = L"Þ";
 			// 
 			// MyForm
 			// 
@@ -2836,22 +2866,19 @@ namespace ForEXCLR
 		lb_BSV->Text = Box5->Text;
 	}
 
+	private: System::Void num_cenaUSDT_ValueChanged_1(System::Object^ sender, System::EventArgs^ e)
+	{
 
+	}
+	private: System::Void num_ETHkwota_ValueChanged(System::Object^ sender, System::EventArgs^ e)
+	{
 
-private: System::Void num_cenaUSDT_ValueChanged_1(System::Object^ sender, System::EventArgs^ e)
-{
+	}
 
-}
-private: System::Void num_ETHkwota_ValueChanged(System::Object^ sender, System::EventArgs^ e)
-{
-
-}
-
-
-private: System::Void num_cenaWyjscia_Click(System::Object^ sender, System::EventArgs^ e)
-{
-	num_cenaWyjscia->BackColor = System::Drawing::SystemColors::Window;
-}
+	private: System::Void num_cenaWyjscia_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		num_cenaWyjscia->BackColor = System::Drawing::SystemColors::Window;
+	}
 };
 
 }
