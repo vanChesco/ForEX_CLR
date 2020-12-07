@@ -234,6 +234,7 @@ private: System::Windows::Forms::Label^ label57;
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->tb_Karty = (gcnew System::Windows::Forms::TabControl());
 			this->tabSwing = (gcnew System::Windows::Forms::TabPage());
+			this->label57 = (gcnew System::Windows::Forms::Label());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->num_XRPcena = (gcnew System::Windows::Forms::NumericUpDown());
 			this->lb_Krypto = (gcnew System::Windows::Forms::Label());
@@ -312,6 +313,7 @@ private: System::Windows::Forms::Label^ label57;
 			this->Box4 = (gcnew System::Windows::Forms::ComboBox());
 			this->Box3 = (gcnew System::Windows::Forms::ComboBox());
 			this->Box2 = (gcnew System::Windows::Forms::ComboBox());
+			this->label56 = (gcnew System::Windows::Forms::Label());
 			this->tabSpread = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
@@ -336,8 +338,6 @@ private: System::Windows::Forms::Label^ label57;
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->sl_stopLoss = (gcnew System::Windows::Forms::Label());
 			this->label25 = (gcnew System::Windows::Forms::Label());
-			this->label56 = (gcnew System::Windows::Forms::Label());
-			this->label57 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_zak_1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->c_sp))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->inwest_1))->BeginInit();
@@ -878,6 +878,18 @@ private: System::Windows::Forms::Label^ label57;
 			this->tabSwing->Text = L"Short Swing";
 			this->tabSwing->UseVisualStyleBackColor = true;
 			// 
+			// label57
+			// 
+			this->label57->AutoSize = true;
+			this->label57->Font = (gcnew System::Drawing::Font(L"Symbol", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															   static_cast<System::Byte>(2)));
+			this->label57->ForeColor = System::Drawing::Color::Blue;
+			this->label57->Location = System::Drawing::Point(293, 245);
+			this->label57->Name = L"label57";
+			this->label57->Size = System::Drawing::Size(35, 27);
+			this->label57->TabIndex = 36;
+			this->label57->Text = L"Þ";
+			// 
 			// panel4
 			// 
 			this->panel4->BackColor = System::Drawing::Color::DarkSeaGreen;
@@ -903,7 +915,7 @@ private: System::Windows::Forms::Label^ label57;
 			// num_XRPcena
 			// 
 			this->num_XRPcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->num_XRPcena->DecimalPlaces = 2;
+			this->num_XRPcena->DecimalPlaces = 5;
 			this->num_XRPcena->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->num_XRPcena->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->num_XRPcena->Location = System::Drawing::Point(131, 30);
@@ -940,7 +952,7 @@ private: System::Windows::Forms::Label^ label57;
 			// num_BSVcena
 			// 
 			this->num_BSVcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->num_BSVcena->DecimalPlaces = 2;
+			this->num_BSVcena->DecimalPlaces = 5;
 			this->num_BSVcena->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->num_BSVcena->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->num_BSVcena->Location = System::Drawing::Point(389, 30);
@@ -1006,7 +1018,7 @@ private: System::Windows::Forms::Label^ label57;
 			// num_ETHcena
 			// 
 			this->num_ETHcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->num_ETHcena->DecimalPlaces = 2;
+			this->num_ETHcena->DecimalPlaces = 5;
 			this->num_ETHcena->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->num_ETHcena->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->num_ETHcena->Location = System::Drawing::Point(44, 30);
@@ -1020,7 +1032,7 @@ private: System::Windows::Forms::Label^ label57;
 			// num_LSKcena
 			// 
 			this->num_LSKcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->num_LSKcena->DecimalPlaces = 2;
+			this->num_LSKcena->DecimalPlaces = 5;
 			this->num_LSKcena->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->num_LSKcena->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->num_LSKcena->Location = System::Drawing::Point(217, 30);
@@ -1034,7 +1046,7 @@ private: System::Windows::Forms::Label^ label57;
 			// num_ZRXcena
 			// 
 			this->num_ZRXcena->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->num_ZRXcena->DecimalPlaces = 2;
+			this->num_ZRXcena->DecimalPlaces = 5;
 			this->num_ZRXcena->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->num_ZRXcena->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->num_ZRXcena->Location = System::Drawing::Point(303, 30);
@@ -1423,11 +1435,12 @@ private: System::Windows::Forms::Label^ label57;
 			this->lb_nazwaKrypto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 																	  static_cast<System::Byte>(0)));
 			this->lb_nazwaKrypto->ForeColor = System::Drawing::Color::Blue;
-			this->lb_nazwaKrypto->Location = System::Drawing::Point(228, 245);
+			this->lb_nazwaKrypto->Location = System::Drawing::Point(227, 245);
 			this->lb_nazwaKrypto->Name = L"lb_nazwaKrypto";
 			this->lb_nazwaKrypto->Size = System::Drawing::Size(72, 31);
 			this->lb_nazwaKrypto->TabIndex = 29;
 			this->lb_nazwaKrypto->Text = L"ETH";
+			this->lb_nazwaKrypto->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			// 
 			// lb_ZRX
 			// 
@@ -1594,10 +1607,10 @@ private: System::Windows::Forms::Label^ label57;
 			// num_prowizja
 			// 
 			this->num_prowizja->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->num_prowizja->DecimalPlaces = 2;
+			this->num_prowizja->DecimalPlaces = 5;
 			this->num_prowizja->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->num_prowizja->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
-			this->num_prowizja->Location = System::Drawing::Point(228, 286);
+			this->num_prowizja->Location = System::Drawing::Point(232, 286);
 			this->num_prowizja->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000000, 0, 0, 0 });
 			this->num_prowizja->Name = L"num_prowizja";
 			this->num_prowizja->Size = System::Drawing::Size(63, 20);
@@ -1609,7 +1622,7 @@ private: System::Windows::Forms::Label^ label57;
 			// label30
 			// 
 			this->label30->AutoSize = true;
-			this->label30->Location = System::Drawing::Point(236, 309);
+			this->label30->Location = System::Drawing::Point(240, 309);
 			this->label30->Name = L"label30";
 			this->label30->Size = System::Drawing::Size(46, 13);
 			this->label30->TabIndex = 8;
@@ -1680,7 +1693,7 @@ private: System::Windows::Forms::Label^ label57;
 			// num_cenaWyjscia
 			// 
 			this->num_cenaWyjscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->num_cenaWyjscia->DecimalPlaces = 2;
+			this->num_cenaWyjscia->DecimalPlaces = 5;
 			this->num_cenaWyjscia->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->num_cenaWyjscia->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->num_cenaWyjscia->Location = System::Drawing::Point(76, 49);
@@ -1748,7 +1761,7 @@ private: System::Windows::Forms::Label^ label57;
 			// num_cenaWejscia
 			// 
 			this->num_cenaWejscia->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->num_cenaWejscia->DecimalPlaces = 2;
+			this->num_cenaWejscia->DecimalPlaces = 5;
 			this->num_cenaWejscia->ForeColor = System::Drawing::SystemColors::WindowText;
 			this->num_cenaWejscia->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
 			this->num_cenaWejscia->Location = System::Drawing::Point(75, 47);
@@ -1854,6 +1867,18 @@ private: System::Windows::Forms::Label^ label57;
 			this->Box2->Visible = false;
 			this->Box2->TextChanged += gcnew System::EventHandler(this, &MyForm::Box2_TextChanged);
 			this->Box2->Leave += gcnew System::EventHandler(this, &MyForm::Box2_Leave);
+			// 
+			// label56
+			// 
+			this->label56->AutoSize = true;
+			this->label56->Font = (gcnew System::Drawing::Font(L"Symbol", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+															   static_cast<System::Byte>(2)));
+			this->label56->ForeColor = System::Drawing::Color::Blue;
+			this->label56->Location = System::Drawing::Point(199, 245);
+			this->label56->Name = L"label56";
+			this->label56->Size = System::Drawing::Size(35, 27);
+			this->label56->TabIndex = 35;
+			this->label56->Text = L"Þ";
 			// 
 			// tabSpread
 			// 
@@ -2133,30 +2158,6 @@ private: System::Windows::Forms::Label^ label57;
 			this->label25->Size = System::Drawing::Size(85, 20);
 			this->label25->TabIndex = 4;
 			this->label25->Text = L"Stop Loss:";
-			// 
-			// label56
-			// 
-			this->label56->AutoSize = true;
-			this->label56->Font = (gcnew System::Drawing::Font(L"Symbol", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-															   static_cast<System::Byte>(2)));
-			this->label56->ForeColor = System::Drawing::Color::Blue;
-			this->label56->Location = System::Drawing::Point(199, 245);
-			this->label56->Name = L"label56";
-			this->label56->Size = System::Drawing::Size(35, 27);
-			this->label56->TabIndex = 35;
-			this->label56->Text = L"Þ";
-			// 
-			// label57
-			// 
-			this->label57->AutoSize = true;
-			this->label57->Font = (gcnew System::Drawing::Font(L"Symbol", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-															   static_cast<System::Byte>(2)));
-			this->label57->ForeColor = System::Drawing::Color::Blue;
-			this->label57->Location = System::Drawing::Point(293, 245);
-			this->label57->Name = L"label57";
-			this->label57->Size = System::Drawing::Size(35, 27);
-			this->label57->TabIndex = 36;
-			this->label57->Text = L"Þ";
 			// 
 			// MyForm
 			// 
