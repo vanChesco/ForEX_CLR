@@ -1,8 +1,11 @@
 ﻿#pragma once
 #include <fstream>
 #include <math.h>
+#include <iostream>
 #include "curl/curl.h"
 #include "curl/easy.h"
+#include <msclr/marshal_cppstd.h>
+
 namespace ForEXCLR 
 {
 	using namespace System;
@@ -2305,20 +2308,17 @@ private: System::Windows::Forms::Label^ label59;
 	System::Decimal sumaUSD;
 	System::Decimal zysk;
 
-	System::Decimal jednostkiKupione;
-	double swingWynik;
 	
 	System::Decimal jednostkiETH;
 	System::Decimal jednostkiXRP;
 	System::Decimal jednostkiLSK;
 	System::Decimal jednostkiZRX;
 	System::Decimal jednostkiBSV;
-//
-//	jednostkiETH = (num_ETHkwota->Value / num_ETHcena->Value) * (1 - num_prowizja->Value / 100);
-//	jednostkiXRP = (num_XRPkwota->Value / num_ZRXcena->Value) * (1 - num_prowizja->Value / 100);
-//	jednostkiLSK = (num_LSKkwota->Value / num_LSKcena->Value) * (1 - num_prowizja->Value / 100);
-//	jednostkiZRX = (num_ZRXkwota->Value / num_ZRXcena->Value) * (1 - num_prowizja->Value / 100);
-//	jednostkiBSV = (num_BSVkwota->Value / num_BSVcena->Value) * (1 - num_prowizja->Value / 100);
+
+	System::Decimal kwota;
+	System::Decimal jednostkiKupione;
+	double swingWynik;
+
 
 	private: System::Void oblicz()
 	{
@@ -2461,7 +2461,11 @@ private: System::Windows::Forms::Label^ label59;
 			}
 			else label24->Text = "0";
 		}
-		else num_cenaWejscia->Value = 0;
+		else
+		{
+			num_cenaWejscia->Value = 0; 
+			lb_progWyjscia->Text = L"0";
+		}
 	}
 
 	private: System::Void zapiszStan()
@@ -2505,14 +2509,12 @@ private: System::Windows::Forms::Label^ label59;
 			stan.write((const char*)&num_BSVUSDT->Value, sizeof(num_BSVUSDT->Value));
 			stan.write((const char*)&num_stopLoss->Value, sizeof(num_stopLoss->Value));
 
-			stan.setf(std::ios_base::out);
-
-			/*stan.write((const char*)&lb_ETH->Text, sizeof(lb_ETH->Text));
-			stan.write((const char*)&lb_XRP->Text, sizeof(lb_XRP->Text));
-			stan.write((const char*)&lb_LSK->Text, sizeof(lb_LSK->Text));
-			stan.write((const char*)&lb_ZRX->Text, sizeof(lb_ZRX->Text));
-			stan.write((const char*)&lb_BSV->Text, sizeof(lb_BSV->Text));*/
-
+			/*stan.write((const char*)&(lb_ETH->Text), sizeof(lb_ETH));
+			stan.write((const char*)&(lb_XRP->Text), sizeof(lb_XRP));
+			stan.write((const char*)&(lb_LSK->Text), sizeof(lb_LSK));
+			stan.write((const char*)&(lb_ZRX->Text), sizeof(lb_ZRX));
+			stan.write((const char*)&(lb_BSV->Text), sizeof(lb_BSV));*/
+			
 		/*	lb_ETH->Text
 			lb_XRP->Text
 			lb_LSK->Text
@@ -2522,6 +2524,15 @@ private: System::Windows::Forms::Label^ label59;
 			//		System::Windows::Forms::MessageBox::Show("Stan zaktualizowany", "Zapis", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		}
 		stan.close();
+
+	//	std::ofstream test;
+
+	//	test.open("test.txt", std::ios_base::out);
+
+	//	test << "rest";
+	//	test << System::Convert::ToBase64String(lb_ETH->Text);
+
+	//	test.close();
 	}
 
 
@@ -2726,13 +2737,16 @@ private: System::Windows::Forms::Label^ label59;
 
 	private: System::Void num_XRPUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		System::Decimal kwota = ((num_XRPkwota->Value / num_XRPcena->Value) * (1 - num_prowizja->Value / 100)) * num_XRPUSDT->Value;
-
 		if (num_XRPcena->Value != 0)
 		{
+			kwota = ((num_XRPkwota->Value / num_XRPcena->Value) * (1 - num_prowizja->Value / 100)) * num_XRPUSDT->Value;
 			lb_USDT2->Text = System::Convert::ToString(System::Decimal::Ceiling(100000 * kwota) / 100000);
 		}
-		else lb_USDT2->Text = "-";
+		else
+		{
+			lb_USDT2->Text = "-";
+			kwota = 0;
+		}
 	
 		label51->Text = System::Convert::ToString(System::Decimal::Ceiling(kwota * num_cenaUSDT->Value * 100) / 100);
 	}
@@ -2740,10 +2754,10 @@ private: System::Windows::Forms::Label^ label59;
 
 	private: System::Void num_LSKUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		System::Decimal kwota = ((num_LSKkwota->Value / num_LSKcena->Value) * (1 - num_prowizja->Value / 100)) * num_LSKUSDT->Value;
 
 		if (num_LSKcena->Value != 0)
 		{
+			kwota = ((num_LSKkwota->Value / num_LSKcena->Value) * (1 - num_prowizja->Value / 100)) * num_LSKUSDT->Value;
 			lb_USDT3->Text = System::Convert::ToString(System::Decimal::Ceiling(100000 * kwota) / 100000);
 		}
 		else lb_USDT3->Text = "-";
@@ -2753,10 +2767,10 @@ private: System::Windows::Forms::Label^ label59;
 
 	private: System::Void num_ZRXUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		System::Decimal kwota = ((num_ZRXkwota->Value / num_ZRXcena->Value) * (1 - num_prowizja->Value / 100)) * num_ZRXUSDT->Value;
 
 		if (num_ZRXcena->Value != 0)
 		{
+			kwota = ((num_ZRXkwota->Value / num_ZRXcena->Value) * (1 - num_prowizja->Value / 100)) * num_ZRXUSDT->Value;
 			lb_USDT4->Text = System::Convert::ToString(System::Decimal::Ceiling(100000 * kwota) / 100000);
 		}
 		else lb_USDT4->Text = "-";
@@ -2766,10 +2780,10 @@ private: System::Windows::Forms::Label^ label59;
 
 	private: System::Void num_BSVUSDT_ValueChanged(System::Object^ sender, System::EventArgs^ e)
 	{
-		System::Decimal kwota = ((num_BSVkwota->Value / num_BSVcena->Value) * (1 - num_prowizja->Value / 100)) * num_BSVUSDT->Value;
 
 		if (num_BSVcena->Value != 0)
 		{
+			kwota = ((num_BSVkwota->Value / num_BSVcena->Value) * (1 - num_prowizja->Value / 100)) * num_BSVUSDT->Value;
 			lb_USDT5->Text = System::Convert::ToString(System::Decimal::Ceiling(100000 * kwota) / 100000);
 		}
 		else lb_USDT5->Text = "-";
@@ -2796,6 +2810,9 @@ private: System::Windows::Forms::Label^ label59;
 		num_cenaWyjscia->BackColor = Color::Red;
 		num_cenaWyjscia->Value = num_cenaWejscia->Value;
 		lb_stopLoss->Text = System::Convert::ToString(System::Decimal::Ceiling(100 * num_cenaWejscia->Value * System::Decimal(100 - num_stopLoss->Value) / 100) / 100);
+	
+		//std::string r = msclr::interop::marshal_as<std::string>(lb_nazwaKrypto->Text);
+		//label40->Text = System::Convert::ToString(&r);
 	}
 
 	private: System::Void lb_ETH_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
